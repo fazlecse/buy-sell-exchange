@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- select2 Css link -->
     <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- intlTelInput -Css link -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
 
 
 
@@ -37,6 +39,7 @@
         </div>
     </div>
     <!-- Preloader section end -->
+
 
     <!-- Header section start -->
     <header id="header" class="header fixed-top d-flex align-items-center">
@@ -221,9 +224,7 @@
     </header>
     <!-- Header section start -->
 
-
     <!-- Bottom Mobile Tab nav section start -->
-
     <ul class="nav bottom-nav fixed-bottom d-lg-none">
         <li class="nav-item">
             <a onclick="toggleSideMenu()" class="nav-link toggle-sidebar" aria-current="page"><i
@@ -243,9 +244,7 @@
             <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
         </li>
     </ul>
-
     <!-- Bottom Mobile Tab nav section end -->
-
 
 
     <!-- Sidebar section start -->
@@ -264,7 +263,6 @@
                     <span>Contact</span>
                 </a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-light fa-paper-plane"></i><span>Bill</span>
@@ -379,141 +377,87 @@
     <!-- Sidebar section end -->
 
 
-    <main id="main" class="main bg-color2">
-        <div class="pagetitle">
-            <h3 class="mb-1">Profile</h3>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
-                </ol>
-            </nav>
-        </div>
-        <!-- End Page Title -->
-
-        <div class="section dashboard">
-            <!-- Left side columns -->
-            <!-- Tab mobile view carousel start -->
-
-            <div class="row">
-                <!-- Account-settings -->
-                <!-- Account settings navbar start -->
-                <div class="account-settings-navbar">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="account-settings-profile.html"><i
-                                    class="fa-light fa-user"></i>profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-settings-notifications.html"><i
-                                    class="fa-regular fa-bell"></i>Notification</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="account-settings-identity-verification.html"><i
-                                    class="fa-light fa-link"></i> Identity Verification</a>
-                        </li>
-                    </ul>
+    <!--Main section start -->
+    <main id="main" class="main">
+        <div class="row">
+            <div class="col-xxl-8 col-lg-10 mx-auto">
+                <div class="pagetitle">
+                    <h3 class="mb-1">Pay Bill</h3>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Pay Bill</li>
+                        </ol>
+                    </nav>
                 </div>
-                <!-- Account settings navbar end -->
-                <form>
-                    <div class="account-settings-profile-section">
-                        <div class="card">
-                            <div class="card-header border-0 text-start text-md-center">
-                                <h5 class="card-title">KYC Information</h5>
-                                <p>Verify your process instantly.</p>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="row">
-                                    <div class="col-md-8 mx-auto">
-                                        <div class="row g-4">
-                                            <div class="col-12">
-                                                <label class="form-label">country</label>
-                                                <select class="cmn-select2-dropdown" name="state">
-                                                    <option value="AL">Select Type</option>
-                                                    <option value="AL">Driving License</option>
-                                                    <option value="WY">Passport</option>
-                                                    <option value="WY">National ID</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="profile-details-section mt-0">
-                                                            <label class="form-label">Front Page *</label>
-                                                            <div class="d-flex gap-3 align-items-center">
-                                                                <div class="image-area">
-                                                                    <img src="assets/img/Person/2.jpg" alt="">
-                                                                </div>
-                                                                <div class="btn-area">
-                                                                    <div class="btn-area-inner d-flex">
-                                                                        <div class="cmn-file-input">
-                                                                            <label for="formFile"
-                                                                                class="form-label cmn-btn">
-                                                                                Select Front Page</label>
-                                                                            <input class="form-control" type="file"
-                                                                                id="formFile">
-                                                                        </div>
-                                                                    </div>
-                                                                    <small>Allowed JPG, GIF or PNG. Max size of
-                                                                        800K</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="profile-details-section mt-0">
-                                                            <label class="form-label">Rear Page *</label>
-                                                            <div class="d-flex gap-3 align-items-center">
-                                                                <div class="image-area">
-                                                                    <img src="assets/img/back-photo/back-photo1.jpg"
-                                                                        alt="">
-                                                                </div>
-                                                                <div class="btn-area">
-                                                                    <div class="btn-area-inner d-flex">
-                                                                        <div class="cmn-file-input">
-                                                                            <label for="formFile2"
-                                                                                class="form-label cmn-btn">
-                                                                                Select Rear Page</label>
-                                                                            <input class="form-control" type="file"
-                                                                                id="formFile2">
-                                                                        </div>
-                                                                    </div>
-                                                                    <small>Allowed JPG, GIF or PNG. Max size of
-                                                                        800K</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h4>Pay Bill</h4>
+                    </div>
+                    <div class="card-body">
 
-                                            <div class="col-12">
-                                                <label for="phonenumber" class="form-label">Passport Number *</label>
-                                                <input type="text" class="form-control" id="phonenumber"
-                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Example
-                                                    textarea</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                    rows="3"></textarea>
-                                            </div>
+                        <form class="paybill-form">
 
-                                            <div class="btn-area">
-                                                <button type="button" class="cmn-btn">submit</button>
-                                            </div>
-                                        </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label for="From-Wallet" class="form-label">From Wallet</label>
+                                    <select class="form-select" id="From-Wallet">
+                                        <option selected>Select wallet</option>
+                                        <option value="1"> USD - US Doller </option>
+                                        <option value="2"> GBP - British pound </option>
+                                        <option value="3"> BTC - BITCOIN </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Country" class="form-label">Country & Phone</label>
+                                    <input id="telephone" type="text" class="form-control" name="phone"
+                                        placeholder="Your phone number"
+                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Services" class="form-label">Services</label>
+                                    <select class="form-select" id="Services">
+                                        <option selected>Select Service</option>
+                                        <option value="1">TIGO VTU</option>
+
+                                    </select>
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <label for="Mobile-number" class="form-label">Mobile Number</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" id="Mobile-number"
+                                            placeholder="Enter Mobile Number"
+                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                                     </div>
+                                </div> -->
+                                <div class="col-md-6">
+                                    <label for="Amount" class="form-label">Amount</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" id="Amount" placeholder="Enter Amount"
+                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                        <span class="input-group-text" id="basic-addon2">NGN</span>
+                                    </div>
+
+
                                 </div>
                             </div>
-                        </div>
+                            <div class="paybill-form-btn-area">
+                                <a href="user-panel-paybill-confirm.html" type="button"
+                                    class="cmn-btn w-100">continue</a>
+                            </div>
+
+                        </form>
                     </div>
-                </form>
+                </div>
 
             </div>
         </div>
 
-    </main><!-- End #main -->
+
+
+    </main>
+    <!--Main section end -->
+
 
 
     <!-- Footer section start -->
@@ -533,6 +477,53 @@
 
 
 
+    <!-- Offcanvas sidebar start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="row g-4">
+                    <div>
+                        <label for="ProductName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="ProductName">
+                    </div>
+                    <div>
+                        <label for="NumberOfSales" class="form-label">Number of sales</label>
+                        <input type="text" class="form-control" id="NumberOfSales">
+                    </div>
+                    <div id="formModal">
+                        <label class="form-label">status</label>
+                        <select class="modal-select" name="state">
+                            <option value="AL">All status</option>
+                            <option value="AL">Bangladesh</option>
+                            <option value="WY">Australia</option>
+                            <option value="WY">Belarus</option>
+                            <option value="WY">Canada</option>
+                            <option value="WY">China</option>
+                            <option value="WY">France</option>
+                            <option value="WY">Germany</option>
+                            <option value="WY">India</option>
+                            <option value="WY">Indonesia</option>
+                            <option value="WY">Italy</option>
+                            <option value="WY">Japan</option>
+                            <option value="WY">Korea</option>
+                        </select>
+                    </div>
+                    <div class="btn-area">
+                        <button type="submit" class="cmn-btn">Filter</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- Offcanvas sidebar end -->
+
+
+
 
 
 
@@ -549,6 +540,8 @@
     <script src="assets/js/select2.min.js"></script>
     <!-- select2_Js_link -->
     <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- intlTelInput Js link -->
+    <script src="assets/js/intlTelInput.min.js"></script>
 
 
     <!-- Main Js slink -->

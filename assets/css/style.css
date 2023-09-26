@@ -53,6 +53,7 @@ Typography
   --lime-gray: #d0d0d0;
   --vivid-orange: #fb6116;
   --yellow: #fcc013;
+  --orange: #FFC83E;
   --input-color: #F2F6FA;
   --primary-color-opacity-low: rgb(0, 208, 149, 0.1);
   --secondary-color-opacity-low: rgb(10, 79, 213, 0.1);
@@ -66,6 +67,7 @@ Typography
   --shadow1: 0px 12px 30px rgba(33, 85, 186, 0.08);
   --shadow2: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
   --shadow3: 5px 5px 20px rgba(54, 97, 252, .15);
+  --shadow4: 5px 5px 20px 0 5px 25px rgba(0, 0, 0, 0.15);
   --transition: all .3s ease-in-out;
 }
 
@@ -790,11 +792,12 @@ Offcanvas end
 }
 
 .shape2 {
-  bottom: 50px;
-  right: -70px;
+  top: 15%;
+  left: 15%;
+  opacity: 0.5;
 }
-.shape2 i {
-  color: var(--yellow);
+.shape2 img {
+  animation: rotate 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
 }
 
 .bg-shape1 {
@@ -1541,6 +1544,20 @@ hr.divider:after {
 }
 .cmn-list .item:not(:last-child) {
   padding-bottom: 30px;
+}
+
+.ratings li i {
+  color: var(--orange);
+  opacity: 0.5;
+}
+
+.ratings li .active {
+  color: var(--orange);
+  opacity: 1;
+}
+
+.opacity {
+  opacity: 0.5;
 }
 
 /*----------------------------------------------
@@ -2427,29 +2444,31 @@ Why choose us end
 /*----------------------------------------------
 09. Testimonial section start
 ----------------------------------------------*/
+.testimonial-section {
+  position: relative;
+}
 .testimonial-section .testimonial-box {
+  position: relative;
   padding: 20px;
   background: var(--white);
-  border-radius: 15px;
+  border-radius: 4px;
   transition: var(--transition);
   border: 1px solid var(--border-color1);
 }
-.testimonial-section .testimonial-box .testimonial-header {
-  display: flex;
-  justify-content: space-between;
+.testimonial-section .testimonial-box .testimonial-thumbs {
+  position: absolute;
+  right: 20px;
+  top: -25px;
+  border: 1px solid var(--border-color1);
+  padding: 2px;
+  border-radius: 4px;
 }
-.testimonial-section .testimonial-box .testimonial-header .testimonial-title-area {
-  display: flex;
-}
-.testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
-  margin-right: 10px;
-}
-.testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs img {
+.testimonial-section .testimonial-box .testimonial-thumbs img {
   width: 65px;
   height: 65px;
-  border-radius: 50%;
+  border-radius: 4px;
 }
-.testimonial-section .testimonial-box .testimonial-header .qoute-icon {
+.testimonial-section .testimonial-box .qoute-icon {
   font-size: 35px;
   color: var(--primary-color);
 }
@@ -2458,6 +2477,9 @@ Why choose us end
 }
 .testimonial-section .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 30px;
+}
+.testimonial-section .testimonial-carousel .owl-stage-outer {
+  padding-top: 50px;
 }
 
 .rtl .testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
@@ -2472,7 +2494,8 @@ Testimonial end
 10. Faq section start
 ----------------------------------------------*/
 .faq-section {
-  background-color: var(--bg-color1);
+  position: relative;
+  background: var(--bg-color1);
 }
 .faq-section .accordion-button {
   padding-left: 0;
@@ -2515,7 +2538,7 @@ Testimonial end
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .accordion-button:not(.collapsed)::after {
   background: url(../img/accordion/minus.png);
@@ -2525,7 +2548,7 @@ Testimonial end
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .rtl .accordion-button {
@@ -2541,74 +2564,39 @@ Testimonial end
 Faq end
 ----------------------------------------------*/
 /*----------------------------------------------
-11. Blog section start
+19. Blog section start
 ----------------------------------------------*/
-.blog-box {
-  background: var(--white);
-  border-radius: 5px;
-  box-shadow: var(--shadow3);
-  border: 1px solid var(--border-color1);
-  transition: var(--transition);
-}
-.blog-box:hover {
-  box-shadow: none;
-}
-.blog-box:hover .img-box {
-  overflow: hidden;
-}
-.blog-box:hover .img-box img {
-  transform: scale(1.1);
-}
-.blog-box .img-box {
-  overflow: hidden;
+.blog-section {
   position: relative;
-  border-radius: 5px;
+  z-index: 0;
+  background: var(--bg-color1);
 }
-.blog-box .img-box img {
-  transition: var(--transition);
-  width: 100%;
-  height: 15vw;
-  max-height: 270px;
-  border-radius: 5px;
+
+.blog-box {
+  display: flex;
+  gap: 20px;
 }
-.blog-box .content-box {
-  padding: 20px;
+.blog-box .thumbs-area {
+  position: relative;
+  padding: 5px;
+  box-shadow: var(--shadow3);
+  background-color: var(--white);
 }
-.blog-box .content-box .blog-btn {
-  color: var(--primary-color);
-  font-size: 18px;
-  font-family: var(--heading-font);
-  margin-top: 30px;
-  display: inline-flex;
+.blog-box .thumbs-area img {
+  max-width: 130px;
+  min-width: 130px;
+  height: 100%;
+  min-height: 150px;
 }
-.blog-box .content-box .para-text {
+.blog-box .content-area .blog-title {
+  margin-bottom: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 1;
 }
-.blog-box .blog-author {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.blog-box .blog-author .author-img {
-  margin-right: 10px;
-}
-.blog-box .blog-author .author-img img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-.blog-box .blog-author .author-info h5 {
-  margin: 0;
-}
-.blog-box .blog-author .author-info span {
-  font-size: 14px;
-}
-.blog-box .blog-title {
-  margin-bottom: 25px;
+.blog-box .content-area .description {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
@@ -2616,50 +2604,70 @@ Faq end
   -webkit-line-clamp: 2;
 }
 
-.date {
-  position: absolute;
-  padding: 5px 10px;
-  background-color: var(--primary-color);
-  color: var(--white);
-  font-size: 14px;
-  border-radius: 5px;
-  bottom: 15px;
-  right: 15px;
+.blog-btn {
+  display: inline-block;
+}
+.blog-btn i {
+  margin-left: 5px;
 }
 
-@media (max-width: 1400px) {
-  h5 {
-    font-size: 18px;
-  }
-  .blog-box .img-box img {
-    height: 20vw;
-  }
-  .blog-box .blog-author .author-info span {
-    font-size: 14px;
-  }
+.blog-box-large {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-@media (max-width: 767px) {
-  .blog-box .img-box img {
-    height: 40vw;
-  }
+.blog-box-large .thumbs-area {
+  position: relative;
+  padding: 5px;
+  box-shadow: var(--shadow3);
+  background-color: var(--white);
 }
-@media (max-width: 575px) {
-  .blog-box .img-box img {
-    height: 55vw;
-  }
+.blog-box-large .thumbs-area img {
+  height: 390px;
+  width: 100%;
 }
-.rtl .blog-box .blog-author .author-img {
-  margin-right: 0;
-  margin-left: 10px;
+.blog-box-large .content-area {
+  max-width: 600px;
 }
-.rtl .blog-box .content-box .cmn-btn i {
+.blog-box-large .content-area .blog-title {
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+.blog-box-large .content-area .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+
+.blog-date {
+  position: absolute;
+  background: var(--primary-color);
+  top: 15px;
+  left: 15px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+.blog-date p,
+.blog-date h5 {
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.rtl .blog-btn i {
   margin-left: 0;
   margin-right: 5px;
-  transform: rotate(180deg);
 }
 
 /*----------------------------------------------
-Blog end
+Blog section end
 ----------------------------------------------*/
 /*----------------------------------------------
 12. Newsletter section start

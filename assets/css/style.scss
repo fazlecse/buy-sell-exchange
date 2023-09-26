@@ -59,6 +59,7 @@ Typography
     --lime-gray: #d0d0d0;
     --vivid-orange: #fb6116;
     --yellow: #fcc013;
+    --orange: #FFC83E;
     --input-color: #F2F6FA;
     --primary-color-opacity-low: rgb(0, 208, 149, 0.1);
     --secondary-color-opacity-low: rgb(10, 79, 213, 0.1);
@@ -70,12 +71,13 @@ Typography
     --body-color: #6B777F;
     --border-color1: #edf2f8;
     --border-color2: #e1e1e1;
-    
+
 
 
     --shadow1: 0px 12px 30px rgba(33, 85, 186, 0.08);
     --shadow2: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
     --shadow3: 5px 5px 20px rgba(54, 97, 252, .15);
+    --shadow4: 5px 5px 20px 0 5px 25px rgba(0, 0, 0, 0.15);
     --transition: all .3s ease-in-out;
 }
 
@@ -893,13 +895,13 @@ Offcanvas end
         animation: rotate 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
     }
 }
+.shape2{
+    top: 15%;
+    left: 15%;
+    opacity: .5;
 
-.shape2 {
-    bottom: 50px;
-    right: -70px;
-
-    i {
-        color: var(--yellow);
+    img {
+        animation: rotate 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
     }
 }
 
@@ -915,6 +917,7 @@ Offcanvas end
     background-color: var(--primary-color);
     z-index: -1;
 }
+
 // Bg gradient1 start
 .bg-gradiend1 {
     content: "";
@@ -987,6 +990,7 @@ Offcanvas end
     }
 
 }
+
 // Bg gradient1 end
 // Bg gradient1 start
 .bg-gradiend2 {
@@ -1058,6 +1062,7 @@ Offcanvas end
     }
 
 }
+
 // Bg gradient1 end
 
 
@@ -1801,7 +1806,23 @@ hr.divider:after {
 }
 
 // Cmn list section end
+// Ratings section start
+.ratings li i {
+    color: var(--orange);
+    opacity: .5;
 
+}
+
+.ratings li .active {
+    color: var(--orange);
+    opacity: 1;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+// Ratings section end
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -2898,35 +2919,33 @@ Why choose us end
 09. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
+    position: relative;
     .testimonial-box {
+        position: relative;
         padding: 20px;
         background: var(--white);
-        border-radius: 15px;
+        border-radius: 4px;
         transition: var(--transition);
         border: 1px solid var(--border-color1);
 
-        .testimonial-header {
-            display: flex;
-            justify-content: space-between;
+        .testimonial-thumbs {
+            position: absolute;
+            right: 20px;
+            top: -25px;
+            border: 1px solid var(--border-color1);
+            padding: 2px;
+            border-radius: 4px;
 
-            .testimonial-title-area {
-                display: flex;
+            img {
+                width: 65px;
+                height: 65px;
+                border-radius: 4px;
             }
+        }
 
-            .testimonial-thumbs {
-                margin-right: 10px;
-
-                img {
-                    width: 65px;
-                    height: 65px;
-                    border-radius: 50%;
-                }
-            }
-
-            .qoute-icon {
-                font-size: 35px;
-                color: var(--primary-color);
-            }
+        .qoute-icon {
+            font-size: 35px;
+            color: var(--primary-color);
         }
 
         .quote-area {
@@ -2940,6 +2959,10 @@ Why choose us end
         .owl-nav.disabled+.owl-dots {
             margin-top: 30px;
         }
+    }
+
+    .testimonial-carousel .owl-stage-outer {
+        padding-top: 50px;
     }
 }
 
@@ -2967,7 +2990,8 @@ Testimonial end
 ----------------------------------------------*/
 
 .faq-section {
-    background-color: var(--bg-color1);
+    position: relative;
+    background: var(--bg-color1);
 
     .accordion-button {
         padding-left: 0;
@@ -3017,7 +3041,7 @@ Testimonial end
         background-size: 50%;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 8px;
+        border-radius: 4px;
     }
 
     &:not(.collapsed) {
@@ -3029,7 +3053,7 @@ Testimonial end
             background-size: 50%;
             background-repeat: no-repeat;
             background-position: center;
-            border-radius: 8px;
+            border-radius: 4px;
         }
     }
 }
@@ -3052,170 +3076,135 @@ Testimonial end
 Faq end
 ----------------------------------------------*/
 
+
 /*----------------------------------------------
-11. Blog section start
+19. Blog section start
 ----------------------------------------------*/
+.blog-section {
+    position: relative;
+    z-index: 0;
+    background: var(--bg-color1);
+}
 
 .blog-box {
-    background: var(--white);
-    border-radius: 5px;
-    box-shadow: var(--shadow3);
-    border: 1px solid var(--border-color1);
-    transition: var(--transition);
+    display: flex;
+    gap: 20px;
 
-    &:hover {
-        box-shadow: none;
-
-        .img-box {
-            overflow: hidden;
-
-            img {
-                transform: scale(1.1);
-            }
-        }
-    }
-
-    .img-box {
-        overflow: hidden;
+    .thumbs-area {
         position: relative;
-        border-radius: 5px;
+        padding: 5px;
+        box-shadow: var(--shadow3);
+        background-color: var(--white);
 
         img {
-            transition: var(--transition);
-            width: 100%;
-            height: 15vw;
-            max-height: 270px;
-            border-radius: 5px;
+            max-width: 130px;
+            min-width: 130px;
+            height: 100%;
+            min-height: 150px;
         }
     }
 
-    .content-box {
-        padding: 20px;
-
-        .blog-btn {
-            color: var(--primary-color);
-            font-size: 18px;
-            font-family: var(--heading-font);
-            margin-top: 30px;
-            display: inline-flex;
-        }
-
-        .para-text {
+    .content-area {
+        .blog-title {
+            margin-bottom: 15px;
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-box-orient: vertical;
             display: -webkit-box;
-            -webkit-line-clamp: 4;
-        }
-    }
-
-    .blog-author {
-        display: inline-flex;
-        align-items: center;
-        margin-bottom: 20px;
-
-        .author-img {
-            margin-right: 10px;
-
-            img {
-                width: 35px;
-                height: 35px;
-                border-radius: 50%;
-            }
+            -webkit-line-clamp: 1;
         }
 
-        .author-info {
-            h5 {
-                margin: 0;
-            }
-
-            span {
-                font-size: 14px;
-            }
+        .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
         }
-    }
-
-    .blog-title {
-        margin-bottom: 25px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
     }
 }
 
-.date {
+.blog-btn {
+    display: inline-block;
+
+    i {
+        margin-left: 5px;
+    }
+}
+
+.blog-box-large {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .thumbs-area {
+        position: relative;
+        padding: 5px;
+        box-shadow: var(--shadow3);
+        background-color: var(--white);
+
+        img {
+            height: 390px;
+            width: 100%;
+        }
+    }
+
+    .content-area {
+        max-width: 600px;
+
+        .blog-title {
+            margin-bottom: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+        }
+
+        .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+        }
+    }
+}
+
+
+
+.blog-date {
     position: absolute;
+    background: var(--primary-color);
+    top: 15px;
+    left: 15px;
+    text-align: center;
     padding: 5px 10px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: 14px;
-    border-radius: 5px;
-    bottom: 15px;
-    right: 15px;
-}
+    border-radius: 2px;
 
-// Responsive Blog section start
-@media (max-width: 1400px) {
+    p,
     h5 {
-        font-size: 18px;
+        color: var(--white);
+        text-transform: uppercase;
+        margin-bottom: 0;
     }
 
-    .blog-box {
-        .img-box img {
-            height: 20vw;
-
-        }
-
-        .blog-author .author-info span {
-            font-size: 14px;
-        }
-    }
 }
 
-@media (max-width: 767px) {
-    .blog-box {
-        .img-box img {
-            height: 40vw;
-        }
-    }
-}
-
-@media (max-width: 575px) {
-    .blog-box {
-        .img-box img {
-            height: 55vw;
-        }
-    }
-}
-
-// Blog responsive end
-
-// Blog responsive start
+// Rtl blog section start
 .rtl {
-    .blog-box {
-        .blog-author {
-            .author-img {
-                margin-right: 0;
-                margin-left: 10px;
-            }
-        }
+    .blog-btn i {
+        margin-left: 0;
+        margin-right: 5px;
 
-        .content-box {
-            .cmn-btn i {
-                margin-left: 0;
-                margin-right: 5px;
-                transform: rotate(180deg);
-            }
-        }
     }
 }
 
-// Blog responsive end
+// Rtl blog section end
 /*----------------------------------------------
-Blog end
+Blog section end
 ----------------------------------------------*/
+
 
 
 /*----------------------------------------------
