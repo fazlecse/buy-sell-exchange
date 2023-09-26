@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransQuick</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+                            alt=""></a>
+                    <button type="button" class="cmn-btn-close btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><i class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <ul class="navbar-nav nav-right d-flex align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i
+                                        class="fa-solid fa-right-to-bracket"></i>Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="get-start-btn" href="signup.html">register now</a>
+                            </li>
+                        </ul>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-area">
+        <div class="container">
+            <div class="row ">
+                <div class="col">
+                    <div class="breadcrumb-area">
+                        <h3>blog details</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home-1.html"><i class="fa-light fa-house"></i> Home</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">blog details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Blog details section start -->
+    <section class="blog-details-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-xxl-8 col-lg-7 order-2 order-lg-1">
+                    <div class="blog-details">
+                        <div class="thum-inner">
+                            <div class="blog-image">
+                                <img src="assets/img/blog/1.jpg" alt="">
+                                <div class="date">September 15, 2023
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="blog-author">
+                            <div class="author-img">
+                                <img src="assets/img/testimonial/1.jpg" alt="">
+                            </div>
+                            <div class="author-info">
+                                <a href="#">
+                                    <h5>Joshep brathwaith</h5>
+                                </a>
+                                <span>Consultant</span>
+                            </div>
+                        </div>
+                        <div class="blog-header">
+                            <h3 class="">A Comprehensive Guide to International Currency Transfers</h3>
+                        </div>
+                        <div class="blog-para">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, soluta optio corporis
+                                ipsam doloremque deleniti. Fugit culpa pariatur aliquam ipsa. Soluta magni reiciendis
+                                sequi maxime ut sapiente officia
+                                incidunt accusantium quisquam blanditiis veniam, neque sed quia, laborum sit suscipit,
+                                dolorem voluptatibus? Dolorem minus amet atque incidunt autem ducimus excepturi nostrum?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, soluta optio corporis
+                                ipsam doloremque deleniti. Fugit culpa pariatur aliquam ipsa. Soluta magni reiciendis
+                                sequi maxime ut sapiente officia
+                                incidunt accusantium quisquam blanditiis veniam, neque sed quia, laborum sit suscipit,
+                                dolorem voluptatibus? Dolorem minus amet atque incidunt autem ducimus excepturi nostrum?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, soluta optio corporis
+                                ipsam doloremque deleniti. Fugit culpa pariatur aliquam ipsa. Soluta magni reiciendis
+                                sequi maxime ut sapiente officia
+                                incidunt accusantium quisquam blanditiis veniam, neque sed quia, laborum sit suscipit,
+                                dolorem voluptatibus? Dolorem minus amet atque incidunt autem ducimus excepturi nostrum?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, soluta optio corporis
+                                ipsam doloremque deleniti. Fugit culpa pariatur aliquam ipsa. Soluta magni reiciendis
+                                sequi maxime ut sapiente officia
+                                incidunt accusantium quisquam blanditiis veniam, neque sed quia, laborum sit suscipit,
+                                dolorem voluptatibus? Dolorem minus amet atque incidunt autem ducimus excepturi nostrum?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- pagination section start -->
+                    <div class="pagination-section">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- pagination section end -->
+                </div>
+                <div class="col-xxl-4 col-lg-5 order-1 order-lg-2">
+                    <div class="blog-sidebar">
+                        <div class="blog-widget-area">
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="blog-widget-area">
+                            <div class="widget-title">
+                                <h4>Recent Post</h4>
+                            </div>
+
+                            <a href="" class="blog-widget-item">
+                                <div class="blog-widget-image">
+                                    <img src="assets/img/blog/2.jpg" alt="">
+                                </div>
+                                <div class="blog-widget-content">
+                                    <div class="blog-title">These Are The Voyages of The Starship</div>
+                                    <div class="blog-date">
+                                        <i class="fa-regular fa-calendar-days"></i> 01 November 2022
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="blog-widget-item">
+                                <div class="blog-widget-image">
+                                    <img src="assets/img/blog/3.png" alt="">
+                                </div>
+                                <div class="blog-widget-content">
+                                    <div class="blog-title">Our Home Entertainment has Evolved Significantly</div>
+                                    <div class="blog-date">
+                                        <i class="fa-regular fa-calendar-days"></i> 01 November 2022
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="blog-widget-area">
+                            <div class="categories-area">
+                                <div class="categories-header">
+                                    <div class="widget-title">
+                                        <h4>Categories</h4>
+                                    </div>
+                                </div>
+                                <ul class="categories-list">
+                                    <li>
+                                        <a href=""><span>Industry Updates</span> <span class="highlight">(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span>Case Studies and Success Stories</span> <span
+                                                class="highlight">(18)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span>Email Design and Optimization</span> <span
+                                                class="highlight">(12)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span>Data Privacy and Compliance</span> <span
+                                                class="highlight">(10)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span>Email Automation and Personalization</span> <span
+                                                class="highlight">(15)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span>Metrics and Analytics</span> <span
+                                                class="highlight">(11)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog-widget-area">
+                            <div class="widget-title">
+                                <h4>Tags</h4>
+                            </div>
+                            <div class="tag-list">
+                                <a href="" class="item">Exchange</a>
+                                <a href="" class="item"> Money</a>
+                                <a href="" class="item">Currency</a>
+                                <a href="" class="item">Risks</a>
+                                <a href="" class="item"> Paypal</a>
+                                <a href="" class="item"> Security</a>
+                                <a href="" class="item"> Business</a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog details Section End -->
+
+    <!-- Newsletter secdtion start -->
+    <section class="newsletter-section pt-50 pb-50">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6 col-md-5">
+                    <div class="content-area">
+                        <div class="subscribe-small-text">Subscribe to our</div>
+                        <h1 class="subscribe-normal-text">newsletter</h1>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-7">
+                    <form class="newsletter-form">
+                        <input type="text" class="form-control" placeholder="Enter your mail">
+                        <button type="button" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter secdtion end -->
+
+    <!-- Footer Section start -->
+    <section class="footer-section pb-50">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo mb-30">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                        </p>
+
+                        <div class="social-area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p>10714 163rd Pl, Orland Park, IL 60467, United States</p>
+                        <p>email@website.com</p>
+                        <p>354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
