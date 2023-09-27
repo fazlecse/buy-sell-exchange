@@ -59,11 +59,14 @@ Typography
   --secondary-color-opacity-low: rgb(10, 79, 213, 0.1);
   --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
   --bg-color1: linear-gradient(152deg, rgba(237, 242, 248, 0.22) 0%, #edf2f8 100%);
+  --bg-color2: #ffffff;
+  --bg-color3: #ffffff;
   --bg-grad-color: #FFF;
   --bg-grad-color-trans: rgba(255, 255, 255, 0.00);
   --body-color: #6B777F;
   --border-color1: #edf2f8;
   --border-color2: #e1e1e1;
+  --border-color3: #000000;
   --shadow1: 0px 12px 30px rgba(33, 85, 186, 0.08);
   --shadow2: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
   --shadow3: 5px 5px 20px rgba(54, 97, 252, .15);
@@ -71,10 +74,60 @@ Typography
   --transition: all .3s ease-in-out;
 }
 
-.bg-color1 {
-  background-color: linear-gradient(152deg, rgba(237, 242, 248, 0.22) 0%, #edf2f8 100%);
+/*----------------------------------------------
+Dark theme section start
+----------------------------------------------*/
+.dark-theme {
+  --bg-color1: linear-gradient(152deg, rgba(237, 242, 248, 0.02) 0%, rgba(237, 242, 248, 0.08) 100%);
+  --bg-color2: #2c403d;
+  --bg-color3: #1B2D29;
+  --heading-color: #ffffff;
+  --border-color1: #37333e;
+  --border-color2: rgba(234, 219, 215, 0.06);
+  --border-color3: #ffffff;
+  --bg-grad-color: #253A33;
+  --input-color: #1B2D29;
+}
+.dark-theme p {
+  color: #d1cbdb;
+}
+.dark-theme .form-control,
+.dark-theme .form-select {
+  color: var(--white);
+  border: 1px solid var(--bg-color3);
+}
+.dark-theme .form-control:focus {
+  color: var(--heading-color);
+  background-color: var(--bg-color3);
+}
+.dark-theme .select2-dropdown {
+  background-color: var(--bg-color2);
+}
+.dark-theme .select2-container--default .select2-selection--single {
+  background-color: var(--bg-color2);
+}
+.dark-theme .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--white);
+}
+.dark-theme .select2-container .select2-dropdown .select2-search__field {
+  background-color: var(--bg-color3);
+  color: var(--white);
+}
+.dark-theme .cmn-box {
+  background-color: var(--bg-color2);
+}
+.dark-theme .cmn-btn3 {
+  background-color: var(--bg-color3);
+  border-color: var(--bg-color2);
+  color: var(--white);
+}
+.dark-theme .section-subtitle::after {
+  background: linear-gradient(90deg, #30185f, rgba(217, 217, 217, 0));
 }
 
+/*----------------------------------------------
+Dark theme section end
+----------------------------------------------*/
 /*----------------------------------------------
 Reset section start
 ----------------------------------------------*/
@@ -264,6 +317,11 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   background-color: var(--white);
+}
+
+body.dark-theme {
+  color: #d1cbdb;
+  background-color: #00150F;
 }
 
 @media (max-width: 991px) {
@@ -553,6 +611,12 @@ h1 {
   line-height: 65px;
 }
 
+@media (max-width: 991px) {
+  h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
 h2 {
   font-size: 36px;
   text-transform: capitalize;
@@ -630,11 +694,11 @@ figure {
 
 ::-webkit-scrollbar {
   width: 3px;
-  height: 6px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 2px;
   background: var(--primary-color);
   visibility: hidden;
   opacity: 0;
@@ -646,12 +710,15 @@ figure {
 }
 
 body::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
   visibility: visible;
   opacity: 1;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--black);
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -686,6 +753,12 @@ Reset end
 /*----------------------------------------------
 Reusable style section start
 ----------------------------------------------*/
+.link {
+  text-decoration: underline;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
 .search-box {
   position: relative;
   display: flex;
@@ -730,7 +803,7 @@ Offcanvas section start
 }
 
 .offcanvas.offcanvas-end {
-  border-left: 1px solid var(--border-color3);
+  border-left: 1px solid var(--border-color2);
   transition: transform 0.5s ease 0.4s;
 }
 
@@ -781,6 +854,11 @@ Offcanvas end
   width: 70px;
 }
 
+@media (max-width: 768px) {
+  .shape1 {
+    width: 50px;
+  }
+}
 .shape1 {
   top: 15%;
   left: 50%;
@@ -791,6 +869,13 @@ Offcanvas end
   animation: rotate 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
 }
 
+@media (max-width: 991px) {
+  .shape1 {
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+  }
+}
 .shape2 {
   top: 15%;
   left: 15%;
@@ -800,6 +885,25 @@ Offcanvas end
   animation: rotate 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
 }
 
+@media (max-width: 991px) {
+  .shape2 {
+    top: 5%;
+  }
+}
+.shape3 {
+  top: 10%;
+  right: 15%;
+  opacity: 0.5;
+}
+.shape3 img {
+  animation: rotate 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
+}
+
+@media (max-width: 991px) {
+  .shape3 {
+    top: 2%;
+  }
+}
 .bg-shape1 {
   position: absolute;
   content: "";
@@ -825,6 +929,7 @@ Offcanvas end
   right: -3%;
   transform: rotate(-10deg);
   position: absolute;
+  display: none;
 }
 .bg-gradiend1 .bg-gradiend1-inner {
   position: absolute;
@@ -840,6 +945,7 @@ Offcanvas end
 
 @media (min-width: 992px) {
   .bg-gradiend1 {
+    display: block;
     width: 570px;
     top: -10%;
     right: -4%;
@@ -887,6 +993,7 @@ Offcanvas end
   left: -3%;
   transform: rotate(10deg);
   position: absolute;
+  display: none;
 }
 .bg-gradiend2 .bg-gradiend2-inner {
   background: linear-gradient(296deg, var(--bg-grad-color) 0%, var(--bg-grad-color-trans) 100%);
@@ -901,6 +1008,7 @@ Offcanvas end
 
 @media (min-width: 992px) {
   .bg-gradiend2 {
+    display: block;
     width: 570px;
     top: -10%;
     right: -4%;
@@ -1013,7 +1121,7 @@ Offcanvas end
 }
 
 .cmn-btn2 {
-  background-color: var(--white);
+  background-color: transparent;
   padding: 10px 20px;
   border-radius: 4px;
   border: 1px solid var(--secondary-color);
@@ -1074,6 +1182,16 @@ Offcanvas end
   color: var(--white);
 }
 
+@media (max-width: 767px) {
+  .login-btn {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .get-start-btn {
   padding: 12px 20px;
   border-radius: 5px;
@@ -1199,7 +1317,7 @@ Cmn tab section start
   color: var(--heading-color);
 }
 .cmn-tabs .nav-pills .nav-link.active, .cmn-tabs .nav-pills .nav-link:hover {
-  background-color: var(--white);
+  background-color: var(--bg-color2);
 }
 
 /*----------------------------------------------
@@ -1285,7 +1403,7 @@ section {
   justify-content: center;
   margin-right: 14px;
   border-radius: 2px;
-  background: var(--white);
+  background: #2c403d;
   color: var(--primary-color);
   box-shadow: var(--shadow3);
 }
@@ -1526,7 +1644,7 @@ hr.divider:after {
   content: "";
   height: 100%;
   width: 1px;
-  background-color: var(--heading-color);
+  background-color: var(--border-color1);
   left: 12px;
   z-index: -1;
 }
@@ -1535,12 +1653,12 @@ hr.divider:after {
   color: var(--heading-color);
   min-width: 25px;
   height: 25px;
-  border: 1px solid var(--heading-color);
+  border: 1px solid var(--border-color3);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--bg-color2);
 }
 .cmn-list .item:not(:last-child) {
   padding-bottom: 30px;
@@ -1835,16 +1953,19 @@ Padding bottom
 01. Nav section start
 ----------------------------------------------*/
 .navbar.active {
-  background-color: var(--white);
+  background-color: var(--bg-color3);
   box-shadow: var(--shadow2);
   z-index: 999;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 
 .navbar {
-  transition: var(--transition);
+  transition: backgaound 0.3s ease-out;
   padding: 20px;
   z-index: 9999;
+}
+.navbar .container {
+  position: relative;
 }
 .navbar .navbar-toggler {
   background: var(--primary-color);
@@ -1997,22 +2118,37 @@ user nav Profile end
   .navbar {
     padding: 20px 0;
   }
-  .navbar.active .navbar-nav .nav-link {
-    color: var(--heading-color);
-  }
   .navbar-expand-lg .navbar-toggler {
     display: none !important;
   }
 }
 @media (max-width: 991px) {
+  .navbar {
+    padding: 15px;
+  }
+  .navbar.active {
+    padding: 15px;
+  }
   .navbar .navbar-nav .nav-link {
     padding: 15px;
   }
   .navbar .nav-right {
-    flex-direction: column;
+    position: absolute;
+    right: 65px;
   }
-  .navbar .nav-right li {
-    padding: 15px;
+}
+@media (max-width: 767px) {
+  .navbar {
+    padding: 10px 5px;
+  }
+  .navbar.active {
+    padding: 10px 5px;
+  }
+  .navbar .nav-right {
+    right: 60px;
+  }
+  .navbar .nav-right .custom-nav {
+    gap: 5px;
   }
 }
 .rtl .navbar-nav.ms-auto {
@@ -2031,7 +2167,7 @@ Nav end
 02. Bottom Mobile, Tab nav section start
 ----------------------------------------------*/
 .bottom-nav {
-  background: var(--white);
+  background: var(--bg-color3);
   justify-content: space-around;
   box-shadow: var(--shadow2);
   border-top-right-radius: 8px;
@@ -2070,6 +2206,10 @@ Bottom Mobile, Tab nav end
   position: relative;
   padding: 250px 0 200px;
 }
+.hero-section .hero-section-inner {
+  position: relative;
+  z-index: 1;
+}
 .hero-section::after {
   position: absolute;
   content: "";
@@ -2078,7 +2218,7 @@ Bottom Mobile, Tab nav end
   right: 0;
   bottom: 0;
   background-image: url(../img/background/bg.png);
-  z-index: -1;
+  z-index: 0;
   opacity: 0.8;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2105,21 +2245,31 @@ Bottom Mobile, Tab nav end
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .hero-section .hero-content .gatways span {
   font-size: 18px;
 }
 
 @media (max-width: 991px) {
-  h1 {
-    font-size: 42px;
-    line-height: 50px;
-  }
   .hero-section {
-    padding: 130px 0 160px;
+    padding: 150px 0 50px;
     text-align: center;
   }
+  .hero-section .hero-content .gatways {
+    justify-content: center;
+  }
+  .hero-section .hero-content .btn-area {
+    justify-content: center;
+  }
+  .hero-section .hero-content .we-accept {
+    margin-top: 40px;
+  }
 }
+.dark-theme .hero-section::after {
+  background-image: url(../img/background/bg-dark.png);
+}
+
 /*----------------------------------------------
 Hero end
 ----------------------------------------------*/
@@ -2129,7 +2279,7 @@ Hero end
 .calculator {
   max-width: 560px;
   margin: 0 auto;
-  background-color: var(--white);
+  background-color: var(--bg-color2);
   padding: 25px;
   border-radius: 4px;
   box-shadow: var(--shadow2);
@@ -2242,7 +2392,7 @@ Hero end
 }
 @media (max-width: 575px) {
   .calculator {
-    padding: 20px;
+    padding: 15px;
   }
 }
 .rtl .input-box .form-control {
@@ -2337,10 +2487,8 @@ Calculator end
 }
 @media (max-width: 575px) {
   .cmn-box {
+    flex-direction: column;
     text-align: center;
-  }
-  .cmn-box .icon-box {
-    margin: 0 auto 20px;
   }
 }
 @media (max-width: 991px) {
@@ -2445,12 +2593,13 @@ Why choose us end
 09. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
+  background: var(--bg-color1);
   position: relative;
 }
 .testimonial-section .testimonial-box {
   position: relative;
   padding: 20px;
-  background: var(--white);
+  background: var(--bg-color2);
   border-radius: 4px;
   transition: var(--transition);
   border: 1px solid var(--border-color1);
@@ -2459,6 +2608,7 @@ Why choose us end
   position: absolute;
   right: 20px;
   top: -25px;
+  background-color: var(--white);
   border: 1px solid var(--border-color1);
   padding: 2px;
   border-radius: 4px;
@@ -2495,7 +2645,6 @@ Testimonial end
 ----------------------------------------------*/
 .faq-section {
   position: relative;
-  background: var(--bg-color1);
 }
 .faq-section .accordion-button {
   padding-left: 0;
@@ -2569,7 +2718,6 @@ Faq end
 .blog-section {
   position: relative;
   z-index: 0;
-  background: var(--bg-color1);
 }
 
 .blog-box {
@@ -2580,13 +2728,15 @@ Faq end
   position: relative;
   padding: 5px;
   box-shadow: var(--shadow3);
-  background-color: var(--white);
+  background-color: var(--bg-color2);
 }
 .blog-box .thumbs-area img {
   max-width: 130px;
   min-width: 130px;
   height: 100%;
-  min-height: 150px;
+  min-height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog-box .content-area .blog-title {
   margin-bottom: 15px;
@@ -2620,11 +2770,13 @@ Faq end
   position: relative;
   padding: 5px;
   box-shadow: var(--shadow3);
-  background-color: var(--white);
+  background-color: var(--bg-color2);
 }
 .blog-box-large .thumbs-area img {
   height: 390px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog-box-large .content-area {
   max-width: 600px;
@@ -2673,33 +2825,33 @@ Blog section end
 12. Newsletter section start
 ----------------------------------------------*/
 .newsletter-section {
-  background-color: var(--bg-color1);
+  position: relative;
+  background-color: var(--secondary-color);
   background-image: url(../img/background/footer-bg-shape.png);
 }
 .newsletter-section .content-area {
-  font-family: var(--heading-font);
   font-weight: 400;
   color: var(--heading-color);
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: 40px;
 }
 .newsletter-section .content-area .subscribe-small-text {
-  font-size: 22px;
+  color: var(--white);
 }
 .newsletter-section .content-area .subscribe-normal-text {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 500;
-  margin-bottom: 0;
+  color: var(--white);
 }
 .newsletter-section .newsletter-form {
+  margin-top: 20px;
   position: relative;
   display: flex;
   align-items: center;
 }
 .newsletter-section .newsletter-form .form-control {
-  border-radius: 9999px;
+  border-radius: 4px;
   height: 55px;
-  background-color: var(--white);
   padding: 10px 165px 10px 20px;
   border-color: var(--primary-color-opacity-low);
 }
@@ -2712,7 +2864,7 @@ Blog section end
   right: 5px;
   background-color: var(--primary-color);
   height: calc(100% - 10px);
-  border-radius: 9999px;
+  border-radius: 4px;
   padding: 10px 40px;
   color: var(--white);
   display: flex;
@@ -2722,10 +2874,21 @@ Blog section end
   background-color: var(--btn-hover-bg);
   color: var(--white);
 }
+.newsletter-section .newsletter-thumbs img {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  max-width: 400px;
+}
 
+@media (max-width: 1199px) {
+  .newsletter-section .newsletter-thumbs img {
+    right: 2%;
+  }
+}
 @media (max-width: 991px) {
-  .newsletter-section .content-area .subscribe-small-text {
-    font-size: 20px;
+  .newsletter-section .content-area {
+    text-align: center;
   }
   .newsletter-section .content-area .subscribe-normal-text {
     font-size: 34px;
@@ -2793,7 +2956,25 @@ Country support section start
 14. Footer section start
 ----------------------------------------------*/
 .footer-section {
+  position: relative;
   background-color: #111111;
+}
+.footer-section .footer-inner-section {
+  position: relative;
+  z-index: 1;
+}
+.footer-section::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-image: url(../img/background/bg-dark.png);
+  background-position: center;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
 }
 .footer-section .footer-widget .widget-title {
   position: relative;

@@ -146,251 +146,263 @@
 
     <!-- Hero section start -->
     <div class="hero-section">
-        <div class="container">
-            <div class="row g-5 justify-content-between align-items-center">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="hero-content">
-                        <h1 class="hero-title">Invest Your Money With <span class="highlight">Higher Return</span></h1>
-                        <p class="hero-description">Empower Your Financial Future with Crypto: Buy, Sell, and Exchange
-                            Your Way to Success!</p>
-                        <div class="btn-area">
-                            <a href="" class="cmn-btn">Get started</a>
-                            <a href="" class="cmn-btn2 text-with-icon"><i class="fa-regular fa-circle-play"></i>watch
-                                now</a>
+        <div class="hero-section-inner">
+            <div class="container">
+                <div class="row g-5 justify-content-between align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Invest Your Money With <span class="highlight">Higher Return</span>
+                            </h1>
+                            <p class="hero-description">Empower Your Financial Future with Crypto: Buy, Sell, and
+                                Exchange
+                                Your Way to Success!</p>
+                            <div class="btn-area">
+                                <a href="" class="cmn-btn">Get started</a>
+                                <a href="" class="cmn-btn2 text-with-icon"><i
+                                        class="fa-regular fa-circle-play"></i>watch
+                                    now</a>
 
-                        </div>
-
-                        <div class="we-accept">
-                            <p>Accepted payment methods:</p>
-                            <div class="gatways">
-                                <img src="./assets/img/gateway/svg/visa.svg" alt="">
-                                <img src="./assets/img/gateway/svg/mastercard.svg" alt="">
-                                <img src="./assets/img/gateway/svg/paypal.svg" alt="">
-                                <img src="./assets/img/gateway/svg/download (1).svg" alt="">
-                                <img src="./assets/img/gateway/svg/sepa.svg" alt="">
-                                <img src="./assets/img/gateway/svg/download (2).svg" alt="">
-                                <span>70+</span>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-6">
-                    <div class="calculator-section">
-
-
-                        <form class="calculator">
-                            <div class="calculator-header">
-                                <div class="cmn-tabs">
-                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="pills-exchange-tab"
-                                                data-bs-toggle="pill" data-bs-target="#pills-exchange" type="button"
-                                                role="tab" aria-controls="pills-exchange"
-                                                aria-selected="true">exchange</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-Buy-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-Buy" type="button" role="tab"
-                                                aria-controls="pills-Buy" aria-selected="false">Buy</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="pills-Sell-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-Sell" type="button" role="tab"
-                                                aria-controls="pills-Sell" aria-selected="false">Sell</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
-                                        aria-labelledby="pills-exchange-tab" tabindex="0">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label for="send" class="form-label">You send</label>
-                                                <div class="input-box">
-                                                    <input type="text" class="form-control" id="send" value="10"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                    <select class="cmn-select2-image2" name="state" id="sendCurrency">
-                                                        <option value="btc">Bitcoin</option>
-                                                        <option value="eth">Ethirium</option>
-                                                        <option value="xrp">xrp</option>
-                                                        <option value="aave">aave</option>
-                                                        <option value="abt">abt</option>
-                                                        <option value="bab">bab</option>
-                                                        <option value="bal">bal</option>
-                                                        <option value="band">band</option>
-                                                        <option value="call">call</option>
-                                                        <option value="cc">cc</option>
-                                                        <option value="cdn">cnd</option>
-                                                        <option value="d">d</option>
-                                                        <option value="dai">dai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="swap-area">
-                                                    <label for="receive" class="form-label">You get</label>
-                                                    <div class="swap-icon" id="swapBtn">
-                                                        <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-12">
-                                                <!-- <label for="receive" class="form-label">You get</label> -->
-                                                <div class="input-box">
-                                                    <input type="text" class="form-control" id="receive" value="30"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                    <select class="cmn-select2-image2" name="state" id="reciveCurrency">
-                                                        <option value="eth">Ethirium</option>
-                                                        <option value="btc">Bitcoin</option>
-                                                        <option value="aave">aave</option>
-                                                        <option value="xrp">xrp</option>
-                                                        <option value="bab">bab</option>
-                                                        <option value="abt">abt</option>
-                                                        <option value="band">band</option>
-                                                        <option value="bal">bal</option>
-                                                        <option value="cc">cc</option>
-                                                        <option value="call">call</option>
-                                                        <option value="dai">dai</option>
-                                                        <option value="d">d</option>
-                                                        <option value="cdn">cnd</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="btn-area">
-                                                <a href="" class="cmn-btn w-100">Exchange now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-Buy" role="tabpanel"
-                                        aria-labelledby="pills-Buy-tab" tabindex="0">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label for="send" class="form-label">You send</label>
-                                                <div class="input-box">
-                                                    <input type="text" class="form-control" id="send" value="10"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                    <select class="cmn-select2-image" name="state" id="sendCurrency">
-                                                        <option value="btc">Bitcoin</option>
-                                                        <option value="eth">Ethirium</option>
-                                                        <option value="xrp">xrp</option>
-                                                        <option value="aave">aave</option>
-                                                        <option value="abt">abt</option>
-                                                        <option value="bab">bab</option>
-                                                        <option value="bal">bal</option>
-                                                        <option value="band">band</option>
-                                                        <option value="call">call</option>
-                                                        <option value="cc">cc</option>
-                                                        <option value="cdn">cnd</option>
-                                                        <option value="d">d</option>
-                                                        <option value="dai">dai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="swap-area">
-                                                    <label for="receive" class="form-label">You get</label>
-                                                    <div class="swap-icon" id="swapBtn">
-                                                        <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-12">
-                                                <!-- <label for="receive" class="form-label">You get</label> -->
-                                                <div class="input-box">
-                                                    <input type="text" class="form-control" id="receive" value="30"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                    <select class="cmn-select2-image" name="state" id="reciveCurrency">
-                                                        <option value="eth">Ethirium</option>
-                                                        <option value="btc">Bitcoin</option>
-                                                        <option value="aave">aave</option>
-                                                        <option value="xrp">xrp</option>
-                                                        <option value="bab">bab</option>
-                                                        <option value="abt">abt</option>
-                                                        <option value="band">band</option>
-                                                        <option value="bal">bal</option>
-                                                        <option value="cc">cc</option>
-                                                        <option value="call">call</option>
-                                                        <option value="dai">dai</option>
-                                                        <option value="d">d</option>
-                                                        <option value="cdn">cnd</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="btn-area">
-                                                <a href="" class="cmn-btn w-100">Exchange now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-Sell" role="tabpanel"
-                                        aria-labelledby="pills-Sell-tab" tabindex="0">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label for="send" class="form-label">You send</label>
-                                                <div class="input-box">
-                                                    <input type="text" class="form-control" id="send" value="10"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                    <select class="cmn-select2-image" name="state" id="sendCurrency">
-                                                        <option value="btc">Bitcoin</option>
-                                                        <option value="eth">Ethirium</option>
-                                                        <option value="xrp">xrp</option>
-                                                        <option value="aave">aave</option>
-                                                        <option value="abt">abt</option>
-                                                        <option value="bab">bab</option>
-                                                        <option value="bal">bal</option>
-                                                        <option value="band">band</option>
-                                                        <option value="call">call</option>
-                                                        <option value="cc">cc</option>
-                                                        <option value="cdn">cnd</option>
-                                                        <option value="d">d</option>
-                                                        <option value="dai">dai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="swap-area">
-                                                    <label for="receive" class="form-label">You get</label>
-                                                    <div class="swap-icon" id="swapBtn">
-                                                        <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-12">
-                                                <!-- <label for="receive" class="form-label">You get</label> -->
-                                                <div class="input-box">
-                                                    <input type="text" class="form-control" id="receive" value="30"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                    <select class="cmn-select2-image" name="state" id="reciveCurrency">
-                                                        <option value="eth">Ethirium</option>
-                                                        <option value="btc">Bitcoin</option>
-                                                        <option value="aave">aave</option>
-                                                        <option value="xrp">xrp</option>
-                                                        <option value="bab">bab</option>
-                                                        <option value="abt">abt</option>
-                                                        <option value="band">band</option>
-                                                        <option value="bal">bal</option>
-                                                        <option value="cc">cc</option>
-                                                        <option value="call">call</option>
-                                                        <option value="dai">dai</option>
-                                                        <option value="d">d</option>
-                                                        <option value="cdn">cnd</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="btn-area">
-                                                <a href="" class="cmn-btn w-100">Exchange now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                            <div class="we-accept">
+                                <p>Accepted payment methods:</p>
+                                <div class="gatways">
+                                    <img src="./assets/img/gateway/svg/visa.svg" alt="">
+                                    <img src="./assets/img/gateway/svg/mastercard.svg" alt="">
+                                    <img src="./assets/img/gateway/svg/paypal.svg" alt="">
+                                    <img src="./assets/img/gateway/svg/download (1).svg" alt="">
+                                    <img src="./assets/img/gateway/svg/sepa.svg" alt="">
+                                    <img src="./assets/img/gateway/svg/download (2).svg" alt="">
+                                    <span>70+</span>
                                 </div>
 
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="calculator-section">
 
+
+                            <form class="calculator">
+                                <div class="calculator-header">
+                                    <div class="cmn-tabs">
+                                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-exchange-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-exchange" type="button"
+                                                    role="tab" aria-controls="pills-exchange"
+                                                    aria-selected="true">exchange</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-Buy-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-Buy" type="button" role="tab"
+                                                    aria-controls="pills-Buy" aria-selected="false">Buy</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-Sell-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-Sell" type="button" role="tab"
+                                                    aria-controls="pills-Sell" aria-selected="false">Sell</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
+                                            aria-labelledby="pills-exchange-tab" tabindex="0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label for="send" class="form-label">You send</label>
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="send" value="10"
+                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                        <select class="cmn-select2-image2" name="state"
+                                                            id="sendCurrency">
+                                                            <option value="btc">Bitcoin</option>
+                                                            <option value="eth">Ethirium</option>
+                                                            <option value="xrp">xrp</option>
+                                                            <option value="aave">aave</option>
+                                                            <option value="abt">abt</option>
+                                                            <option value="bab">bab</option>
+                                                            <option value="bal">bal</option>
+                                                            <option value="band">band</option>
+                                                            <option value="call">call</option>
+                                                            <option value="cc">cc</option>
+                                                            <option value="cdn">cnd</option>
+                                                            <option value="d">d</option>
+                                                            <option value="dai">dai</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="swap-area">
+                                                        <label for="receive" class="form-label">You get</label>
+                                                        <div class="swap-icon" id="swapBtn">
+                                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- <label for="receive" class="form-label">You get</label> -->
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="receive" value="30"
+                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                        <select class="cmn-select2-image2" name="state"
+                                                            id="reciveCurrency">
+                                                            <option value="eth">Ethirium</option>
+                                                            <option value="btc">Bitcoin</option>
+                                                            <option value="aave">aave</option>
+                                                            <option value="xrp">xrp</option>
+                                                            <option value="bab">bab</option>
+                                                            <option value="abt">abt</option>
+                                                            <option value="band">band</option>
+                                                            <option value="bal">bal</option>
+                                                            <option value="cc">cc</option>
+                                                            <option value="call">call</option>
+                                                            <option value="dai">dai</option>
+                                                            <option value="d">d</option>
+                                                            <option value="cdn">cnd</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <a href="" class="cmn-btn w-100">Exchange now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-Buy" role="tabpanel"
+                                            aria-labelledby="pills-Buy-tab" tabindex="0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label for="send" class="form-label">You send</label>
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="send" value="10"
+                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                        <select class="cmn-select2-image" name="state"
+                                                            id="sendCurrency">
+                                                            <option value="btc">Bitcoin</option>
+                                                            <option value="eth">Ethirium</option>
+                                                            <option value="xrp">xrp</option>
+                                                            <option value="aave">aave</option>
+                                                            <option value="abt">abt</option>
+                                                            <option value="bab">bab</option>
+                                                            <option value="bal">bal</option>
+                                                            <option value="band">band</option>
+                                                            <option value="call">call</option>
+                                                            <option value="cc">cc</option>
+                                                            <option value="cdn">cnd</option>
+                                                            <option value="d">d</option>
+                                                            <option value="dai">dai</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="swap-area">
+                                                        <label for="receive" class="form-label">You get</label>
+                                                        <div class="swap-icon" id="swapBtn">
+                                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- <label for="receive" class="form-label">You get</label> -->
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="receive" value="30"
+                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                        <select class="cmn-select2-image" name="state"
+                                                            id="reciveCurrency">
+                                                            <option value="eth">Ethirium</option>
+                                                            <option value="btc">Bitcoin</option>
+                                                            <option value="aave">aave</option>
+                                                            <option value="xrp">xrp</option>
+                                                            <option value="bab">bab</option>
+                                                            <option value="abt">abt</option>
+                                                            <option value="band">band</option>
+                                                            <option value="bal">bal</option>
+                                                            <option value="cc">cc</option>
+                                                            <option value="call">call</option>
+                                                            <option value="dai">dai</option>
+                                                            <option value="d">d</option>
+                                                            <option value="cdn">cnd</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <a href="" class="cmn-btn w-100">Exchange now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-Sell" role="tabpanel"
+                                            aria-labelledby="pills-Sell-tab" tabindex="0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label for="send" class="form-label">You send</label>
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="send" value="10"
+                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                        <select class="cmn-select2-image" name="state"
+                                                            id="sendCurrency">
+                                                            <option value="btc">Bitcoin</option>
+                                                            <option value="eth">Ethirium</option>
+                                                            <option value="xrp">xrp</option>
+                                                            <option value="aave">aave</option>
+                                                            <option value="abt">abt</option>
+                                                            <option value="bab">bab</option>
+                                                            <option value="bal">bal</option>
+                                                            <option value="band">band</option>
+                                                            <option value="call">call</option>
+                                                            <option value="cc">cc</option>
+                                                            <option value="cdn">cnd</option>
+                                                            <option value="d">d</option>
+                                                            <option value="dai">dai</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="swap-area">
+                                                        <label for="receive" class="form-label">You get</label>
+                                                        <div class="swap-icon" id="swapBtn">
+                                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- <label for="receive" class="form-label">You get</label> -->
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="receive" value="30"
+                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                        <select class="cmn-select2-image" name="state"
+                                                            id="reciveCurrency">
+                                                            <option value="eth">Ethirium</option>
+                                                            <option value="btc">Bitcoin</option>
+                                                            <option value="aave">aave</option>
+                                                            <option value="xrp">xrp</option>
+                                                            <option value="bab">bab</option>
+                                                            <option value="abt">abt</option>
+                                                            <option value="band">band</option>
+                                                            <option value="bal">bal</option>
+                                                            <option value="cc">cc</option>
+                                                            <option value="call">call</option>
+                                                            <option value="dai">dai</option>
+                                                            <option value="d">d</option>
+                                                            <option value="cdn">cnd</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <a href="" class="cmn-btn w-100">Exchange now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+
         <div class="shape shape1">
             <img src="./assets/img/coin/coin-2.png" alt="">
         </div>
@@ -430,6 +442,9 @@
             </div>
         </div>
         <div class="bg-shape1"></div>
+        <div class="shape shape2 opacity-100">
+            <img src="./assets/img/coin/5.png" alt="">
+        </div>
     </section>
     <!-- About section end -->
 
@@ -438,7 +453,7 @@
         <div class="feature-section-inner">
             <div class="container">
                 <div class="row g-4 g-xxl-5 align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-md-6  order-2 order-md-1">
                         <div class="section-header">
                             <h2 class="section-title"><span class="highlight">Benefits</span> We Offer</h2>
                             <p class="cmn-para-text mx-auto">Connect your money to your friends & family from anywhere,
@@ -493,7 +508,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 order-1 order-md-2">
                         <div class="feature-thumbs">
                             <img src="./assets/img/feature-section/Crypto portfolio-pana.png" alt="">
                         </div>
@@ -506,6 +521,9 @@
 
         <div class="bg-gradiend1">
             <div class="bg-gradiend1-inner"></div>
+        </div>
+        <div class="shape shape3 opacity-100">
+            <img src="./assets/img/coin/5.png" alt="">
         </div>
     </section>
     <!-- Feature section end -->
@@ -583,7 +601,7 @@
                             <img src="assets/img/why-choose-us/Crypto portfolio-rafiki.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 ">
                         <div class="section-header">
                             <h2 class="section-title"><span class="highlight">Why invest in</span> CoinMingle</h2>
                             <p class="cmn-para-text mx-auto">Connect your money to your friends & family from anywhere,
@@ -648,8 +666,144 @@
         <div class="bg-gradiend2">
             <div class="bg-gradiend2-inner"></div>
         </div>
+
     </section>
     <!-- Why choose us section end -->
+
+    <!-- Faq section start -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row gy-5 gx-sm-5 align-items-center">
+                <div class="col-md-6">
+                    <div class="faq-thum">
+                        <img src="assets/img/feature-section/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="faq-content">
+                        <h2>Still, have questions?</h2>
+                        <p class="cmn-para-text mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Perspiciatis, facere incidunt dolorum illum nesciunt eaque.</p>
+                        <div class="accordion" id="accordionExample2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headinOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How does the money transfer service work?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headinOne" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <p>Our money transfer service allows you to send and receive funds securely
+                                                and conveniently. You can initiate a transfer by selecting the
+                                                recipient, specifying the amount, and choosing the payment method. Once
+                                                the transfer is confirmed, the funds will be sent to the recipient's
+                                                account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headinTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        How long does it take for a money transfer to be processed?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headinTwo"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <p>The processing time for money transfers can vary based on the payment
+                                                method and the recipient's location. In most cases, transfers are
+                                                completed within a few business days.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headinThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseThree">
+                                        Can I track the status of my money transfer?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headinThree" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <p>es, you can track the status of your money transfer through your account
+                                                dashboard. We also provide email notifications for important updates
+                                                during the transfer process.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headinFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
+                                        Is my personal and financial information safe on your website?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headinFour"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <p>Yes, we take the security of your personal and financial information
+                                                seriously. Our website employs robust encryption protocols and follows
+                                                industry best practices to safeguard your data from unauthorized access
+                                                or misuse.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        What payment methods do you support for money transfers?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <p>We support various payment methods, including credit/debit cards and bank
+                                            transfers. The available options will be displayed during the transfer
+                                            process.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        Are there any fees associated with sending or receiving money?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <p>Yes, there might be fees associated with money transfers. The applicable fees
+                                            will be displayed before you confirm the transaction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-shape1"></div>
+    </section>
+    <!-- Faq section end -->
 
     <!-- Testimonial section start -->
     <section class="testimonial-section">
@@ -812,143 +966,6 @@
     </section>
     <!-- Testimonial section end -->
 
-
-    <!-- Faq section start -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="faq-thum">
-                        <img src="assets/img/feature-section/1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="faq-content">
-
-                        <h2>Still, have questions?</h2>
-                        <p class="cmn-para-text mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Perspiciatis, facere incidunt dolorum illum nesciunt eaque.</p>
-                        <div class="accordion" id="accordionExample2">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headinOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        How does the money transfer service work?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headinOne" data-bs-parent="#accordionExample2">
-                                    <div class="accordion-body">
-                                        <div class="table-responsive">
-                                            <p>Our money transfer service allows you to send and receive funds securely
-                                                and conveniently. You can initiate a transfer by selecting the
-                                                recipient, specifying the amount, and choosing the payment method. Once
-                                                the transfer is confirmed, the funds will be sent to the recipient's
-                                                account.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headinTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                        How long does it take for a money transfer to be processed?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headinTwo"
-                                    data-bs-parent="#accordionExample2">
-                                    <div class="accordion-body">
-                                        <div class="table-responsive">
-                                            <p>The processing time for money transfers can vary based on the payment
-                                                method and the recipient's location. In most cases, transfers are
-                                                completed within a few business days.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headinThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="true"
-                                        aria-controls="collapseThree">
-                                        Can I track the status of my money transfer?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headinThree" data-bs-parent="#accordionExample2">
-                                    <div class="accordion-body">
-                                        <div class="table-responsive">
-                                            <p>es, you can track the status of your money transfer through your account
-                                                dashboard. We also provide email notifications for important updates
-                                                during the transfer process.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headinFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="true"
-                                        aria-controls="collapseFour">
-                                        Is my personal and financial information safe on your website?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headinFour"
-                                    data-bs-parent="#accordionExample2">
-                                    <div class="accordion-body">
-                                        <div class="table-responsive">
-                                            <p>Yes, we take the security of your personal and financial information
-                                                seriously. Our website employs robust encryption protocols and follows
-                                                industry best practices to safeguard your data from unauthorized access
-                                                or misuse.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        What payment methods do you support for money transfers?
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                    data-bs-parent="#accordionExample2">
-                                    <div class="accordion-body">
-                                        <p>We support various payment methods, including credit/debit cards and bank
-                                            transfers. The available options will be displayed during the transfer
-                                            process.</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        Are there any fees associated with sending or receiving money?
-                                    </button>
-                                </h2>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                    data-bs-parent="#accordionExample2">
-                                    <div class="accordion-body">
-                                        <p>Yes, there might be fees associated with money transfers. The applicable fees
-                                            will be displayed before you confirm the transaction.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="bg-shape1"></div>
-    </section>
-    <!-- Faq section end -->
-
     <!-- Blog Section start -->
     <section class="blog-section">
         <div class="container">
@@ -970,40 +987,36 @@
                                 <div class="thumbs-area">
                                     <img src="./assets/img/blog/1.jpg" alt="">
                                     <div class="blog-date">
-                                        <h5>jun</h5>
-                                        <p>25</p>
+                                        <h5>25</h5>
+                                        <p>jun</p>
                                     </div>
                                 </div>
                                 <div class="content-area">
-                                    <h4 class="blog-title"><a href="blog-details.html">Must-Visit Hidden Gems in
-                                            Egipt</a></h4>
-                                    <p class="description">List 10 lesser-known attractions, hotels, or restaurants in a
-                                        popular travel
-                                        destination.
-                                    </p>
+                                    <h4 class="blog-title"><a href="blog-details.html">Understanding the Basics: A
+                                            Beginner's Guide to Cryptocurrency</a></h4>
+                                    <p class="description">An informative post explaining what cryptocurrencies are, how
+                                        they work, and their significance in the financial world.</p>
                                     <a href="blog-details.html" class="blog-btn link">Read more<i
-                                            class="fa-regular fa-arrow-up-right"></i></a>
+                                            class="fa-light fa-arrow-up-right"></i></a></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="blog-box">
                                 <div class="thumbs-area">
-                                    <img src="./assets/img/blog/4.jpg" alt="">
+                                    <img src="./assets/img/blog/2.jpg" alt="">
                                     <div class="blog-date">
-                                        <h5>jun</h5>
-                                        <p>25</p>
+                                        <h5>27</h5>
+                                        <p>jul</p>
                                     </div>
                                 </div>
                                 <div class="content-area">
-                                    <h4 class="blog-title"><a href="blog-details.html">The Ultimate Guide to Solo
-                                            Travel: Tips and
-                                            Destinations</a></h4>
-                                    <p class="description">Share statistics on the rise of solo travel, safety tips, and
-                                        a list of
-                                        solo-friendly destinations.</p>
+                                    <h4 class="blog-title"><a href="blog-details.html">Keep Your Cryptocurrency Safe</a>
+                                    </h4>
+                                    <p class="description">A guide on different types of cryptocurrency wallets and best
+                                        practices for securing your digital assets.</p>
                                     <a href="blog-details.html" class="blog-btn link">Read more<i
-                                            class="fa-regular fa-arrow-up-right"></i></a>
+                                            class="fa-light fa-arrow-up-right"></i></a></a>
                                 </div>
                             </div>
                         </div>
@@ -1012,19 +1025,17 @@
                                 <div class="thumbs-area">
                                     <img src="./assets/img/blog/3.jpg" alt="">
                                     <div class="blog-date">
-                                        <h5>jun</h5>
-                                        <p>25</p>
+                                        <h5>20</h5>
+                                        <p>jan</p>
                                     </div>
                                 </div>
                                 <div class="content-area">
-                                    <h4 class="blog-title"><a href="blog-details.html">The Impact of COVID-19 on the
-                                            Travel Industry:
-                                            Trends and Recovery</a></h4>
-                                    <p class="description">The Impact of COVID-19 on the Travel Industry: Trends and
-                                        Recovery. ipsum dolor sit amet, consectetur adipisicing elit. Amet, deserunt!
-                                    </p>
+                                    <h4 class="blog-title"><a href="blog-details.html">The Rise of Altcoins: Exploring
+                                            Alternative Cryptocurrencies</a></h4>
+                                    <p class="description">An exploration of popular altcoins like Ethereum, Litecoin,
+                                        and Ripple, highlighting their unique features and use cases.</p>
                                     <a href="blog-details.html" class="blog-btn link">Read more<i
-                                            class="fa-regular fa-arrow-up-right"></i></a>
+                                            class="fa-light fa-arrow-up-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1036,252 +1047,137 @@
                         <div class="thumbs-area">
                             <img src="./assets/img/blog/large-1.jpg" alt="">
                             <div class="blog-date">
-                                <h5>jun</h5>
-                                <p>25</p>
+                                <h5>20</h5>
+                                <p>aug</p>
                             </div>
                         </div>
                         <div class="content-area">
-                            <h4 class="blog-title"><a href="blog-details.html">Sustainable Travel: How to Reduce Your
-                                    Carbon Footprint on
-                                    Your Next Trip</a></h4>
-                            <p class="description">Share data on the carbon footprint of travel, eco-friendly
-                                destinations, and sustainable travel practices. Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Ratione, eligendi sapiente eveniet sequi consectetur quidem corporis
-                                quaerat repellendus aliquam fuga minus modi dolorum dolore, natus nihil molestias eius
-                                ad est.</p>
+                            <h4 class="blog-title"><a href="blog-details.html">Tips for Success in the Cryptocurrency
+                                    Market</a></h4>
+                            <p class="description">Insights into various trading strategies, risk management, and market
+                                analysis techniques for crypto traders.</p>
+
+                            <p class="description">An overview of cryptocurrency regulations in different countries and
+                                how they impact users and businesses.
+                                6. "Diving into DeFi: U</p>
+
                             <a href="#" class="blog-btn link">Read more<i class="fa-regular fa-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="shape shape3">
+            <img src="./assets/img/coin/coin-3.png" alt="">
+        </div>
     </section>
     <!-- Blog Section end -->
 
     <!-- Newsletter section start -->
-    <section class="newsletter-section pt-50 pb-50">
+    <section class="newsletter-section">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6 col-md-5">
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-xl-5 col-lg-7">
                     <div class="content-area">
-                        <div class="subscribe-small-text">Subscribe to our</div>
-                        <h1 class="subscribe-normal-text">newsletter</h1>
+                        <h3 class="subscribe-normal-text">Subscribe to our mailing list <br> and stay up to date</h3>
+                        <p class="subscribe-small-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
+                            hic!</p>
+                        <form class="newsletter-form">
+                            <input type="text" class="form-control" placeholder="Your email">
+                            <button type="button" class="subscribe-btn">Subscribe</button>
+                        </form>
                     </div>
-
                 </div>
-                <div class="col-lg-6 col-md-7">
-                    <form class="newsletter-form">
-                        <input type="text" class="form-control" placeholder="Enter your mail">
-                        <button type="button" class="subscribe-btn">Subscribe</button>
-                    </form>
+                <div class="col-md-5 d-none d-lg-block">
+                    <div class="newsletter-thumbs">
+                        <img src="./assets/img/newsletter/1-removebg-preview.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Newsletter section end -->
 
-    <!-- Country support section start -->
-    <section class="country-support-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-header text-center">
-                        <div class="section-subtitle">country supported </div>
-                        <h2 class="section-title mx-auto">Popular Countries to send money</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/bd.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Bangladesh</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/us.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>USA</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/gb.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>UK</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/nz.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>New Zealand</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/sa.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Saudi Arabia</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/it.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Italy</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/au.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Australia</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/ae.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>UAE</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/ca.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Canada</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/tr.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Turkiye</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
-                    <div class="country-box">
-                        <div class="thumb-area">
-                            <img src="assets/img/mini-flag/qa.svg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6>Qater</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Country support section end -->
-
     <!-- Footer Section start -->
     <section class="footer-section pb-50">
-        <div class="container">
-            <div class="row gy-4 gy-sm-5">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="footer-widget">
-                        <div class="widget-logo mb-30">
-                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
-                        </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi,
-                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
-                        </p>
+        <div class="footer-inner-section">
+            <div class="container">
+                <div class="row gy-4 gy-sm-5">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="widget-logo mb-30">
+                                <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit
+                                excepturi,
+                                natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                            </p>
 
-                        <div class="social-area mt-50">
-                            <ul class="d-flex">
-                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <div class="social-area mt-50">
+                                <ul class="d-flex">
+                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <ul>
+                                <li><a class="widget-link" href="about.html">About</a></li>
+                                <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                                <li><a class="widget-link" href="index.html">Home</a></li>
+                                <li><a class="widget-link" href="blog.html">Blog</a></li>
+                                <li><a class="widget-link" href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-sm-6">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Quick Links</h5>
-                        <ul>
-                            <li><a class="widget-link" href="about.html">About</a></li>
-                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
-                            <li><a class="widget-link" href="index.html">Home</a></li>
-                            <li><a class="widget-link" href="blog.html">Blog</a></li>
-                            <li><a class="widget-link" href="contact.html">Contact</a></li>
-                        </ul>
+                    <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Company Policy</h5>
+                            <ul>
+                                <li><a class="widget-link" href="">Privacy Policy</a></li>
+                                <li><a class="widget-link" href="">Refund Policy</a></li>
+                                <li><a class="widget-link" href="">Terms of use</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Company Policy</h5>
-                        <ul>
-                            <li><a class="widget-link" href="">Privacy Policy</a></li>
-                            <li><a class="widget-link" href="">Refund Policy</a></li>
-                            <li><a class="widget-link" href="">Terms of use</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Contact Us</h5>
-                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
-                            IL 60467, United States</p>
-                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
-                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
-                    </div>
-                </div>
-            </div>
-            <hr class="cmn-hr">
-            <!-- Copyright-area-start -->
-            <div class="copyright-area">
-                <div class="row gy-4">
-                    <div class="col-sm-6">
-                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights Reserved
-                        </p>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="language">
-                            <a href="" class="language">English</a>
-                            <a href="" class="language">Spanish</a>
-                            <a href="" class="language">Germany</a>
+                    <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Contact Us</h5>
+                            <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland
+                                Park,
+                                IL 60467, United States</p>
+                            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
                         </div>
                     </div>
                 </div>
+                <hr class="cmn-hr">
+                <!-- Copyright-area-start -->
+                <div class="copyright-area">
+                    <div class="row gy-4">
+                        <div class="col-sm-6">
+                            <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                                Reserved
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="language">
+                                <a href="" class="language">English</a>
+                                <a href="" class="language">Spanish</a>
+                                <a href="" class="language">Germany</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright-area-end -->
             </div>
-            <!-- Copyright-area-end -->
         </div>
+
     </section>
     <!-- Footer Section end -->
 
