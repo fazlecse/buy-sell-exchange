@@ -93,8 +93,6 @@ Dark theme section start
     --bg-color1: linear-gradient(152deg, rgba(237, 242, 248, 0.02) 0%, rgba(237, 242, 248, 0.08) 100%);
     --bg-color2: #2c403d;
     --bg-color3: #1B2D29;
-    // --bg-color5: #212837;
-    // --bg-color6: #111827;
     --heading-color: #ffffff;
     --border-color1: #37333e;
     --border-color2: rgba(234, 219, 215, 0.06);
@@ -142,12 +140,16 @@ Dark theme section start
 
     .cmn-btn3 {
         background-color: var(--bg-color3);
-        border-color: var(--bg-color2);
+        border-color: var(--bg-color3);
         color: var(--white);
     }
 
     .section-subtitle::after {
         background: linear-gradient(90deg, #30185f, rgba(217, 217, 217, 0));
+    }
+
+    hr.divider:after {
+        background-color: transparent;
     }
 
 
@@ -528,6 +530,13 @@ intlTelInput section start
 }
 
 // Rtl intlTelInput section end
+// Dark theme intLTelInput section start
+.dark-theme{
+    .iti__country-list{
+        background-color: var(--bg-color3);
+    }
+}
+// Dark theme intLTelInput section end
 /*----------------------------------------------
 intlTelInput end
 ----------------------------------------------*/
@@ -879,8 +888,8 @@ Reusable style section start
 
     .form-control {
         border-radius: 5px;
-        border: 1px solid var(--border-color3);
-        background-color: var(--white);
+        // border: 1px solid var(--border-color3);
+        // background-color: var(--white);
         padding-right: 50px;
 
         &:focus {
@@ -1343,8 +1352,8 @@ Offcanvas end
 
 .cmn-btn3 {
     background: var(--white);
-    padding: 8px 20px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
     transition: var(--transition);
     font-size: 16px;
     display: inline-flex;
@@ -1352,6 +1361,7 @@ Offcanvas end
     justify-content: center;
     text-transform: capitalize;
     background-color: var(--bg-color1);
+    border: 1px solid var(--border-color1);
 
     &:hover {
         color: var(--white);
@@ -2273,6 +2283,7 @@ Padding bottom
     transition: backgaound .3s ease-out;
     padding: 20px;
     z-index: 9999;
+    background-color: var(--bg-color3);
 
     .container {
         position: relative;
@@ -2350,6 +2361,10 @@ Padding bottom
 
 
 
+}
+
+.transparent {
+    background-color: transparent;
 }
 
 /*----------------------------------------------
@@ -3481,21 +3496,22 @@ Blog section end
 
 @media (max-width: 1199px) {
     .newsletter-section {
-        .newsletter-thumbs{
-            img{
+        .newsletter-thumbs {
+            img {
                 right: 2%;
             }
         }
 
     }
 }
+
 @media (max-width: 991px) {
     .newsletter-section {
         .content-area {
             text-align: center;
 
             .subscribe-normal-text {
-                font-size: 34px;
+                font-size: 24px;
             }
         }
 
@@ -3791,11 +3807,12 @@ Copyright end
 16. Banner section start
 ----------------------------------------------*/
 .banner-area {
-    padding-top: 220px;
+    margin-top: 93px;
+    padding-top: 120px;
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
-    background: linear-gradient(rgba(2, 26, 46, 0.6), rgba(2, 25, 44, 0.6)), url(../img/banner/pexels-anete-lusina-6353681.jpg);
+    background: url(../img/banner/1.png);
     background-size: cover;
     background-position: 100% 75%;
 
@@ -3821,7 +3838,7 @@ Copyright end
 
 @media(max-width: 991px) {
     .banner-area {
-        padding-top: 150px;
+        padding-top: 100px;
         padding-bottom: 50px
     }
 
@@ -3841,33 +3858,23 @@ Banner end
 17. Contact section start
 ----------------------------------------------*/
 .contact-section {
-    .contact-top {
-        position: relative;
-        background-color: var(--bg-color1);
-        padding: 100px 0 300px 0;
-
-        .contact-top-thum {
-            position: absolute;
-            top: -20px;
-            left: 90%;
-            transform: translateX(-90%);
-            width: 450px;
-            z-index: -1;
-        }
-    }
 
     .contact-inner {
         position: relative;
-        background-color: var(--white);
-        border-radius: 20px;
-        padding: 15px;
+        background-color: var(--bg-color2);
+        border-radius: 10px;
+        // padding: 15px;
         box-shadow: var(--shadow3);
         margin-top: -250px;
         z-index: 1;
     }
 
     .contact-message-area {
-        padding: 20px;
+        padding: 30px 30px 30px 10px;
+
+        .contact-header {
+            margin-bottom: 30px;
+        }
 
         .form-label {
             text-transform: capitalize;
@@ -3881,9 +3888,13 @@ Banner end
 
     .contact-area {
         height: 100%;
-        padding: 20px;
-        border-radius: 15px;
+        padding: 30px 10px 30px 30px;
+        border-radius: 10px 0 0 10px;
         background-color: var(--primary-color);
+        background-image: url(../img/background/Rectangle\ 4\ .png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 
         h3,
         h6 {
@@ -3938,35 +3949,78 @@ Banner end
 Contact end
 ----------------------------------------------*/
 
+/*----------------------------------------------
+26. Map section start
+----------------------------------------------*/
+.map-section {
+    .title {
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 450px;
+        padding: 5px;
+        background-color: var(--white);
+        box-shadow: var(--shadow4);
+    }
+}
 
 /*----------------------------------------------
-18. Login Signup section start
+Map section end
+----------------------------------------------*/
+
+
+/*----------------------------------------------
+25. Login Signup section start
 ----------------------------------------------*/
 .login-signup-page {
-    position: relative;
 
-    &::after {
-        position: absolute;
-        content: "";
-        background-color: var(--primary-color);
-        background-image: url(../img/background/waves_white-15.png);
-        width: 35%;
-        top: 0;
-        right: 0;
-        height: 100%;
-        z-index: -1;
+
+    .login-signup-thums {
+        background-image: url(../img/login-signup/login-signup-background.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+
+        .content-area {
+            max-height: 680px;
+            max-width: 500px;
+            background-color: rgba(0, 0, 0, 0.7);
+            // background-color: var(--secondary-color-opacity-low);
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 10px;
+            height: 100%;
+
+            .logo {
+                max-width: 150px;
+            }
+
+            .section-subtitle {
+                color: var(--white);
+            }
+
+            .section-title {
+                color: var(--white);
+            }
+
+            p {
+                color: var(--white);
+            }
+        }
     }
 
-    .login-signup-header {
-        margin-bottom: 30px;
-    }
 
     .login-signup-form {
-        background-color: var(--white);
-        padding: 30px 20px;
-        border-radius: 15px;
-        box-shadow: var(--shadow2);
-
+        padding: 50px 65px 40px 65px;
+        max-width: 600px;
 
         .cmn-btn {
             height: 45px;
@@ -3984,17 +4038,8 @@ Contact end
             }
         }
     }
-
-    .login-signup-thums {
-        img {
-            height: 750px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-    }
 }
 
-// Password box start
 .password-box {
     position: relative;
     display: flex;
@@ -4011,41 +4056,10 @@ Contact end
     }
 }
 
-// Rtl password box start
-.rtl {
-    .password-box {
-        .form-control {
-            padding-right: .75rem;
-            padding-left: 35px;
-        }
-
-        .password-icon {
-            right: auto;
-            left: 15px;
-        }
-    }
-}
-
-
-// Rtl password box end
-// Password box end
-
-
-
 // Responsive login signup start
-@media (max-width: 991px) {
-    .login-signup-page {
-        padding-top: 100px;
-    }
-
-    .cmn-btn3 {
-        font-size: 13px;
-    }
-}
-
 @media (max-width: 767px) {
-    .login-signup-page::after {
-        display: none;
+    .login-signup-page .login-signup-form {
+        margin: auto;
     }
 }
 
@@ -4059,18 +4073,22 @@ Contact end
 
 // Rtl login signup page start
 .rtl {
-    .login-signup-page {
-        .login-signup-form .cmn-btn-group .btn img {
-            margin-left: 5px;
-            margin-right: 0;
-        }
-
-        &::after {
-            left: 0;
-            right: auto;
-        }
+    .login-signup-page .login-signup-form .cmn-btn-group .btn img {
+        margin-left: 5px;
+        margin-right: 0;
     }
 
+    .password-box {
+        .form-control {
+            padding-right: .75rem;
+            padding-left: 35px;
+        }
+
+        .password-icon {
+            right: auto;
+            left: 15px;
+        }
+    }
 
 }
 
@@ -4080,229 +4098,236 @@ Contact end
 Login Signup end
 ----------------------------------------------*/
 
+
 /*----------------------------------------------
-19. Blog details section start
+27. Blog details section start
 ----------------------------------------------*/
 .blog-details-section {
+    background: var(--bg-color1);
 
-    .blog-details {
-        .thum-inner {
-            position: relative;
+    .blog-box-large {
+        .content-area {
+            max-width: 100%;
+
+            .blog-title {
+                margin-bottom: 20px;
+            }
+
+            .para-text {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+.blog-quote-box {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: var(--bg-color2);
+    box-shadow: var(--shadow1);
+    padding: 25px 20px 20px 40px;
+    border-radius: 5px;
+
+    .icon-area {
+        position: absolute;
+        font-size: 25px;
+        color: var(--primary-color);
+        top: -30px;
+        left: -20px;
+        background-color: var(--bg-color2);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: var(--shadow1);
+    }
+}
+
+
+
+.sidebar-categories-area {
+    li {
+        border-bottom: 1px solid var(--border-color1);
+        padding: 10px 0;
+
+        a {
+            font-size: 18px;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            color: var(--heading-color);
+            font-family: var(--heading-font);
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    li {
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+}
+
+.tag-list {
+    .item {
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 15px;
+        transition: var(--transition);
+        border-radius: 5px;
+        margin: 0 5px 5px 0;
+        background-color: var(--bg-color3);
+
+        border: 1px solid var(--border-color1);
+
+        &:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+    }
+
+    .item {
+        &:last-child {
+            margin-bottom: 0;
         }
 
-        .blog-image {
-            position: relative;
+    }
+}
+
+.sidebar-widget-area {
+    padding: 25px;
+    background-color: var(--bg-color2);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow1);
+
+    .title {
+        margin-bottom: 5px;
+    }
+
+    .widget-title {
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            content: "";
+            width: 150px;
+            height: 2px;
+            background-color: rgba(225, 225, 225, 0.40);
+        }
+    }
+
+    .sidebar-widget-item {
+        display: flex;
+        transition: var(--transition);
+
+        &:hover .content-area .title {
+            color: var(--primary-color);
+        }
+
+        .image-area {
+            width: 100px;
 
             img {
                 width: 100%;
-                max-height: 490px;
+                height: 85px;
                 border-radius: 5px;
             }
         }
 
-        .blog-author {
-            display: flex;
-            align-items: center;
-            margin: 30px 0 20px 0;
+        .content-area {
+            margin-left: 15px;
+            width: calc(100% - 100px);
 
-            .author-img {
-                margin-right: 15px;
-
-                img {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                }
-            }
-        }
-    }
-
-    .blog-header {
-        margin-bottom: 20px;
-
-        h3 {
-            margin-bottom: 0;
-        }
-
-        span {
-            margin-right: 15px;
-
-            i {
-                margin-right: 10px;
-                color: var(--primary-color);
-            }
-        }
-    }
-
-    .blog-widget-image {
-        width: 100px;
-    }
-
-    .blog-widget-content {
-        margin-left: 15px;
-        width: calc(100% - 100px);
-
-        .blog-title {
-            font-size: 16px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            transition: all ease 0.3s;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-weight: 500;
-            line-height: 1.3;
-            color: var(--heading-color);
-            margin-bottom: 10px;
-            font-family: var(--heading-font);
-        }
-    }
-
-    .categories-area {
-
-        li {
-            border-bottom: 1px solid var(--border-color2);
-            padding: 10px 0;
-
-            a {
-                font-size: 16px;
-                font-weight: 500;
-                display: flex;
-                justify-content: space-between;
+            .title {
+                font-size: 18px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                transition: all ease 0.3s;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 400;
+                line-height: 1.3;
                 color: var(--heading-color);
+                margin-bottom: 10px;
                 font-family: var(--heading-font);
+            }
 
-                &:hover {
+            .widget-date {
+                display: flex;
+                gap: 5px;
+                color: var(--heading-color);
+
+                i {
                     color: var(--primary-color);
                 }
-            }
-        }
 
-        li {
-            &:first-child {
-                padding-top: 0;
+                font-size: 14px;
             }
         }
     }
-}
 
-.blog-sidebar {
-    .blog-widget-area {
-        padding: 30px;
-        background-color: var(--bg-color1);
-        border-radius: 5px;
-        margin-bottom: 30px;
-
-        .widget-title {
+    .sidebar-widget-item {
+        &:not(:last-child) {
             margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-
-            &::before {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                content: "";
-                width: 50px;
-                height: 2px;
-                background-color: var(--primary-color);
-            }
-
-            &::after {
-                position: absolute;
-                bottom: 0px;
-                left: 0;
-                content: "";
-                width: 150px;
-                height: 2px;
-                background-color: rgba(225, 225, 225, 0.40);
-            }
         }
 
-        .blog-widget-item {
-            display: flex;
-            transition: var(--transition);
-
-            &:hover .blog-widget-content .blog-title {
-                color: var(--primary-color);
-            }
-        }
-
-        .blog-widget-item {
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
-        }
-    }
-
-    .blog-widget-image {
-        img {
-            width: 100%;
-            height: 85px;
-            border-radius: 5px;
-        }
-    }
-
-    .tag-list {
-        .item {
-            display: inline-block;
-            font-size: 14px;
-            padding: 10px 15px;
-            background-color: var(--white);
-            transition: var(--transition);
-            border-radius: 5px;
-            margin: 0 5px 5px 0;
-
-            border: 1px solid var(--border-color3);
-
-            &:hover {
-                background-color: var(--primary-color);
-                color: var(--white);
-            }
-        }
-
-        .item {
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-        }
     }
 }
 
-.blog-date {
-    color: var(--heading-color);
-
-    i {
-        margin-right: 5px;
-        color: var(--primary-color);
-    }
-
-    font-size: 14px;
-}
 
 // Blog details rtl start
 .rtl {
-    .blog-details-section {
-        .blog-widget-content {
+    .sidebar-widget-item {
+        .content-area {
             margin-left: 0;
             margin-right: 15px;
         }
 
-        .blog-details .blog-author .author-img {
-            margin-right: 0;
-            margin-left: 15px;
-        }
     }
 
-    .blog-sidebar .blog-widget-area {
+    .sidebar-widget-area {
         .widget-title {
 
             &::before,
             &::after {
                 right: 0;
                 left: auto;
+            }
+        }
+    }
+
+    .blog-quote-box {
+        padding: 25px 40px 20px 20px;
+
+        .icon-area {
+            left: auto;
+            right: -20px;
+
+            i {
+                transform: rotateY(180deg);
             }
         }
     }

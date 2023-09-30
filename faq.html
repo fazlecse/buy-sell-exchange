@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransQuick</title>
+    <title>CoinMingle</title>
     <!-- Favicon-link -->
     <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
 
@@ -76,19 +76,45 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
-                    <form>
-                        <ul class="navbar-nav nav-right d-flex align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html"><i
-                                        class="fa-solid fa-right-to-bracket"></i>Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="get-start-btn" href="signup.html">register now</a>
-                            </li>
-                        </ul>
-                    </form>
-
                 </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="login.html"><i
+                                class="login-icon fa-light fa-right-to-bracket"></i><span
+                                class="d-none d-md-block">Login</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </nav>
@@ -139,28 +165,27 @@
     <!-- Faq section start -->
     <section class="faq-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row gy-5 gx-sm-5 align-items-center">
                 <div class="col-md-6">
                     <div class="faq-thum">
-                        <img src="assets/img/faqs/1.png" alt="">
+                        <img src="assets/img/feature-section/1.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="faq-content">
-                        <div class="section-subtitle">Faq</div>
                         <h2>Still, have questions?</h2>
                         <p class="cmn-para-text mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Perspiciatis, facere incidunt dolorum illum nesciunt eaque.</p>
                         <div class="accordion" id="accordionExample2">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headinOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         How does the money transfer service work?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headinOne"
-                                    data-bs-parent="#accordionExample2">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headinOne" data-bs-parent="#accordionExample2">
                                     <div class="accordion-body">
                                         <div class="table-responsive">
                                             <p>Our money transfer service allows you to send and receive funds securely
@@ -268,85 +293,117 @@
                 </div>
             </div>
         </div>
+        <div class="bg-shape1"></div>
     </section>
     <!-- Faq section end -->
 
 
 
+    <!-- Newsletter section start -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-xl-5 col-lg-7">
+                    <div class="content-area">
+                        <h3 class="subscribe-normal-text">Subscribe to our mailing list <br> and stay up to date</h3>
+                        <p class="subscribe-small-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
+                            hic!</p>
+                        <form class="newsletter-form">
+                            <input type="text" class="form-control" placeholder="Your email">
+                            <button type="button" class="subscribe-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5 d-none d-lg-block">
+                    <div class="newsletter-thumbs">
+                        <img src="./assets/img/newsletter/1-removebg-preview.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter section end -->
+
     <!-- Footer Section start -->
     <section class="footer-section pb-50">
-        <div class="container">
-            <div class="row gy-4 gy-sm-5">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="footer-widget">
-                        <div class="widget-logo mb-30">
-                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
-                        </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi,
-                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
-                        </p>
+        <div class="footer-inner-section">
+            <div class="container">
+                <div class="row gy-4 gy-sm-5">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="widget-logo mb-30">
+                                <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit
+                                excepturi,
+                                natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                            </p>
 
-                        <div class="social-area mt-50">
-                            <ul class="d-flex">
-                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <div class="social-area mt-50">
+                                <ul class="d-flex">
+                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <ul>
+                                <li><a class="widget-link" href="about.html">About</a></li>
+                                <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                                <li><a class="widget-link" href="index.html">Home</a></li>
+                                <li><a class="widget-link" href="blog.html">Blog</a></li>
+                                <li><a class="widget-link" href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-sm-6">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Quick Links</h5>
-                        <ul>
-                            <li><a class="widget-link" href="about.html">About</a></li>
-                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
-                            <li><a class="widget-link" href="index.html">Home</a></li>
-                            <li><a class="widget-link" href="blog.html">Blog</a></li>
-                            <li><a class="widget-link" href="contact.html">Contact</a></li>
-                        </ul>
+                    <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Company Policy</h5>
+                            <ul>
+                                <li><a class="widget-link" href="">Privacy Policy</a></li>
+                                <li><a class="widget-link" href="">Refund Policy</a></li>
+                                <li><a class="widget-link" href="">Terms of use</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Company Policy</h5>
-                        <ul>
-                            <li><a class="widget-link" href="">Privacy Policy</a></li>
-                            <li><a class="widget-link" href="">Refund Policy</a></li>
-                            <li><a class="widget-link" href="">Terms of use</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Contact Us</h5>
-                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
-                            IL 60467, United States</p>
-                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
-                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
-                    </div>
-                </div>
-            </div>
-            <hr class="cmn-hr">
-            <!-- Copyright-area-start -->
-            <div class="copyright-area">
-                <div class="row gy-4">
-                    <div class="col-sm-6">
-                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights Reserved
-                        </p>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="language">
-                            <a href="" class="language">English</a>
-                            <a href="" class="language">Spanish</a>
-                            <a href="" class="language">Germany</a>
+                    <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Contact Us</h5>
+                            <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland
+                                Park,
+                                IL 60467, United States</p>
+                            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
                         </div>
                     </div>
                 </div>
+                <hr class="cmn-hr">
+                <!-- Copyright-area-start -->
+                <div class="copyright-area">
+                    <div class="row gy-4">
+                        <div class="col-sm-6">
+                            <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                                Reserved
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="language">
+                                <a href="" class="language">English</a>
+                                <a href="" class="language">Spanish</a>
+                                <a href="" class="language">Germany</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright-area-end -->
             </div>
-            <!-- Copyright-area-end -->
         </div>
+
     </section>
     <!-- Footer Section end -->
 
