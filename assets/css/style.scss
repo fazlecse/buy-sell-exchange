@@ -531,11 +531,12 @@ intlTelInput section start
 
 // Rtl intlTelInput section end
 // Dark theme intLTelInput section start
-.dark-theme{
-    .iti__country-list{
+.dark-theme {
+    .iti__country-list {
         background-color: var(--bg-color3);
     }
 }
+
 // Dark theme intLTelInput section end
 /*----------------------------------------------
 intlTelInput end
@@ -1039,6 +1040,13 @@ Offcanvas end
     }
 }
 
+.rtl {
+    .shape2 {
+        right: 15%;
+        left: auto;
+    }
+}
+
 .shape3 {
     top: 10%;
     right: 15%;
@@ -1055,6 +1063,15 @@ Offcanvas end
     }
 }
 
+.rtl {
+    .shape3 {
+        left: 15%;
+        right: auto;
+    }
+}
+
+// Bg shape1 start
+
 .bg-shape1 {
     position: absolute;
     content: "";
@@ -1067,6 +1084,17 @@ Offcanvas end
     background-color: var(--primary-color);
     z-index: -1;
 }
+
+// Rtl bg shape1 start
+.rtl {
+    .bg-shape1 {
+        left: auto;
+        right: 20%;
+    }
+}
+
+// Rtl bg shape1 end
+// Bg shape1 end
 
 // Bg gradient1 start
 .bg-gradiend1 {
@@ -1096,6 +1124,7 @@ Offcanvas end
 
 }
 
+// Responsive bg gradient1 start
 @media(min-width: 992px) {
     .bg-gradiend1 {
         display: block;
@@ -1142,8 +1171,52 @@ Offcanvas end
 
 }
 
-// Bg gradient1 end
-// Bg gradient1 start
+// Responsive bg gradient1 end
+// Rtl bg gradiend1 start 
+.rtl {
+    .bg-gradiend1 {
+        left: -3%;
+        right: auto;
+        transform: rotate(10deg);
+        border-bottom-right-radius: 25%;
+        border-bottom-left-radius: 0;
+
+        .bg-gradiend1-inner {
+            background: linear-gradient(154deg, var(--bg-grad-color-trans) 0%, var(--bg-grad-color) 100%);
+            left: -1%;
+            right: auto;
+            border-bottom-right-radius: 25%;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .bg-gradiend1 {
+            left: -4%;
+            right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .bg-gradiend1 {
+            left: -4%;
+            right: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .bg-gradiend1 {
+            left: -3%;
+            right: auto;
+        }
+    }
+
+
+}
+
+// Rtl bg gradiend1 end 
+
+// Bg gradient2 start
 .bg-gradiend2 {
     content: "";
     height: 92%;
@@ -1170,18 +1243,19 @@ Offcanvas end
 
 }
 
+// Responsive bg gradiend2 section start
 @media(min-width: 992px) {
 
     .bg-gradiend2 {
         display: block;
         width: 570px;
         top: -10%;
-        right: -4%;
+        left: -4%;
 
         .bg-gradiend2-inner {
             width: 550px;
             top: 0%;
-            right: -1%;
+            left: -1%;
         }
     }
 }
@@ -1191,13 +1265,13 @@ Offcanvas end
         height: 100%;
         width: 725px;
         top: -12%;
-        right: -4%;
+        left: -4%;
 
         .bg-gradiend2-inner {
             height: 97%;
             width: 700px;
             top: 0%;
-            right: -1%;
+            left: -1%;
         }
     }
 }
@@ -1206,18 +1280,47 @@ Offcanvas end
     .bg-gradiend2 {
         width: 960px;
         top: -12%;
-        right: -3%;
+        left: -3%;
 
         .bg-gradiend2-inner {
             width: 940px;
             top: 0%;
-            right: -1%;
+            left: -1%;
         }
     }
 
 }
 
-// Bg gradient1 end
+// Responsive bg gradiend2 section end
+// Rtl bg gradiend2 section start
+.rtl {
+    .bg-gradiend2 {
+        right: -3%;
+        left: auto;
+        transform: rotate(-10deg);
+        border-bottom-left-radius: 25%;
+        border-bottom-right-radius: 0;
+
+        .bg-gradiend2-inner {
+            right: -1%;
+            left: auto;
+            border-bottom-left-radius: 25%;
+            border-bottom-right-radius: 0;
+            background: linear-gradient(28deg, var(--bg-grad-color) 0%, var(--bg-grad-color-trans) 100%);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .bg-gradiend2 {
+            right: -4%;
+
+            .bg-gradiend2-inner {}
+        }
+    }
+}
+
+// Rtl bg gradiend2 section end
+// Bg gradient2 end
 
 
 
@@ -1971,6 +2074,15 @@ hr.divider:after {
 
 }
 
+// Rtl cmn list section start
+.rtl {
+    .cmn-list .item:not(:last-child)::after {
+        left: 0;
+        right: 12px;
+    }
+}
+
+// Rtl cmn list section end
 // Cmn list section end
 // Ratings section start
 .ratings li i {
@@ -2463,9 +2575,25 @@ user nav Profile start
 
 // Rtl user nav profile start
 .rtl {
+    .navbar-brand {
+        margin-right: 0;
+        margin-left: var(--bs-navbar-brand-margin-end);
+    }
+
+    .navbar .nav-right {
+        left: 65px;
+        right: auto;
+    }
+
     .profile-box .user-dropdown {
         left: 0;
         right: auto;
+    }
+
+    @media(max-width: 767px) {
+        .navbar .nav-right {
+            left: 60px;
+        }
     }
 }
 
@@ -2682,7 +2810,16 @@ Bottom Mobile, Tab nav end
     }
 }
 
-@media (max-width: 767px) {}
+// Rtl hero section start
+.rtl {
+    .hero-section {
+        &::after {
+            transform: rotatey(180deg);
+        }
+    }
+}
+
+// Rtl hero section end
 
 // Hero responsive end
 // Dark theme hero section start
@@ -2979,6 +3116,12 @@ Calculator end
     }
 }
 
+@media (max-width: 767px) {
+    .section-header {
+        text-align: center;
+    }
+}
+
 @media (max-width: 575px) {
     .cmn-box {
         flex-direction: column;
@@ -3062,6 +3205,10 @@ About end
         .btn-area {
             display: flex;
             justify-content: center;
+        }
+
+        .section-header {
+            text-align: initial;
         }
     }
 }
@@ -3542,14 +3689,29 @@ Blog section end
 // Responsive neswletter section end
 // Rtl newsletter section start 
 .rtl {
-    .newsletter-section .newsletter-form {
-        .form-control {
-            padding: 10px 20px 10px 165px;
+    .newsletter-section {
+        .newsletter-form {
+            .form-control {
+                padding: 10px 20px 10px 165px;
+            }
+
+            .subscribe-btn {
+                left: 5px;
+                right: auto;
+            }
         }
 
-        .subscribe-btn {
-            left: 5px;
+        .newsletter-thumbs img {
             right: auto;
+            left: 5%;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .newsletter-section {
+            .newsletter-thumbs img {
+                left: 2%;
+            }
         }
     }
 
@@ -3694,6 +3856,7 @@ Country support section start
         }
 
         &::before {
+            border-radius: 2px;
             height: 7px;
             width: 7px;
             content: '';
@@ -3912,24 +4075,20 @@ Banner end
 // Contact responsive start
 @media (max-width: 991px) {
     .contact-section {
-        .contact-top {
-            padding: 50px 0 300px 0;
-        }
-
         .contact-inner {
             margin-top: -275px;
         }
-    }
 
-}
+        .contact-area {
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
 
-@media (max-width: 575px) {
-    .contact-section {
         .contact-message-area {
-            padding: 0;
-            padding-top: 15px;
+            padding: 20px;
         }
     }
+
 
 }
 
@@ -3937,9 +4096,28 @@ Banner end
 
 // Rtl contact section start 
 .rtl {
-    .contact-section .contact-top .contact-top-thum {
-        right: 90%;
-        transform: translateX(90%);
+    .contact-section {
+        .contact-area {
+            padding: 30px 30px 30px 10px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .contact-message-area {
+            padding: 30px 10px 30px 30px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .contact-section {
+            .contact-area {
+                padding: 20px;
+                border-radius: 10px 10px 0 0;
+            }
+            .contact-message-area {
+                padding: 20px;
+            }
+        }
+
     }
 }
 
@@ -3996,7 +4174,7 @@ Map section end
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-radius: 10px;
+            border-radius: 25px;
             height: 100%;
 
             .logo {
@@ -4057,6 +4235,12 @@ Map section end
 }
 
 // Responsive login signup start
+@media (max-width: 991px) {
+    .login-signup-page .login-signup-form {
+        padding: 40px;
+    }
+}
+
 @media (max-width: 767px) {
     .login-signup-page .login-signup-form {
         margin: auto;

@@ -260,29 +260,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 // Highlight editor end
 
-// input field show hide password start
-const password = document.querySelector('.password');
-const passwordIcon = document.querySelector('.password-icon');
-
-passwordIcon.addEventListener("click", function () {
-    if (password.type == 'password') {
-        password.type = 'text';
-        passwordIcon.classList.add('fa-eye-slash');
-    } else {
-        password.type = 'password';
-        passwordIcon.classList.remove('fa-eye-slash');
-    }
-})
-// input field show hide password end
-
-// International Telephone Input start
-const input = document.querySelector("#telephone");
-window.intlTelInput(input, {
-    initialCountry: "bd",
-    separateDialCode: true,
-});
-// International Telephone Input end
-
 
 // Calculator swap start
 const sendInput = document.getElementById('send');
@@ -302,4 +279,26 @@ swapBtn.addEventListener('click', () => {
 });
 // Calculator swap end
 
+// International Telephone Input start
+const input = document.querySelector("#telephone");
+window.intlTelInput(input, {
+    initialCountry: "bd",
+    separateDialCode: true,
+});
+// International Telephone Input end
 
+
+// input field show hide password start
+const password = document.querySelector('.password');
+const passwordIcon = document.querySelector('.password-icon');
+
+passwordIcon.addEventListener("click", function () {
+    if (password.type == 'password') {
+        password.type = 'text';
+        passwordIcon.classList.add('fa-eye-slash');
+    } else {
+        password.type = 'password';
+        passwordIcon.classList.remove('fa-eye-slash');
+    }
+})
+// input field show hide password end
