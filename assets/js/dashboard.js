@@ -1,7 +1,7 @@
 
 // Preloader area
 var preloader = document.getElementById("preloader");
-function preloder_function() {
+function preloderFunction() {
     preloader.style.display = "none";
 }
 // toggleSideMenu start
@@ -299,7 +299,7 @@ $(document).ready(function () {
     $('.date').datepicker({
         // options here
         format: 'dd/mm/yyyy',
-        
+
 
 
     });

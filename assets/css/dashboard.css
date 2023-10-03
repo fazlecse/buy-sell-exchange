@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap");
+/*----------------------------------------------
+Typography 
+----------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700;800&family=Open+Sans:wght@400;500&display=swap");
 :root {
-  --body-font: "Barlow", sans-serif;
-  --heading-font: "Palanquin Dark", sans-serif;
-  --primary-color: #ff9933;
+  --body-font: "Open Sans", sans-serif;
+  --heading-font: "Anek Telugu", sans-serif;
+  --primary-color: #00D095;
   --heading-color: #000000;
   --black: #000000;
   --grayish-blue: #929cbf;
@@ -22,7 +25,7 @@
   --body-color: #707070;
   --border-color1: #e5e7eb;
   --border-color2: #F2EFDF70;
-  --primary-color-opacity-low: rgba(255, 153, 51, 0.2);
+  --primary-color-opacity-low: rgb(0, 208, 149, 0.1);
   --primary-color-opacity-low2: rgba(255, 153, 51, 0.3);
   --shadow1: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);
   --shadow2: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
@@ -254,7 +257,7 @@ textarea.form-control {
 
 .form-control:focus,
 .form-select:focus {
-  box-shadow: 0 0 0 4px rgba(255, 153, 51, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 208, 149, 0.1);
   border: 1px solid var(--primary-color);
   background-color: var(--white);
 }

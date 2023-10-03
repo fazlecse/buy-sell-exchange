@@ -1,8 +1,7 @@
 
-
 // Preloader area
 const preloader = document.getElementById("preloader");
-function preloder_function() {
+function preloderFunction() {
     preloader.style.display = "none";
 }
 // toggleSideMenu start
@@ -205,25 +204,6 @@ function setTheme() {
 }
 setTheme();
 // Dark theme end
-
-// // Calculator swap start
-// const sendInput = document.getElementById('send');
-// const sendCurrency = document.getElementById('sendCurrency');
-// const reciveInput = document.getElementById('receive');
-// const reciveCurrency = document.getElementById('reciveCurrency');
-// const swapBtn = document.getElementById('swapBtn');
-
-// swapBtn.addEventListener('click', () => {
-//     const temp = { value: sendInput.value, currency: sendCurrency.value }
-//     sendInput.value = reciveInput.value;
-//     sendCurrency.value = reciveCurrency.value;
-//     reciveInput.value = temp.value;
-//     reciveCurrency.value = temp.currency;
-//     sendCurrency.dispatchEvent(new Event('change'));
-//     reciveCurrency.dispatchEvent(new Event('change'));
-// });
-// // Calculator swap end
-
 
 
 // input file preview

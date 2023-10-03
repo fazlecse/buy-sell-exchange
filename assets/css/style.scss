@@ -89,7 +89,6 @@ Dark theme section start
 ----------------------------------------------*/
 .dark-theme {
 
-
     --bg-color1: linear-gradient(152deg, rgba(237, 242, 248, 0.02) 0%, rgba(237, 242, 248, 0.08) 100%);
     --bg-color2: #2c403d;
     --bg-color3: #1B2D29;
@@ -771,11 +770,12 @@ h5 {
 }
 
 h6 {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 22px;
     font-weight: 500;
     margin-bottom: 0;
     color: var(--heading-color);
+    // font-family: var(--heading-font);
 }
 
 img {
@@ -1313,8 +1313,6 @@ Offcanvas end
     @media (min-width: 1200px) {
         .bg-gradiend2 {
             right: -4%;
-
-            .bg-gradiend2-inner {}
         }
     }
 }
@@ -1945,6 +1943,18 @@ hr.divider:after {
     gap: 5px;
 }
 
+// Progress bar section start
+.progress {
+    margin: 20px 0;
+    height: 10px;
+
+    .progress-bar {
+
+        background-color: var(--secondary-color);
+    }
+}
+
+// Progress bar section end
 // Multi step progress section start
 .multi-step-progress-section {
     width: 100%;
@@ -2511,7 +2521,7 @@ user nav Profile start
     }
 
     .user-dropdown {
-        background: var(--white);
+        background: var(--bg-color2);
         box-shadow: var(--shadow2);
         width: 200px;
         overflow: hidden;
@@ -2845,8 +2855,8 @@ Hero end
     margin: 0 auto;
     background-color: var(--bg-color2);
     padding: 25px;
-    border-radius: 4px;
-    box-shadow: var(--shadow2);
+    border-radius: 10px;
+    box-shadow: var(--shadow3);
 
 
 
@@ -2880,7 +2890,7 @@ Hero end
     }
 
     .btn-area {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
 }
@@ -2930,11 +2940,10 @@ Hero end
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0;
-    gap: 10px;
+    margin: 20px 85px 20px 0;
 
     .form-label {
-        margin-bottom: -20px;
+        margin-bottom: -40px;
     }
 
     .swap-icon {
@@ -4060,7 +4069,7 @@ Banner end
         background-position: center;
 
         h3,
-        h6 {
+        h5 {
             color: var(--white);
         }
 
@@ -4113,6 +4122,7 @@ Banner end
                 padding: 20px;
                 border-radius: 10px 10px 0 0;
             }
+
             .contact-message-area {
                 padding: 20px;
             }
@@ -4655,4 +4665,257 @@ Pagination end
 // Responsive error section end
 /*----------------------------------------------
 Error end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Calculator details section start
+----------------------------------------------*/
+.calculator-details-section {
+    background: var(--bg-color1);
+
+    .widget-area {
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: var(--shadow3);
+        margin-top: 20px;
+        background-color: var(--bg-color2);
+    }
+}
+
+.progress-section {
+    background-color: var(--bg-color2);
+    padding: 20px;
+    box-shadow: var(--shadow3);
+    border-radius: 10px;
+
+    .title {
+        font-weight: 500;
+        color: var(--heading-color);
+    }
+}
+
+.progress-step-area {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color2);
+
+    .item {
+        display: flex;
+        gap: 8px;
+        background: var(--input-color);
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+
+        h6 {
+            font-size: 15px;
+        }
+
+        .icon-area {
+            min-width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50%;
+
+            &.checkmark {
+                color: var(--primary-color);
+                background-color: var(--bg-color2);
+            }
+        }
+
+        .number {
+            min-width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color2);
+            color: var(--heading-color);
+        }
+
+
+    }
+
+    .item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.Transection-section {
+    background-color: var(--bg-color2);
+    padding: 20px;
+    box-shadow: var(--shadow3);
+    border-radius: 10px;
+
+
+    .title {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--border-color2);
+    }
+}
+
+.transection-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .item {
+        h6 {
+            margin-top: 5px;
+        }
+    }
+
+    .item:last-child {
+        margin-top: 10px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color2);
+    }
+}
+
+.rate-btn-area {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn.rate-btn {
+    width: 100%;
+    padding: 15px 25px;
+    background-color: var(--bg-color2);
+    color: var(--heading-color);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--shadow3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+
+    &:hover {
+        background-color: var(--primary-color-opacity-low);
+        border: 2px solid var(--primary-color);
+        color: var(--heading-color);
+    }
+
+    i {
+        margin: 0 5px;
+    }
+}
+
+.btn-check:checked+.btn.rate-btn {
+    background-color: var(--primary-color-opacity-low);
+    border: 2px solid var(--primary-color);
+    color: var(--heading-color);
+}
+
+.notice-area {
+    padding: 0 25px;
+    display: flex;
+    gap: 5px;
+
+    .icon-area {
+        color: var(--primary-color);
+
+        i {
+            transform: rotate(10deg);
+        }
+    }
+}
+
+.wallet-address-section {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 25px;
+    background-color: var(--bg-color2);
+
+    .form-floating {
+        display: flex;
+        align-items: center;
+
+        .form-control {
+            padding-right: 35px;
+        }
+
+        .icon {
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+        }
+    }
+
+    .tag-area {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .tag {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--white);
+            border-radius: 4px;
+            padding: 2px 4px;
+            background-color: var(--black);
+
+            &:nth-child(2) {
+                background-color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+.checkout-section {
+    box-shadow: var(--shadow3);
+    border-radius: 10px;
+    padding: 25px;
+    background-color: var(--bg-color2);
+    font-size: 14px;
+
+    .checkout-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cmn-btn2 {
+        gap: 10px;
+    }
+}
+
+.transection-details-table {
+    .table-row {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        h6 {
+            font-weight: 600;
+            font-size: 14px;
+            overflow-wrap: break-word;
+            word-break: break-all;
+        }
+
+        span.small {
+            line-height: 1;
+        }
+
+        &:first-child {
+            border-bottom: 1px solid var(--border-color2);
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+/*----------------------------------------------
+Calculator details section end
 ----------------------------------------------*/
