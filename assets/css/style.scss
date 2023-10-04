@@ -1421,6 +1421,7 @@ Offcanvas end
     justify-content: center;
     font-weight: 500;
     text-transform: capitalize;
+    gap: 5px;
 
     &:hover {
         color: var(--white);
@@ -1543,7 +1544,6 @@ Alerts section start
     padding: 10px 15px;
     border-radius: 15px;
     border-left: 15px solid;
-    box-shadow: 0px 3px 3px #BABABA;
 
     .icon-area {
         i {
@@ -1616,6 +1616,28 @@ Alerts section start
 
     .btn-close {
         color: #E89F29;
+    }
+}
+
+.alert-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fcf2e3;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: var(--heading-color);
+    font-weight: 500;
+
+    i {
+        color: var(--orange);
+        font-size: 16px;
+    }
+}
+.dark-theme{
+    .alert-message{
+        background-color: #a38558;
     }
 }
 
@@ -1842,7 +1864,7 @@ hr.divider:after {
     overflow-y: auto;
     border-radius: 5px;
     padding: 8px;
-    background: var(--white);
+    background: var(--bg-color2);
     border: 1px solid var(--border-color1);
     box-shadow: var(--shadow2);
 
@@ -1858,7 +1880,7 @@ hr.divider:after {
 
         &:hover {
             background: var(--primary-color);
-            color: var(--white) !important;
+            color: var(--white);
         }
 
     }
@@ -2111,6 +2133,15 @@ hr.divider:after {
 }
 
 // Ratings section end
+// Countdown section start
+.countdown-area{
+    display: flex;
+    gap: 10px;
+    #countdown1{
+        display: flex;
+    }
+}
+// Countdown section end
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -4745,7 +4776,7 @@ Calculator details section start
     }
 }
 
-.Transection-section {
+.Transection-summery {
     background-color: var(--bg-color2);
     padding: 20px;
     box-shadow: var(--shadow3);
@@ -4890,7 +4921,7 @@ Calculator details section start
     }
 }
 
-.transection-details-table {
+.checkout-table {
     .table-row {
         margin-top: 25px;
         display: grid;
@@ -4904,8 +4935,8 @@ Calculator details section start
             word-break: break-all;
         }
 
-        span.small {
-            line-height: 1;
+        .small {
+            line-height: 1.1;
         }
 
         &:first-child {
@@ -4916,6 +4947,132 @@ Calculator details section start
 
 }
 
+.transection-card {
+    background-color: var(--bg-color2);
+    box-shadow: var(--shadow3);
+    padding: 25px;
+    border-radius: 10px;
+
+    .title {
+        border-bottom: 1px solid var(--border-color2);
+        padding-bottom: 10px;
+    }
+}
+
+.transection-table {
+    display: grid;
+    gap: 20px;
+
+    .table-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        h6 {
+            font-weight: 600;
+            display: flex;
+            gap: 5px;
+            word-break: break-all;
+            font-size: 14px;
+
+            i:hover {
+                color: var(--primary-color);
+            }
+        }
+
+        .btn-area {
+            margin-top: 20px;
+        }
+    }
+}
+
+.request-found-form {
+    border-top: 1px solid var(--border-color2);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.deadline-timer-section {
+    background-color: var(--bg-color2);
+    box-shadow: var(--shadow3);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    h6{
+        display: flex;
+        gap: 8px;
+        i{
+            color: var(--body-color);
+            cursor: pointer;
+        }
+    }
+}
+.payment-method-section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    .dropdown-menu{
+        max-height: 15rem;
+        padding: 4px;
+    }
+    .payment-item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .image-area{
+
+           img{
+            background-color: var(--bg-color2);
+            border-radius: 50%;
+            border: 1px solid var(--border-color2);
+            padding: 2px;
+            border-radius: 50%;
+            width: 35px;
+            min-width: 35px;
+            height: 35px;
+           }
+        }
+
+    }
+    .dropdown-item{
+        padding: 5px;
+        &:hover{
+            background-color: var(--primary-color-opacity-low);
+            color: var(--heading-color);
+        }
+
+    }
+}
+.payment-offers-seciton{
+    margin-top: 25px;
+}
+.btn.offer-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-color2);
+    color: var(--heading-color);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--shadow3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    img{
+        max-height: 25px;
+    }
+    &:hover{
+        background-color: var(--primary-color-opacity-low);
+        border: 2px solid var(--primary-color);
+        color: var(--heading-color);
+    }
+
+}
+.btn-check:checked + .btn.offer-btn {
+    background-color: var(--primary-color-opacity-low);
+    border: 2px solid var(--primary-color);
+    color: var(--heading-color);
+}
 /*----------------------------------------------
 Calculator details section end
 ----------------------------------------------*/

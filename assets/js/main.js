@@ -282,3 +282,8 @@ passwordIcon.addEventListener("click", function () {
     }
 })
 // input field show hide password end
+
+// countdown
+$('#countdown1').countdown('2023/11/05', function (event) {
+    $(this).html(event.strftime('<div class="single-coundown"><h5>%H :</h5></div><div class="single-coundown"><h5>%M :</h5></div><div class="single-coundown"><h5>%S</h5></div>'));
+});
