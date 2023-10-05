@@ -196,124 +196,56 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
-                    <div class="calculator-section">
-                        <form class="calculator mw-100">
-                            <h3>Calculate amount</h3>
-                            <div class="row">
-                                <div class="col-12">
-                                    <label for="send" class="form-label">You send</label>
-                                    <div class="input-box">
-                                        <input type="text" class="form-control" id="send" value="10"
-                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                        <select class="cmn-select2-image2" name="state" id="sendCurrency">
-                                            <option value="btc">Bitcoin</option>
-                                            <option value="eth">Ethirium</option>
-                                            <option value="xrp">xrp</option>
-                                            <option value="aave">aave</option>
-                                            <option value="abt">abt</option>
-                                            <option value="bab">bab</option>
-                                            <option value="bal">bal</option>
-                                            <option value="band">band</option>
-                                            <option value="call">call</option>
-                                            <option value="cc">cc</option>
-                                            <option value="cdn">cnd</option>
-                                            <option value="d">d</option>
-                                            <option value="dai">dai</option>
-                                        </select>
-                                    </div>
-                                    <div class="swap-area">
-                                        <label for="receive" class="form-label">You get</label>
-                                        <div class="swap-icon" id="swapBtn">
-                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                        </div>
+                    <div class="transaction-card">
+                        <h3 class="title">Send funds to the address below</h3>
+                        <div class="transaction-table">
+                            <div class="table-row">
+                                <div class="item"><span>Amount</span></div>
+                                <div class="item">
+                                    <h6> 0.1 BTC<i class="fa-regular fa-pen"></i></h6>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="item"><span>Changelly address (BTC)</span></div>
+                                <div class="item">
+                                    <h6>GUBGMHVpwcTsPFvNNVdG5DKtpv6UwksAfzw5aULcGzgG</h6>
+                                    <small class="highlight">blockchain: bitcoin</small>
+                                    <div class="btn-area">
+                                        <a href="" class="cmn-btn"><i class="fa-light fa-copy"></i><span
+                                                class="d-none d-sm-block">Copy address</span></a>
+                                        <a href="" class="cmn-btn2"><i class="fa-light fa-barcode-read"></i></a>
                                     </div>
 
                                 </div>
-                                <div class="col-12">
-                                    <!-- <label for="receive" class="form-label">You get</label> -->
-                                    <div class="input-box">
-                                        <input type="text" class="form-control" id="receive" value="30"
-                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                        <select class="cmn-select2-image2" name="state" id="reciveCurrency">
-                                            <option value="eth">Ethirium</option>
-                                            <option value="btc">Bitcoin</option>
-                                            <option value="aave">aave</option>
-                                            <option value="xrp">xrp</option>
-                                            <option value="bab">bab</option>
-                                            <option value="abt">abt</option>
-                                            <option value="band">band</option>
-                                            <option value="bal">bal</option>
-                                            <option value="cc">cc</option>
-                                            <option value="call">call</option>
-                                            <option value="dai">dai</option>
-                                            <option value="d">d</option>
-                                            <option value="cdn">cnd</option>
-                                        </select>
-                                    </div>
-                                </div>
                             </div>
+                        </div>
+                        <div class="alert-message mt-20">
+                            <i class="fa-solid fa-circle-info fa-rotate-180"></i>
+                            <span>Please note that you can send funds to the address above only once.</span>
+                        </div>
+                        <form class="request-found-form">
+                            <h6>or request funds with FIO</h6>
+                            <div class="form-floating my-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">FIO address</label>
+                            </div>
+                            <a href="" class="cmn-btn w-100">request</a>
                         </form>
-                    </div>
-                    <div class="rate-btn-area">
-                        <div>
-                            <input type="radio" name="rate" class="btn-check" id="Floating-rate" autocomplete="off"
-                                checked>
-                            <label class="btn rate-btn" for="Floating-rate"><span><i
-                                        class="fa-light fa-lock"></i>Floating rate</span>
-                                <span>~16.40247385</span></label>
-                        </div>
-                        <div>
-                            <input type="radio" name="rate" class="btn-check" id="Fixed-rate" autocomplete="off">
-                            <label class="btn rate-btn" for="Fixed-rate"><span><i class="fa-light fa-lock"></i>Fixed
-                                    rate</span> <span>16.2848103</span></label>
-                        </div>
-                    </div>
-                    <div class="notice-area">
-                        <div class="icon-area"><i class="fa-solid fa-circle-info"></i></div>
-                        <small class="content-area">With the fixed rate, you will receive the exact amount of crypto you
-                            see on this screen.</small>
-                    </div>
-                    <div class="wallet-address-section">
-                        <div class="item">
-                            <h4>Destination wallet address</h4>
-                            <form class="form-floating">
-                                <input type="email" class="form-control" id="floatingInputValue"
-                                    placeholder="name@example.com">
-                                <label for="floatingInputValue">Enter your ETH recipient address</label>
-                                <div class="icon"><i class="fa-light fa-barcode-read"></i></div>
-                            </form>
-                            <div class="tag-area">
-                                <div class="tag">FIO</div>
-                                <div class="tag">UD</div>
-                                <small>FIO protocol and Unstoppable Domains are supported</small>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <h4>Refund wallet address</h4>
-                            <form class="form-floating">
-                                <input type="email" class="form-control" id="floatingInputValue"
-                                    placeholder="name@example.com">
-                                <label for="floatingInputValue">Enter your BTC recipient address</label>
-                                <div class="icon"><i class="fa-light fa-barcode-read"></i></div>
-                            </form>
-                            <div class="tag-area">
-                                <div class="tag">FIO</div>
-                                <div class="tag">UD</div>
-                                <small>FIO protocol and Unstoppable Domains are supported</small>
-                            </div>
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">I agree with <a href="">Terms of
-                                    Use</a>, <a href="">Privacy Policy</a> and <a href="
-                                ">AML/KYC</a></label>
-                        </div>
-                        <div class="btn-are">
-                            <a href="checkout.html" class="cmn-btn w-100">Next step</a>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-3 order-3 order-lg-3">
+                    <div class="deadline-timer-section">
+                        <div class="countdown-area">
+                            <h6><i class="fa-light fa-clock"></i></h6>
+                            <h6 id="countdown1"> </h6>
+                        </div>
+                        <span>Time left to send 0.1 BTC</span>
+                        <hr>
+                        <h6>vsgmh1a2xq6pn0vx <i class="fa-regular fa-copy"></i></h6>
+                        <span>Transaction ID</span>
+                    </div>
                     <div class="transaction-summery">
                         <h4 class="title">Transaction details</h4>
                         <div class="transaction-item-container">
@@ -453,6 +385,8 @@
     <script src="assets/js/select2.min.js"></script>
     <!-- noUiSlider Js link -->
     <script src="assets/js/nouislider.min.js"></script>
+    <!-- countdown Js link -->
+    <script src="assets/js/jquery.countdown.min.js"></script>
 
     <!-- Main Js link -->
     <script src="assets/js/main.js"></script>

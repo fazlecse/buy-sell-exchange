@@ -280,7 +280,7 @@ textarea.form-control {
 
 .form-control:focus,
 .form-select:focus {
-    box-shadow: 0 0 0 4px rgb(0, 208, 149,0.1);
+    box-shadow: 0 0 0 4px rgb(0, 208, 149, 0.1);
     border: 1px solid var(--primary-color);
     background-color: var(--white);
 }
@@ -1072,6 +1072,7 @@ body::-webkit-scrollbar-thumb {
         color: var(--white);
     }
 }
+
 .action-btn-secondary {
     width: 30px;
     height: 30px;
@@ -1610,18 +1611,21 @@ hr.divider:after {
 
 // Feature-rich Photo Viewer end
 // Modal section start
-.modal{
-    .modal-header{
+.modal {
+    .modal-header {
         border-bottom: 1px solid var(--border-color1);
-        .modal-title{
+
+        .modal-title {
             font-size: 20px;
             font-family: var(--heading-font);
         }
     }
-    .modal-footer{
+
+    .modal-footer {
         border-top: 1px solid var(--border-color1);
     }
 }
+
 // Modal section end
 /* reusable style end */
 
@@ -2867,6 +2871,7 @@ Account settings profile section start
 
     .nav {
         gap: 5px;
+
         .nav-link {
             background-color: var(--primary-color-opacity-low);
             color: var(--heading-color);
@@ -3106,9 +3111,9 @@ Pagination end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-Transections section start
+transactions section start
 ----------------------------------------------*/
-.transections-section {
+.transactions-section {
     .section-header {
         padding: 20px;
         margin-bottom: 0;
@@ -3133,7 +3138,7 @@ Transections section start
 }
 
 /*----------------------------------------------
-Transections section end
+transactions section end
 ----------------------------------------------*/
 
 /*----------------------------------------------

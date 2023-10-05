@@ -2591,29 +2591,29 @@ Pagination section start
 Pagination end
 ----------------------------------------------*/
 /*----------------------------------------------
-Transections section start
+transactions section start
 ----------------------------------------------*/
-.transections-section .section-header {
+.transactions-section .section-header {
   padding: 20px;
   margin-bottom: 0;
 }
-.transections-section .list-area {
+.transactions-section .list-area {
   border: 1px solid var(--border-color3);
   border-radius: 5px;
 }
-.transections-section .list-area li {
+.transactions-section .list-area li {
   padding: 15px 10px;
   color: var(--heading-color);
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
 }
-.transections-section .list-area li:not(:last-child) {
+.transactions-section .list-area li:not(:last-child) {
   border-bottom: 1px solid var(--border-color3);
 }
 
 /*----------------------------------------------
-Transections section end
+transactions section end
 ----------------------------------------------*/
 /*----------------------------------------------
 Paybill section start

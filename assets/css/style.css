@@ -329,7 +329,7 @@ body.dark-theme {
 
 @media (max-width: 991px) {
   body {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 }
 html {
@@ -361,7 +361,7 @@ textarea.form-control {
 
 .form-control:focus,
 .form-select:focus {
-  box-shadow: 0 0 0 4px rgba(0, 153, 105, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 208, 149, 0.1);
   border: 1px solid var(--primary-color);
 }
 
@@ -616,6 +616,7 @@ h1 {
   margin-bottom: 25px;
   font-weight: 600;
   line-height: 65px;
+  text-transform: capitalize;
 }
 
 @media (max-width: 991px) {
@@ -800,6 +801,43 @@ Reusable style section start
   padding-left: 50px;
 }
 
+.search-box2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-box2 .form-control {
+  border-radius: 4px;
+  height: 55px;
+  padding: 10px 145px 10px 20px;
+}
+.search-box2 .search-btn2 {
+  transition: var(--transition);
+  position: absolute;
+  right: 5px;
+  background-color: var(--primary-color);
+  height: calc(100% - 10px);
+  border-radius: 4px;
+  padding: 10px 40px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.search-box2 .search-btn2:hover {
+  background-color: var(--btn-hover-bg);
+  border-color: var(--btn-hover-bg);
+  color: var(--white);
+}
+
+@media (max-width: 575px) {
+  .search-box2 .form-control {
+    height: 45px;
+    padding: 10px 100px 10px 10px;
+  }
+  .search-box2 .search-btn2 {
+    padding: 10px 20px;
+  }
+}
 /*----------------------------------------------
 Offcanvas section start 
 ----------------------------------------------*/
@@ -3772,6 +3810,7 @@ Error end
 Calculator details section start
 ----------------------------------------------*/
 .calculator-details-section {
+  padding: 200px 0 100px 0;
   background: var(--bg-color1);
 }
 .calculator-details-section .widget-area {
@@ -3836,27 +3875,27 @@ Calculator details section start
   margin-bottom: 10px;
 }
 
-.Transection-summery {
+.transaction-summery {
   background-color: var(--bg-color2);
   padding: 20px;
   box-shadow: var(--shadow3);
   border-radius: 10px;
 }
-.Transection-summery .title {
+.transaction-summery .title {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color2);
 }
 
-.transection-item-container {
+.transaction-item-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.transection-item-container .item h6 {
+.transaction-item-container .item h6 {
   margin-top: 5px;
 }
-.transection-item-container .item:last-child {
+.transaction-item-container .item:last-child {
   margin-top: 10px;
   padding-top: 20px;
   border-top: 1px solid var(--border-color2);
@@ -3983,37 +4022,40 @@ Calculator details section start
   padding-bottom: 20px;
 }
 
-.transection-card {
+.transaction-card {
   background-color: var(--bg-color2);
   box-shadow: var(--shadow3);
   padding: 25px;
   border-radius: 10px;
 }
-.transection-card .title {
+.transaction-card .title {
   border-bottom: 1px solid var(--border-color2);
   padding-bottom: 10px;
 }
 
-.transection-table {
+.transaction-table {
   display: grid;
   gap: 20px;
 }
-.transection-table .table-row {
+.transaction-table .table-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.transection-table .table-row h6 {
+.transaction-table .table-row h6 {
   font-weight: 600;
   display: flex;
   gap: 5px;
   word-break: break-all;
   font-size: 14px;
 }
-.transection-table .table-row h6 i:hover {
+.transaction-table .table-row h6 i:hover {
   color: var(--primary-color);
 }
-.transection-table .table-row .btn-area {
+.transaction-table .table-row .btn-area {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .request-found-form {
@@ -4103,6 +4145,98 @@ Calculator details section start
   color: var(--heading-color);
 }
 
+@media (max-width: 991px) {
+  .calculator-details-section {
+    padding: 140px 0 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .calculator-details-section {
+    padding: 120px 0 50px 0;
+  }
+}
 /*----------------------------------------------
 Calculator details section end
+----------------------------------------------*/
+/*----------------------------------------------
+Tracking section start
+----------------------------------------------*/
+.tracking-section {
+  padding-top: 200px;
+  background: var(--bg-color1);
+}
+
+.tracking-card {
+  background-color: var(--bg-color2);
+  padding: 30px;
+  box-shadow: var(--shadow3);
+  border-radius: 10px;
+}
+.tracking-card .icon-area {
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+  .tracking-section {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 575px) {
+  .tracking-card {
+    padding: 15px;
+  }
+}
+/*----------------------------------------------
+Tracking section end
+----------------------------------------------*/
+/*----------------------------------------------
+Tracking transaction section start
+----------------------------------------------*/
+.tracking-transaction-section {
+  padding-top: 200px;
+  background: var(--bg-color1);
+}
+
+.transaction-table-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.transaction-table-container .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tracking-transaction-card {
+  background-color: var(--bg-color2);
+  box-shadow: var(--shadow3);
+  padding: 25px;
+  border-radius: 10px;
+}
+.tracking-transaction-card .header {
+  border-bottom: 1px solid var(--border-color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+.tracking-transaction-card .header .title {
+  margin-bottom: 0;
+}
+.tracking-transaction-card .header img {
+  width: 40px;
+}
+
+@media (max-width: 767px) {
+  .tracking-transaction-section {
+    padding-top: 120px;
+  }
+}
+/*----------------------------------------------
+Tracking transaction section end
 ----------------------------------------------*/
