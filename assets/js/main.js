@@ -93,8 +93,12 @@ $(document).ready(function () {
     });
     // Testimonial section start
     // cmn select2 start
-    $('.cmn-select2').select2({
+    $(document).ready(function () {
+        $('.cmn-select2').select2({
+            templateResult: formatState,
+            templateSelection: formatState
 
+        });
     });
     // cmn select2 end
 

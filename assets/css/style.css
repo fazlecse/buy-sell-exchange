@@ -838,6 +838,19 @@ Reusable style section start
     padding: 10px 20px;
   }
 }
+.rtl .search-box2 .form-control {
+  padding: 10px 20px 10px 145px;
+}
+.rtl .search-box2 .search-btn2 {
+  right: auto;
+  left: 5px;
+}
+@media (max-width: 575px) {
+  .rtl .search-box2 .form-control {
+    padding: 10px 20px 10px 100px;
+  }
+}
+
 /*----------------------------------------------
 Offcanvas section start 
 ----------------------------------------------*/
@@ -2547,6 +2560,9 @@ Hero end
   .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
     width: 150px;
   }
+  .swap-area {
+    margin: 20px 60px 20px 0;
+  }
 }
 @media (max-width: 1199px) {
   .calculator .form-description .single-description {
@@ -2580,6 +2596,9 @@ Hero end
 .rtl .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
   justify-content: end;
 }
+.rtl .swap-area {
+  margin: 20px 0 20px 85px;
+}
 .rtl .input-box span.select2.select2-container.select2-container--default {
   left: 6px;
   right: auto;
@@ -2601,6 +2620,9 @@ Hero end
 @media (max-width: 1399px) {
   .rtl .input-box .form-control {
     padding-left: 155px;
+  }
+  .rtl .swap-area {
+    margin: 20px 0 20px 60px;
   }
 }
 
@@ -3961,12 +3983,15 @@ Calculator details section start
   align-items: center;
 }
 .wallet-address-section .form-floating .form-control {
-  padding-right: 35px;
+  padding-right: 40px;
 }
 .wallet-address-section .form-floating .icon {
   cursor: pointer;
   position: absolute;
   right: 15px;
+}
+.wallet-address-section .form-floating > label {
+  padding-right: 35px;
 }
 .wallet-address-section .tag-area {
   margin-top: 10px;
@@ -4155,6 +4180,22 @@ Calculator details section start
     padding: 120px 0 50px 0;
   }
 }
+.rtl .wallet-address-section .form-floating .form-control {
+  padding-left: 40px;
+  padding-right: 12px;
+}
+.rtl .wallet-address-section .form-floating .icon {
+  right: auto;
+  left: 15px;
+}
+.rtl .wallet-address-section .form-floating > label {
+  padding-left: 35px;
+  padding-right: 12px;
+}
+.rtl .progress-step-area .item:nth-child(2) .icon-area {
+  transform: rotate(180deg);
+}
+
 /*----------------------------------------------
 Calculator details section end
 ----------------------------------------------*/
@@ -4220,6 +4261,7 @@ Tracking transaction section start
 .tracking-transaction-card .header {
   border-bottom: 1px solid var(--border-color2);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
@@ -4229,7 +4271,7 @@ Tracking transaction section start
   margin-bottom: 0;
 }
 .tracking-transaction-card .header img {
-  width: 40px;
+  width: 35px;
 }
 
 @media (max-width: 767px) {

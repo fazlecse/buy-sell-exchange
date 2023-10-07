@@ -982,6 +982,25 @@ Reusable style section start
 }
 
 // Responsive search box2 end
+// Rtl search box2 start
+.rtl{
+    .search-box2{
+
+        .form-control{
+            padding: 10px 20px 10px 145px;
+        }
+        .search-btn2{
+            right: auto;
+            left: 5px;
+        }
+    } 
+    @media (max-width: 575px){
+        .search-box2 .form-control {
+            padding: 10px 20px 10px 100px;
+        }
+    }
+}
+// Rtl search box2 end
 // Search box2 section end
 
 /*----------------------------------------------
@@ -3063,6 +3082,9 @@ Hero end
             }
         }
     }
+    .swap-area{
+        margin: 20px 60px 20px 0;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -3117,6 +3139,10 @@ Hero end
         }
     }
 
+    .swap-area {
+        margin: 20px 0 20px 85px;
+    }
+
     .input-box span.select2.select2-container.select2-container--default {
         left: 6px;
         right: auto;
@@ -3143,6 +3169,9 @@ Hero end
     @media (max-width: 1399px) {
         .input-box .form-control {
             padding-left: 155px;
+        }
+        .swap-area{
+            margin: 20px 0 20px 60px;
         }
     }
 }
@@ -4926,14 +4955,19 @@ Calculator details section start
         display: flex;
         align-items: center;
 
+
         .form-control {
-            padding-right: 35px;
+            padding-right: 40px;
         }
 
         .icon {
             cursor: pointer;
             position: absolute;
             right: 15px;
+        }
+
+        &>label {
+            padding-right: 35px;
         }
     }
 
@@ -5159,6 +5193,40 @@ Calculator details section start
 }
 
 // Responsive calculatior details section end
+// Rtl calculatior details section start
+.rtl {
+    .wallet-address-section {
+
+        .form-floating {
+            .form-control {
+                padding-left: 40px;
+                padding-right: 12px;
+            }
+
+            .icon {
+                right: auto;
+                left: 15px;
+            }
+
+            &>label {
+                padding-left: 35px;
+                padding-right: 12px;
+            }
+        }
+    }
+
+    .progress-step-area {
+
+        .item:nth-child(2) {
+            .icon-area {
+                transform: rotate(180deg);
+            }
+
+        }
+    }
+}
+
+// Rtl calculatior details section end
 /*----------------------------------------------
 Calculator details section end
 ----------------------------------------------*/
@@ -5187,10 +5255,11 @@ Tracking section start
 
 // Responsive tracking section start
 @media (max-width: 991px) {
-    .tracking-section{
+    .tracking-section {
         padding-top: 120px;
     }
 }
+
 @media (max-width: 575px) {
     .tracking-card {
         padding: 15px;
@@ -5232,6 +5301,7 @@ Tracking transaction section start
     .header {
         border-bottom: 1px solid var(--border-color2);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
@@ -5242,16 +5312,18 @@ Tracking transaction section start
         }
 
         img {
-            width: 40px;
+            width: 35px;
         }
     }
 }
+
 // Responsive tracking transaction section start
-@media (max-width: 767px){
-    .tracking-transaction-section{
+@media (max-width: 767px) {
+    .tracking-transaction-section {
         padding-top: 120px;
     }
 }
+
 // Responsive tracking transaction section end
 /*----------------------------------------------
 Tracking transaction section end

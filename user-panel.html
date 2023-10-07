@@ -61,18 +61,24 @@
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
+                <li class="nav-item pe-3">
+                    <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                        <i class="fa-light fa-moon" id="moon"></i>
+                        <i class="fa-light fa-sun-bright" id="sun"></i>
+                    </a>
+                </li>
 
                 <li class="nav-item d-none d-lg-block d-xl-none">
                     <a class="nav-link nav-icon search-bar-toggle" href="#">
                         <i class="fa-regular fa-magnifying-glass"></i>
                     </a>
-                </li><!-- End Search Icon-->
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                         <i class="fa-light fa-bell"></i>
                         <span class="badge badge-number">4</span>
-                    </a><!-- End Notification Icon -->
+                    </a>
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
                         <li class="dropdown-header">
@@ -545,7 +551,7 @@
                 <div class="card-body">
                     <div class="cmn-table">
                         <div class="table-responsive overflow-hidden">
-                            <table class="table align-middle">
+                            <table class="table table-striped align-middle">
                                 <thead>
                                     <tr>
                                         <th scope="col">Transaction ID</th>
