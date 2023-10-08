@@ -937,13 +937,12 @@ Offcanvas section end
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
-  background-color: var(--bg-color1);
+  border: 1px solid var(--border-color1);
   z-index: 1;
 }
 .cmn-btn3:hover {
   color: var(--white);
-  background: var(--btn-after-bg);
-  border-color: var(--btn-after-bg);
+  background: var(--primary-color);
 }
 .cmn-btn3:hover::after {
   height: 100%;
@@ -2331,11 +2330,6 @@ Sidebar start
 }
 .sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
   transform: rotate(180deg);
-}
-.sidebar-nav .nav-content {
-  padding: 5px 0 0 0;
-  margin: 0;
-  list-style: none;
 }
 .sidebar-nav .nav-content a {
   display: flex;

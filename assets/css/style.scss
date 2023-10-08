@@ -186,126 +186,49 @@ preloader section start
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: var(--black);
     z-index: 99999;
+    background-color: var(--white);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    .loader {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .ring {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            margin: -30px;
-            border: 4px solid transparent;
-            border-radius: 50%;
-            border-top: 4px solid #24ecff;
-            animation: animate 4s linear infinite;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 12px;
-                right: 12px;
-                border-radius: 50%;
-                width: 15px;
-                height: 15px;
-                background: #24ecff;
-                box-shadow: 0 0 0 5px #24ecff33,
-                    0 0 0 10px #24ecff22,
-                    0 0 0 20px #24ecff11,
-                    0 0 20px #24ecff,
-                    0 0 50px #24ecff;
-            }
-
-            &:nth-child(2) {
-                animation: animate2 4s linear infinite;
-                animation-delay: -1s;
-                border-left: 4px solid #93ff2d;
-                border-top: 4px solid transparent;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: initial;
-                    bottom: 12px;
-                    left: 12px;
-                    border-radius: 50%;
-                    width: 15px;
-                    height: 15px;
-                    background: #93ff2d;
-                    box-shadow: 0 0 0 5px #93ff2d33,
-                        0 0 0 10px #93ff2d22,
-                        0 0 0 20px #93ff2d11,
-                        0 0 20px #93ff2d,
-                        0 0 50px #93ff2d;
-                }
-            }
-
-            &:nth-child(3) {
-                animation: animate2 4s linear infinite;
-                animation-delay: -3s;
-                position: absolute;
-                top: -66.66px;
-                border-top: 4px solid transparent;
-                border-left: 4px solid #e41cf8;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: initial;
-                    bottom: 12px;
-                    left: 12px;
-                    border-radius: 50%;
-                    width: 15px;
-                    height: 15px;
-                    background: #e41cf8;
-                    box-shadow: 0 0 0 5px #e41cf833,
-                        0 0 0 10px #e41cf822,
-                        0 0 0 20px #e41cf811,
-                        0 0 20px #e41cf8,
-                        0 0 50px #e41cf8;
-                }
-            }
-        }
-
-        p {
-            position: absolute;
-            color: #fff;
-            font-size: 1.5em;
-            font-family: consolas;
-            bottom: -120px;
-            letter-spacing: 0.15em;
-        }
+    .preloader-image {
+        width: 100px;
+        animation: flipInY both 2s infinite;
     }
 
-    @keyframes animate {
+    @keyframes flipInY {
         0% {
-            transform: rotate(0deg);
+            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            opacity: 0;
+        }
+
+        40% {
+            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        60% {
+            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            opacity: 1;
+        }
+
+        80% {
+            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
         }
 
         100% {
-            transform: rotate(360deg);
+            -webkit-transform: perspective(400px);
+            transform: perspective(400px);
         }
     }
-
-    @keyframes animate2 {
-        0% {
-            transform: rotate(360deg);
-        }
-
-        100% {
-            transform: rotate(0deg);
-        }
-    }
-
 
 }
 
@@ -585,14 +508,19 @@ span.select2.select2-container.select2-container--default {
     border-radius: 5px;
 }
 
-.select2-container--default .select2-results__option--selected {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background: var(--primary-color-opacity-low);
     color: var(--heading-color);
+}
+
+.select2-container--default .select2-results__option--selected {
+    background: var(--primary-color);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
 }
 
 .select2-container--default .select2-results>.select2-results__options {
@@ -983,23 +911,26 @@ Reusable style section start
 
 // Responsive search box2 end
 // Rtl search box2 start
-.rtl{
-    .search-box2{
+.rtl {
+    .search-box2 {
 
-        .form-control{
+        .form-control {
             padding: 10px 20px 10px 145px;
         }
-        .search-btn2{
+
+        .search-btn2 {
             right: auto;
             left: 5px;
         }
-    } 
-    @media (max-width: 575px){
+    }
+
+    @media (max-width: 575px) {
         .search-box2 .form-control {
             padding: 10px 20px 10px 100px;
         }
     }
 }
+
 // Rtl search box2 end
 // Search box2 section end
 
@@ -1532,7 +1463,6 @@ Offcanvas end
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    background-color: var(--bg-color1);
     border: 1px solid var(--border-color1);
 
     &:hover {
@@ -3036,9 +2966,9 @@ Hero end
 
 }
 
-.select2-results__option {
-    text-transform: uppercase;
-}
+// .select2-results__option {
+//     text-transform: uppercase;
+// }
 
 .swap-area {
     display: flex;
@@ -3078,11 +3008,12 @@ Hero end
             max-width: 150px;
 
             .select2-selection--single {
-                width: 150px;
+                max-width: 150px;
             }
         }
     }
-    .swap-area{
+
+    .swap-area {
         margin: 20px 60px 20px 0;
     }
 }
@@ -3103,7 +3034,7 @@ Hero end
             max-width: 150px;
 
             .select2-selection--single {
-                width: 150px;
+                max-width: 150px;
             }
         }
     }
@@ -3170,7 +3101,8 @@ Hero end
         .input-box .form-control {
             padding-left: 155px;
         }
-        .swap-area{
+
+        .swap-area {
             margin: 20px 0 20px 60px;
         }
     }
@@ -5106,42 +5038,25 @@ Calculator details section start
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 
-    .dropdown-menu {
-        max-height: 15rem;
-        padding: 4px;
+    .select2-container .select2-selection--single:focus,
+    .select2-container .select2-selection--multiple:focus {
+        border: 1px solid transparent;
     }
 
-    .payment-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .image-area {
-
-            img {
-                background-color: var(--bg-color2);
-                border-radius: 50%;
-                border: 1px solid var(--border-color2);
-                padding: 2px;
-                border-radius: 50%;
-                width: 35px;
-                min-width: 35px;
-                height: 35px;
-            }
-        }
-
+    span.select2.select2-container.select2-container--default {
+        max-width: 200px;
     }
 
-    .dropdown-item {
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
         padding: 5px;
-
-        &:hover {
-            background-color: var(--primary-color-opacity-low);
-            color: var(--heading-color);
-        }
-
+        border: 1px solid var(--border-color2);
+        border-radius: 5px;
+        font-weight: 500;
+        font-family: var(--heading-font);
+        margin-top: -7px;
+        background-color: var(--bg-color3);
     }
 }
 

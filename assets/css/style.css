@@ -155,100 +155,35 @@ preloader section start
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: var(--black);
   z-index: 99999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#preloader .loader {
-  position: relative;
-  width: 100%;
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#preloader .loader .ring {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin: -30px;
-  border: 4px solid transparent;
-  border-radius: 50%;
-  border-top: 4px solid #24ecff;
-  animation: animate 4s linear infinite;
+#preloader .preloader-image {
+  width: 100px;
+  animation: flipInY both 2s infinite;
 }
-#preloader .loader .ring::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background: #24ecff;
-  box-shadow: 0 0 0 5px rgba(36, 236, 255, 0.2), 0 0 0 10px rgba(36, 236, 255, 0.1333333333), 0 0 0 20px rgba(36, 236, 255, 0.0666666667), 0 0 20px #24ecff, 0 0 50px #24ecff;
-}
-#preloader .loader .ring:nth-child(2) {
-  animation: animate2 4s linear infinite;
-  animation-delay: -1s;
-  border-left: 4px solid #93ff2d;
-  border-top: 4px solid transparent;
-}
-#preloader .loader .ring:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  top: initial;
-  bottom: 12px;
-  left: 12px;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background: #93ff2d;
-  box-shadow: 0 0 0 5px rgba(147, 255, 45, 0.2), 0 0 0 10px rgba(147, 255, 45, 0.1333333333), 0 0 0 20px rgba(147, 255, 45, 0.0666666667), 0 0 20px #93ff2d, 0 0 50px #93ff2d;
-}
-#preloader .loader .ring:nth-child(3) {
-  animation: animate2 4s linear infinite;
-  animation-delay: -3s;
-  position: absolute;
-  top: -66.66px;
-  border-top: 4px solid transparent;
-  border-left: 4px solid #e41cf8;
-}
-#preloader .loader .ring:nth-child(3)::before {
-  content: "";
-  position: absolute;
-  top: initial;
-  bottom: 12px;
-  left: 12px;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background: #e41cf8;
-  box-shadow: 0 0 0 5px rgba(228, 28, 248, 0.2), 0 0 0 10px rgba(228, 28, 248, 0.1333333333), 0 0 0 20px rgba(228, 28, 248, 0.0666666667), 0 0 20px #e41cf8, 0 0 50px #e41cf8;
-}
-#preloader .loader p {
-  position: absolute;
-  color: #fff;
-  font-size: 1.5em;
-  font-family: consolas;
-  bottom: -120px;
-  letter-spacing: 0.15em;
-}
-@keyframes animate {
+@keyframes flipInY {
   0% {
-    transform: rotate(0deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
   100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
+    transform: perspective(400px);
   }
 }
 
@@ -498,14 +433,18 @@ span.select2.select2-container.select2-container--default {
   border-radius: 5px;
 }
 
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: var(--primary-color-opacity-low);
+  color: var(--heading-color);
+}
+
 .select2-container--default .select2-results__option--selected {
   background: var(--primary-color);
   color: var(--white);
 }
-
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background: var(--primary-color-opacity-low);
-  color: var(--heading-color);
+.select2-container--default .select2-results__option--selected:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .select2-container--default .select2-results > .select2-results__options {
@@ -1275,7 +1214,6 @@ Offcanvas end
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
-  background-color: var(--bg-color1);
   border: 1px solid var(--border-color1);
 }
 .cmn-btn3:hover {
@@ -2522,10 +2460,6 @@ Hero end
   top: 10px;
 }
 
-.select2-results__option {
-  text-transform: uppercase;
-}
-
 .swap-area {
   display: flex;
   align-items: center;
@@ -2558,7 +2492,7 @@ Hero end
     max-width: 150px;
   }
   .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
-    width: 150px;
+    max-width: 150px;
   }
   .swap-area {
     margin: 20px 60px 20px 0;
@@ -2577,7 +2511,7 @@ Hero end
     max-width: 150px;
   }
   .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
-    width: 150px;
+    max-width: 150px;
   }
 }
 @media (max-width: 575px) {
@@ -4110,33 +4044,23 @@ Calculator details section start
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
-.payment-method-section .dropdown-menu {
-  max-height: 15rem;
-  padding: 4px;
+.payment-method-section .select2-container .select2-selection--single:focus,
+.payment-method-section .select2-container .select2-selection--multiple:focus {
+  border: 1px solid transparent;
 }
-.payment-method-section .payment-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.payment-method-section span.select2.select2-container.select2-container--default {
+  max-width: 200px;
 }
-.payment-method-section .payment-item .image-area img {
-  background-color: var(--bg-color2);
-  border-radius: 50%;
-  border: 1px solid var(--border-color2);
-  padding: 2px;
-  border-radius: 50%;
-  width: 35px;
-  min-width: 35px;
-  height: 35px;
-}
-.payment-method-section .dropdown-item {
+.payment-method-section .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding: 5px;
-}
-.payment-method-section .dropdown-item:hover {
-  background-color: var(--primary-color-opacity-low);
-  color: var(--heading-color);
+  border: 1px solid var(--border-color2);
+  border-radius: 5px;
+  font-weight: 500;
+  font-family: var(--heading-font);
+  margin-top: -7px;
+  background-color: var(--bg-color3);
 }
 
 .payment-offers-seciton {

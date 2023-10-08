@@ -174,11 +174,49 @@ $(document).ready(function () {
     };
     // cmn-select2 with image end
 
+    // Payment method with image2 start
+    $(document).ready(function () {
+        $('.payment-method-select2-image').select2({
+            templateResult: paymentMethod,
+            templateSelection: paymentMethod
+        });
+    });
+    // select2 function
+    function paymentMethod(state) {
+        if (!state.id) {
+            return state.text;
+        }
+        var baseUrl = "assets/img/gateway";
+        var $state = $(
+            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.jpg" class="img-flag" /> ' + state.text + '</span>'
+        );
+        return $state;
+    };
+    function paymentMethod(state) {
+        if (!state.id) {
+            return state.text;
+        }
+
+        var baseUrl = "assets/img/gateway";
+        var $state = $(
+            '<span><img class="img-flag" /> <span></span></span>'
+        );
+
+        // Use .text() instead of HTML string concatenation to avoid script injection issues
+        $state.find("span").text(state.text);
+        $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".jpg");
+
+        return $state;
+    };
+    // Payment method with image2 start
+
     // cmn select2 modal start
     $(".modal-select").select2({
         dropdownParent: $("#formModal"),
     });
     // cmn select2 modal start
+
+
 
 });
 // Dark theme start

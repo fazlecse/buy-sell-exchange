@@ -279,7 +279,6 @@ $(document).ready(function () {
     $('.cmn-select2-image').select2({
         templateResult: formatState,
         templateSelection: formatState
-
     });
 });
 
@@ -295,6 +294,7 @@ function formatState(state) {
     return $state;
 };
 // cmn-select2 with image start
+
 
 
 

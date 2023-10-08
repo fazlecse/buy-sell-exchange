@@ -1063,13 +1063,12 @@ Offcanvas section end
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    background-color: var(--bg-color1);
+    border: 1px solid var(--border-color1);
     z-index: 1;
 
     &:hover {
         color: var(--white);
-        background: var(--btn-after-bg);
-        border-color: var(--btn-after-bg);
+        background: var(--primary-color);
 
         &::after {
             height: 100%;
@@ -2766,9 +2765,9 @@ Sidebar start
     }
 
     .nav-content {
-        padding: 5px 0 0 0;
-        margin: 0;
-        list-style: none;
+        // padding: 5px 0 0 0;
+        // margin: 0;
+        // list-style: none;
 
         a {
             display: flex;

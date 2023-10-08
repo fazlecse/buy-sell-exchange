@@ -34,12 +34,7 @@
 
     <!-- Preloader section start -->
     <div id="preloader">
-        <div class="loader">
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <p>Loading...</p>
-        </div>
+        <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="">
     </div>
     <!-- Preloader section end -->
 
@@ -252,95 +247,17 @@
                                     </div>
                                 </div>
                                 <div class="payment-method-section">
-                                    <div>Payment method:</div>
-                                    <div class="dropdown-center ">
-                                        <a class="dropdown-toggle d-flex align-items-center" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <h6>Select Option</h6>
-                                        </a>
+                                    <h6>Payment Method:</h6>
+                                    <select class="payment-method-select2-image" name="state">
+                                        <option value="bank-transfer">Bank Transfer</option>
+                                        <option value="mastercard">Mastercard</option>
+                                        <option value="razorpay">Razorpay</option>
+                                        <option value="skrill">Skrill</option>
+                                        <option value="stripe">Stripe</option>
+                                        <option value="visa">Visa</option>
 
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="payment-item">
-                                                        <div class="image-area">
-                                                            <img src="./assets/img/gateway/Bank-Transfer.png" alt="">
-                                                        </div>
-                                                        <div class="content-area">
-                                                            <h6>Bank Transfer</h6>
-                                                            <span>0.00499 BTC</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="payment-item">
-                                                        <div class="image-area">
-                                                            <img src="./assets/img/gateway/mastercard.png" alt="">
-                                                        </div>
-                                                        <div class="content-area">
-                                                            <h6>Mastercard</h6>
-                                                            <span>0.00499 BTC</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="payment-item">
-                                                        <div class="image-area">
-                                                            <img src="./assets/img/gateway/razorpay.jpg" alt="">
-                                                        </div>
-                                                        <div class="content-area">
-                                                            <h6>Razorpay</h6>
-                                                            <span>0.00499 BTC</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="payment-item">
-                                                        <div class="image-area">
-                                                            <img src="./assets/img/gateway/skrill.jpg" alt="">
-                                                        </div>
-                                                        <div class="content-area">
-                                                            <h6>Skrill</h6>
-                                                            <span>0.00499 BTC</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="payment-item">
-                                                        <div class="image-area">
-                                                            <img src="./assets/img/gateway/stripe.jpg" alt="">
-                                                        </div>
-                                                        <div class="content-area">
-                                                            <h6>Stripe</h6>
-                                                            <span>0.00499 BTC</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <div class="payment-item">
-                                                        <div class="image-area">
-                                                            <img src="./assets/img/gateway/visa.png" alt="">
-                                                        </div>
-                                                        <div class="content-area">
-                                                            <h6>Visa</h6>
-                                                            <span>0.00499 BTC</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                    </select>
 
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </form>
