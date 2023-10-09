@@ -3745,16 +3745,9 @@ Pagination end
     font-size: 30px;
   }
 }
-@media (max-width: 991px) {
-  .error-section .error-content .error-title {
-    font-size: 60px;
-  }
-  .error-section .error-content .error-info {
-    font-size: 26px;
-  }
-}
 @media (max-width: 575px) {
   .error-section {
+    text-align: center;
     min-height: 100%;
     min-width: 100%;
   }
@@ -4160,7 +4153,6 @@ Tracking section end
 Tracking transaction section start
 ----------------------------------------------*/
 .tracking-transaction-section {
-  padding-top: 200px;
   background: var(--bg-color1);
 }
 
@@ -4198,11 +4190,6 @@ Tracking transaction section start
   width: 35px;
 }
 
-@media (max-width: 767px) {
-  .tracking-transaction-section {
-    padding-top: 120px;
-  }
-}
 /*----------------------------------------------
 Tracking transaction section end
 ----------------------------------------------*/
