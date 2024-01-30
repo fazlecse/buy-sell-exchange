@@ -303,7 +303,7 @@ body {
     line-height: 1.4;
     color: var(--body-color);
     font-size: 16px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     background-color: var(--white);
 }
 
@@ -2422,6 +2422,64 @@ Padding bottom
 Padding bottom
 ----------------------------------------------*/
 
+// Offer banner section start
+.offer-banner-seciton {
+    position: relative;
+    color: var(--white);
+    height: 50px;
+    z-index: 0;
+    font-size: 14px;
+
+    .offer-close-btn {
+        position: absolute;
+        right: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: var(--white);
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        border-radius: 3px;
+        &:hover{
+            background-color: var(--black);
+        }
+    }
+
+    p {
+        color: var(--white);
+    }
+
+    .offer-overlay {
+        position: absolute;
+        background: linear-gradient(rgba(0, 208, 149, 0.8), rgba(0, 208, 149, 0.8)), url(../img/offer-banner/header-bar-bg.png);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+.offer-btn {
+    font-size: 12px;
+    background-color: var(--black);
+    padding: 8px 40px;
+    color: var(--white);
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+
+    &:hover {
+        color: var(--white);
+        opacity: .8;
+    }
+}
+
+// Offer banner section end
 
 /*----------------------------------------------
 01. Nav section start
@@ -2770,7 +2828,7 @@ Bottom Mobile, Tab nav end
 ----------------------------------------------*/
 .hero-section {
     position: relative;
-    padding: 250px 0 200px;
+    padding: 200px 0;
 
     .hero-section-inner {
         position: relative;
@@ -2790,6 +2848,7 @@ Bottom Mobile, Tab nav end
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        top: -93px;
     }
 
 
