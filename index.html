@@ -38,13 +38,13 @@
     </div>
     <!-- Preloader section end -->
     <!-- Header top section start -->
-    <div class="offer-banner-seciton">
+    <div class="offer-banner-seciton d-none d-lg-block">
         <button type="button" class="offer-close-btn">
             <i class="fa-regular fa-xmark"></i>
         </button>
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-12 gap-4 justify-content-center align-items-center d-flex">
+                <div class="col-12 gap-3 justify-content-center align-items-center d-flex">
                     <p class="mb-0">Exchange crypto for a 0% service fee in the app! Exclusive offer for your next
                         exchange.</p>
                     <a href="" class="offer-btn">Get in app</a>
@@ -53,7 +53,20 @@
         </div>
         <div class="offer-overlay"></div>
     </div>
+    <div class="mobile-offer-banner d-lg-none">
+        <button type="button" class="offer-close-btn">
+            <i class="fa-regular fa-xmark"></i>
+        </button>
+        <div class="gap-3 justify-content-center align-items-center d-flex flex-column">
+            <p class="mb-0">Exchange crypto for a 0% service fee in the app! Exclusive offer for your next
+                exchange.</p>
+            <a href="" class="offer-btn">Get in app</a>
+        </div>
+        <div class="mobile-offer-banner-inner">
+        </div>
+    </div>
     <!-- Header top section end -->
+
     <!-- Nav section start -->
     <nav class="navbar sticky-top navbar-expand-lg transparent">
         <div class="container">
@@ -191,9 +204,27 @@
                     </div>
                     <div class="col-xl-5 col-lg-6">
                         <div class="calculator-section">
-                            
                             <form class="calculator">
-                                <div class="calculator-header">
+                                <div class="calculator-banner">
+                                    <a href="">
+                                        <div class="calculator-banner-wrapper">
+                                            <div class="left-side">
+                                                <div class="image-area">
+                                                    <img src="./assets/img/calculator/popularPairBanner.png" alt="">
+                                                </div>
+                                                <div class="text-area">
+                                                    <p class="mb-0">Hottest rates for <strong> USDT/BTC,
+                                                            USDT/ETH</strong> swaps</p>
+                                                </div>
+                                            </div>
+                                            <div class="right-side">
+                                                <i class="fa-regular fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="calculator-body">
                                     <div class="cmn-tabs">
                                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
@@ -214,196 +245,200 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
-                                            aria-labelledby="pills-exchange-tab" tabindex="0">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <label for="send" class="form-label">You send</label>
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="send" value="10"
-                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                        <select class="cmn-select2-image2" name="state"
-                                                            id="sendCurrency">
-                                                            <option value="btc">Bitcoin</option>
-                                                            <option value="eth">Ethirium</option>
-                                                            <option value="xrp">xrp</option>
-                                                            <option value="aave">aave</option>
-                                                            <option value="abt">abt</option>
-                                                            <option value="bab">bab</option>
-                                                            <option value="bal">bal</option>
-                                                            <option value="band">band</option>
-                                                            <option value="call">call</option>
-                                                            <option value="cc">cc</option>
-                                                            <option value="cdn">cnd</option>
-                                                            <option value="d">d</option>
-                                                            <option value="dai">dai</option>
-                                                        </select>
+                                    <div>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
+                                                aria-labelledby="pills-exchange-tab" tabindex="0">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="send" class="form-label">You send</label>
+                                                        <div class="input-box">
+                                                            <input type="text" class="form-control" id="send" value="10"
+                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                            <select class="cmn-select2-image2" name="state"
+                                                                id="sendCurrency">
+                                                                <option value="btc">Bitcoin</option>
+                                                                <option value="eth">Ethirium</option>
+                                                                <option value="xrp">xrp</option>
+                                                                <option value="aave">aave</option>
+                                                                <option value="abt">abt</option>
+                                                                <option value="bab">bab</option>
+                                                                <option value="bal">bal</option>
+                                                                <option value="band">band</option>
+                                                                <option value="call">call</option>
+                                                                <option value="cc">cc</option>
+                                                                <option value="cdn">cnd</option>
+                                                                <option value="d">d</option>
+                                                                <option value="dai">dai</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="swap-area">
+                                                            <label for="receive" class="form-label">You get</label>
+                                                            <div class="swap-icon" id="swapBtn">
+                                                                <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
-                                                    <div class="swap-area">
-                                                        <label for="receive" class="form-label">You get</label>
-                                                        <div class="swap-icon" id="swapBtn">
-                                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                    <div class="col-12">
+                                                        <!-- <label for="receive" class="form-label">You get</label> -->
+                                                        <div class="input-box">
+                                                            <input type="text" class="form-control" id="receive"
+                                                                value="30"
+                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                            <select class="cmn-select2-image2" name="state"
+                                                                id="reciveCurrency">
+                                                                <option value="eth">Ethirium</option>
+                                                                <option value="btc">Bitcoin</option>
+                                                                <option value="aave">aave</option>
+                                                                <option value="xrp">xrp</option>
+                                                                <option value="bab">bab</option>
+                                                                <option value="abt">abt</option>
+                                                                <option value="band">band</option>
+                                                                <option value="bal">bal</option>
+                                                                <option value="cc">cc</option>
+                                                                <option value="call">call</option>
+                                                                <option value="dai">dai</option>
+                                                                <option value="d">d</option>
+                                                                <option value="cdn">cnd</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-
-                                                </div>
-                                                <div class="col-12">
-                                                    <!-- <label for="receive" class="form-label">You get</label> -->
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="receive" value="30"
-                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                        <select class="cmn-select2-image2" name="state"
-                                                            id="reciveCurrency">
-                                                            <option value="eth">Ethirium</option>
-                                                            <option value="btc">Bitcoin</option>
-                                                            <option value="aave">aave</option>
-                                                            <option value="xrp">xrp</option>
-                                                            <option value="bab">bab</option>
-                                                            <option value="abt">abt</option>
-                                                            <option value="band">band</option>
-                                                            <option value="bal">bal</option>
-                                                            <option value="cc">cc</option>
-                                                            <option value="call">call</option>
-                                                            <option value="dai">dai</option>
-                                                            <option value="d">d</option>
-                                                            <option value="cdn">cnd</option>
-                                                        </select>
+                                                    <div class="btn-area">
+                                                        <a href="exchange.html" class="cmn-btn w-100">Exchange now</a>
                                                     </div>
-                                                </div>
-                                                <div class="btn-area">
-                                                    <a href="exchange.html" class="cmn-btn w-100">Exchange now</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="pills-Buy" role="tabpanel"
-                                            aria-labelledby="pills-Buy-tab" tabindex="0">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <label for="send" class="form-label">You send</label>
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="send" value="10"
-                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                        <select class="cmn-select2-image" name="state"
-                                                            id="sendCurrency">
-                                                            <option value="btc">Bitcoin</option>
-                                                            <option value="eth">Ethirium</option>
-                                                            <option value="xrp">xrp</option>
-                                                            <option value="aave">aave</option>
-                                                            <option value="abt">abt</option>
-                                                            <option value="bab">bab</option>
-                                                            <option value="bal">bal</option>
-                                                            <option value="band">band</option>
-                                                            <option value="call">call</option>
-                                                            <option value="cc">cc</option>
-                                                            <option value="cdn">cnd</option>
-                                                            <option value="d">d</option>
-                                                            <option value="dai">dai</option>
-                                                        </select>
+                                            <div class="tab-pane fade" id="pills-Buy" role="tabpanel"
+                                                aria-labelledby="pills-Buy-tab" tabindex="0">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="send" class="form-label">You send</label>
+                                                        <div class="input-box">
+                                                            <input type="text" class="form-control" id="send" value="10"
+                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                            <select class="cmn-select2-image" name="state"
+                                                                id="sendCurrency">
+                                                                <option value="btc">Bitcoin</option>
+                                                                <option value="eth">Ethirium</option>
+                                                                <option value="xrp">xrp</option>
+                                                                <option value="aave">aave</option>
+                                                                <option value="abt">abt</option>
+                                                                <option value="bab">bab</option>
+                                                                <option value="bal">bal</option>
+                                                                <option value="band">band</option>
+                                                                <option value="call">call</option>
+                                                                <option value="cc">cc</option>
+                                                                <option value="cdn">cnd</option>
+                                                                <option value="d">d</option>
+                                                                <option value="dai">dai</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="swap-area">
+                                                            <label for="receive" class="form-label">You get</label>
+                                                            <div class="swap-icon" id="swapBtn">
+                                                                <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
-                                                    <div class="swap-area">
-                                                        <label for="receive" class="form-label">You get</label>
-                                                        <div class="swap-icon" id="swapBtn">
-                                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                    <div class="col-12">
+                                                        <!-- <label for="receive" class="form-label">You get</label> -->
+                                                        <div class="input-box">
+                                                            <input type="text" class="form-control" id="receive"
+                                                                value="30"
+                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                            <select class="cmn-select2-image" name="state"
+                                                                id="reciveCurrency">
+                                                                <option value="eth">Ethirium</option>
+                                                                <option value="btc">Bitcoin</option>
+                                                                <option value="aave">aave</option>
+                                                                <option value="xrp">xrp</option>
+                                                                <option value="bab">bab</option>
+                                                                <option value="abt">abt</option>
+                                                                <option value="band">band</option>
+                                                                <option value="bal">bal</option>
+                                                                <option value="cc">cc</option>
+                                                                <option value="call">call</option>
+                                                                <option value="dai">dai</option>
+                                                                <option value="d">d</option>
+                                                                <option value="cdn">cnd</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-
-                                                </div>
-                                                <div class="col-12">
-                                                    <!-- <label for="receive" class="form-label">You get</label> -->
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="receive" value="30"
-                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                        <select class="cmn-select2-image" name="state"
-                                                            id="reciveCurrency">
-                                                            <option value="eth">Ethirium</option>
-                                                            <option value="btc">Bitcoin</option>
-                                                            <option value="aave">aave</option>
-                                                            <option value="xrp">xrp</option>
-                                                            <option value="bab">bab</option>
-                                                            <option value="abt">abt</option>
-                                                            <option value="band">band</option>
-                                                            <option value="bal">bal</option>
-                                                            <option value="cc">cc</option>
-                                                            <option value="call">call</option>
-                                                            <option value="dai">dai</option>
-                                                            <option value="d">d</option>
-                                                            <option value="cdn">cnd</option>
-                                                        </select>
+                                                    <div class="btn-area">
+                                                        <a href="" class="cmn-btn w-100">Exchange now</a>
                                                     </div>
-                                                </div>
-                                                <div class="btn-area">
-                                                    <a href="" class="cmn-btn w-100">Exchange now</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="pills-Sell" role="tabpanel"
-                                            aria-labelledby="pills-Sell-tab" tabindex="0">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <label for="send" class="form-label">You send</label>
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="send" value="10"
-                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                        <select class="cmn-select2-image" name="state"
-                                                            id="sendCurrency">
-                                                            <option value="btc">Bitcoin</option>
-                                                            <option value="eth">Ethirium</option>
-                                                            <option value="xrp">xrp</option>
-                                                            <option value="aave">aave</option>
-                                                            <option value="abt">abt</option>
-                                                            <option value="bab">bab</option>
-                                                            <option value="bal">bal</option>
-                                                            <option value="band">band</option>
-                                                            <option value="call">call</option>
-                                                            <option value="cc">cc</option>
-                                                            <option value="cdn">cnd</option>
-                                                            <option value="d">d</option>
-                                                            <option value="dai">dai</option>
-                                                        </select>
+                                            <div class="tab-pane fade" id="pills-Sell" role="tabpanel"
+                                                aria-labelledby="pills-Sell-tab" tabindex="0">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="send" class="form-label">You send</label>
+                                                        <div class="input-box">
+                                                            <input type="text" class="form-control" id="send" value="10"
+                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                            <select class="cmn-select2-image" name="state"
+                                                                id="sendCurrency">
+                                                                <option value="btc">Bitcoin</option>
+                                                                <option value="eth">Ethirium</option>
+                                                                <option value="xrp">xrp</option>
+                                                                <option value="aave">aave</option>
+                                                                <option value="abt">abt</option>
+                                                                <option value="bab">bab</option>
+                                                                <option value="bal">bal</option>
+                                                                <option value="band">band</option>
+                                                                <option value="call">call</option>
+                                                                <option value="cc">cc</option>
+                                                                <option value="cdn">cnd</option>
+                                                                <option value="d">d</option>
+                                                                <option value="dai">dai</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="swap-area">
+                                                            <label for="receive" class="form-label">You get</label>
+                                                            <div class="swap-icon" id="swapBtn">
+                                                                <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
-                                                    <div class="swap-area">
-                                                        <label for="receive" class="form-label">You get</label>
-                                                        <div class="swap-icon" id="swapBtn">
-                                                            <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                                                    <div class="col-12">
+                                                        <!-- <label for="receive" class="form-label">You get</label> -->
+                                                        <div class="input-box">
+                                                            <input type="text" class="form-control" id="receive"
+                                                                value="30"
+                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                            <select class="cmn-select2-image" name="state"
+                                                                id="reciveCurrency">
+                                                                <option value="eth">Ethirium</option>
+                                                                <option value="btc">Bitcoin</option>
+                                                                <option value="aave">aave</option>
+                                                                <option value="xrp">xrp</option>
+                                                                <option value="bab">bab</option>
+                                                                <option value="abt">abt</option>
+                                                                <option value="band">band</option>
+                                                                <option value="bal">bal</option>
+                                                                <option value="cc">cc</option>
+                                                                <option value="call">call</option>
+                                                                <option value="dai">dai</option>
+                                                                <option value="d">d</option>
+                                                                <option value="cdn">cnd</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-
-                                                </div>
-                                                <div class="col-12">
-                                                    <!-- <label for="receive" class="form-label">You get</label> -->
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="receive" value="30"
-                                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                        <select class="cmn-select2-image" name="state"
-                                                            id="reciveCurrency">
-                                                            <option value="eth">Ethirium</option>
-                                                            <option value="btc">Bitcoin</option>
-                                                            <option value="aave">aave</option>
-                                                            <option value="xrp">xrp</option>
-                                                            <option value="bab">bab</option>
-                                                            <option value="abt">abt</option>
-                                                            <option value="band">band</option>
-                                                            <option value="bal">bal</option>
-                                                            <option value="cc">cc</option>
-                                                            <option value="call">call</option>
-                                                            <option value="dai">dai</option>
-                                                            <option value="d">d</option>
-                                                            <option value="cdn">cnd</option>
-                                                        </select>
+                                                    <div class="btn-area">
+                                                        <a href="" class="cmn-btn w-100">Exchange now</a>
                                                     </div>
                                                 </div>
-                                                <div class="btn-area">
-                                                    <a href="" class="cmn-btn w-100">Exchange now</a>
-                                                </div>
                                             </div>
+
                                         </div>
 
                                     </div>
-
                                 </div>
+
                             </form>
                         </div>
                     </div>

@@ -2059,24 +2059,6 @@ Padding bottom
   z-index: 0;
   font-size: 14px;
 }
-.offer-banner-seciton .offer-close-btn {
-  position: absolute;
-  right: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: var(--white);
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-  border-radius: 3px;
-}
-.offer-banner-seciton .offer-close-btn:hover {
-  background-color: var(--black);
-}
 .offer-banner-seciton p {
   color: var(--white);
 }
@@ -2088,6 +2070,25 @@ Padding bottom
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+.offer-close-btn {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+.offer-close-btn:hover {
+  background-color: var(--black);
 }
 
 .offer-btn {
@@ -2104,13 +2105,40 @@ Padding bottom
   opacity: 0.8;
 }
 
+.mobile-offer-banner {
+  position: fixed;
+  bottom: 65px;
+  left: 0;
+  right: 0;
+  max-width: 480px;
+  z-index: 9999;
+  background-color: var(--primary-color);
+  padding: 15px 35px 15px 15px;
+  border-radius: 5px;
+  margin: auto;
+}
+.mobile-offer-banner p {
+  color: var(--white);
+}
+.mobile-offer-banner .offer-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: translate(0);
+}
+
+@media (max-width: 575px) {
+  .mobile-offer-banner {
+    max-width: calc(100% - 20px);
+  }
+}
 /*----------------------------------------------
 01. Nav section start
 ----------------------------------------------*/
 .navbar.active {
   background-color: var(--bg-color3);
   box-shadow: var(--shadow2);
-  z-index: 999;
+  z-index: 99;
   padding: 20px 0;
 }
 
@@ -2454,13 +2482,52 @@ Hero end
 /*----------------------------------------------
 04. Calculator section start
 ----------------------------------------------*/
+.calculator-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  padding: 26px 16px;
+  background: linear-gradient(271deg, #ebfedd 9.24%, rgba(238, 239, 255, 0) 49.61%, #cfccff 89.2%), #eef3ff;
+}
+
+.calculator-banner-wrapper {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.calculator-banner-wrapper .left-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+}
+.calculator-banner-wrapper .left-side p {
+  color: var(--heading-color);
+}
+.calculator-banner-wrapper .right-side {
+  margin-right: 15px;
+  font-size: 20px;
+  color: var(--heading-color);
+}
+.calculator-banner-wrapper .image-area img {
+  width: 100px;
+}
+
 .calculator {
   max-width: 560px;
   margin: 0 auto;
   background-color: var(--bg-color2);
-  padding: 25px;
   border-radius: 10px;
   box-shadow: var(--shadow3);
+}
+.calculator .calculator-body {
+  padding: 25px;
 }
 .calculator .calculator-header {
   margin-bottom: 20px;
@@ -2567,7 +2634,7 @@ Hero end
   }
 }
 @media (max-width: 575px) {
-  .calculator {
+  .calculator .calculator-body {
     padding: 15px;
   }
 }
