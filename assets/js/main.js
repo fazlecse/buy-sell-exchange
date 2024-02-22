@@ -92,6 +92,17 @@ $(document).ready(function () {
         });
     });
     // Testimonial section start
+
+    $('.banner-slider').slick({
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false
+    });
+
     // cmn select2 start
     $(document).ready(function () {
         $('.cmn-select2').select2({
