@@ -37,6 +37,7 @@
         <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="">
     </div>
     <!-- Preloader section end -->
+
     <!-- Header top section start -->
     <div class="offer-banner-seciton d-none d-lg-block">
         <button type="button" class="offer-close-btn">
@@ -79,8 +80,8 @@
                 <div class="offcanvas-header">
                     <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
                             alt=""></a>
-                    <button type="button" class="cmn-btn-close btn-close" data-bs-dismiss="offcanvas"
-                        aria-label="Close"><i class="fa-light fa-arrow-right"></i></button>
+                    <button type="button" class="cmn-btn-close " data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
                 </div>
                 <div class="offcanvas-body align-items-center justify-content-between">
                     <ul class="navbar-nav ms-auto">
@@ -172,7 +173,7 @@
     <div class="hero-section">
         <div class="hero-section-inner">
             <div class="container">
-                <div class="row g-5 justify-content-between align-items-center">
+                <div class="row g-4 g-sm-5 justify-content-between align-items-center">
                     <div class="col-xl-6 col-lg-6">
                         <div class="hero-content">
                             <h1 class="hero-title">Invest Your Money With <span class="highlight">Higher Return</span>
@@ -296,29 +297,42 @@
                                                 aria-labelledby="pills-exchange-tab" tabindex="0">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <label for="send" class="form-label">You send</label>
-                                                        <div class="input-box">
-                                                            <input type="text" class="form-control" id="send" value="10"
-                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                            <select class="cmn-select2-image2" name="state"
-                                                                id="sendCurrency">
-                                                                <option value="btc">Bitcoin</option>
-                                                                <option value="eth">Ethirium</option>
-                                                                <option value="xrp">xrp</option>
-                                                                <option value="aave">aave</option>
-                                                                <option value="abt">abt</option>
-                                                                <option value="bab">bab</option>
-                                                                <option value="bal">bal</option>
-                                                                <option value="band">band</option>
-                                                                <option value="call">call</option>
-                                                                <option value="cc">cc</option>
-                                                                <option value="cdn">cnd</option>
-                                                                <option value="d">d</option>
-                                                                <option value="dai">dai</option>
-                                                            </select>
+                                                        <div class="input-amount-box" id="inputAmountBox">
+                                                            <span class="linear-gradient"></span>
+                                                            <div class="input-amount-wrapper">
+                                                                <label class="form-label mb-2">You send</label>
+                                                                <div class="input-amount-box-inner"
+                                                                    id="inputAmountBoxInner">
+                                                                    <a href="#" class="icon-area" data-bs-toggle="modal"
+                                                                        data-bs-target="#calculator-modal">
+                                                                        <img class="img-flag"
+                                                                            src="./assets/img/crypto-icon/btc.svg"
+                                                                            alt="">
+                                                                    </a>
+                                                                    <div class="text-area w-100">
+                                                                        <div
+                                                                            class="d-flex gap-3 justify-content-between">
+                                                                            <a href="#"
+                                                                                class="d-flex align-items-center gap-1"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#calculator-modal">
+                                                                                <div class="title">BTC</div>
+                                                                                <i class="fa-regular fa-angle-down"></i>
+                                                                            </a>
+                                                                            <input type="text" name="" id=""
+                                                                                placeholder="You send" value="321"
+                                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div class="sub-title">Bitcoin</div>
+                                                                            <div class="fw-500">Max is 2.98 BTC</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
+
                                                         <div class="swap-area">
-                                                            <label for="receive" class="form-label">You get</label>
                                                             <div class="swap-icon" id="swapBtn">
                                                                 <i class="fa-regular fa-arrow-up-arrow-down"></i>
                                                             </div>
@@ -326,27 +340,39 @@
 
                                                     </div>
                                                     <div class="col-12">
-                                                        <!-- <label for="receive" class="form-label">You get</label> -->
-                                                        <div class="input-box">
-                                                            <input type="text" class="form-control" id="receive"
-                                                                value="30"
-                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                                            <select class="cmn-select2-image2" name="state"
-                                                                id="reciveCurrency">
-                                                                <option value="eth">Ethirium</option>
-                                                                <option value="btc">Bitcoin</option>
-                                                                <option value="aave">aave</option>
-                                                                <option value="xrp">xrp</option>
-                                                                <option value="bab">bab</option>
-                                                                <option value="abt">abt</option>
-                                                                <option value="band">band</option>
-                                                                <option value="bal">bal</option>
-                                                                <option value="cc">cc</option>
-                                                                <option value="call">call</option>
-                                                                <option value="dai">dai</option>
-                                                                <option value="d">d</option>
-                                                                <option value="cdn">cnd</option>
-                                                            </select>
+                                                        <div class="input-amount-box" id="inputAmountBox2">
+                                                            <span class="linear-gradient"></span>
+                                                            <div class="input-amount-wrapper">
+                                                                <label class="form-label mb-2">You send</label>
+                                                                <div class="input-amount-box-inner"
+                                                                    id="inputAmountBoxInner2">
+                                                                    <a href="#" class="icon-area" data-bs-toggle="modal"
+                                                                        data-bs-target="#calculator-modal2">
+                                                                        <img class="img-flag"
+                                                                            src="./assets/img/crypto-icon/act.svg"
+                                                                            alt="">
+                                                                    </a>
+                                                                    <div class="text-area w-100">
+                                                                        <div
+                                                                            class="d-flex gap-3 justify-content-between">
+                                                                            <a href="#"
+                                                                                class="d-flex align-items-center gap-1"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#calculator-modal2">
+                                                                                <div class="title">BTC</div>
+                                                                                <i class="fa-regular fa-angle-down"></i>
+                                                                            </a>
+                                                                            <input type="text" name="" id=""
+                                                                                placeholder="You send" value="500"
+                                                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div>Bitcoin</div>
+                                                                            <div class="fw-500">Max is 2.98 BTC</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="btn-area">
@@ -501,7 +527,7 @@
     <!-- About section start -->
     <section class="about-section">
         <div class="container">
-            <div class="row g-5 align-items-center">
+            <div class="row g-4 g-sm-5 align-items-center">
                 <div class="col-md-6 justify-content-center d-flex">
                     <div class="about-thum">
                         <img src="assets/img/about/bitcoin.png" alt="">
@@ -1070,7 +1096,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row gy-5">
+            <div class="row g-4 g-sm-5">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="row gy-5">
                         <div class="col-12">
@@ -1273,6 +1299,260 @@
     <!-- Footer Section end -->
 
 
+    <!-- Modal section start -->
+    <div class="modal fade calculator-modal" id="calculator-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="modal-title" id="staticBackdropLabel">Select a currency</h3>
+                        <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="search-box mt-10">
+                        <input type="text" id="search-input" onkeyup="filterItems('search-input')" class="form-control"
+                            placeholder="Search here...">
+                        <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="currency-list" class="currency-list">
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">btc</div>
+                                    <div class="sub-title">Bitcoin</div>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/eth.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">ave</div>
+                                    <div class="sub-title">Ethereum</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/usdt.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">USDT20</div>
+                                    <div class="sub-title">Tether ERC20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/sol.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">sol</div>
+                                    <div class="sub-title">solana</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/1inch.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">1inch</div>
+                                    <div class="sub-title">1inch (ERC20)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/aave.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">AAVE</div>
+                                    <div class="sub-title">Aave (ERC20)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/abt.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">ABT</div>
+                                    <div class="sub-title">Arcblock (ERC20)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">act</div>
+                                    <div class="sub-title">Achain</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/ada.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">ada</div>
+                                    <div class="sub-title">Cardano</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade calculator-modal" id="calculator-modal2" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="modal-title" id="staticBackdropLabel">Select a currency</h3>
+                        <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="search-box mt-10">
+                        <input type="text" id="search-input2" onkeyup="filterItems('search-input2')"
+                            class="form-control" placeholder="Search here...">
+                        <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="currency-list" class="currency-list">
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/aave.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">AAVE</div>
+                                    <div class="sub-title">Aave (ERC20)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/abt.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">ABT</div>
+                                    <div class="sub-title">Arcblock (ERC20)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">act</div>
+                                    <div class="sub-title">Achain</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/ada.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">ada</div>
+                                    <div class="sub-title">Cardano</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">btc</div>
+                                    <div class="sub-title">Bitcoin</div>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/eth.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">ave</div>
+                                    <div class="sub-title">Ethereum</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/usdt.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">USDT20</div>
+                                    <div class="sub-title">Tether ERC20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/sol.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">sol</div>
+                                    <div class="sub-title">solana</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left-side">
+                                <div class="img-area">
+                                    <img class="img-flag" src="./assets/img/crypto-icon/1inch.svg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">1inch</div>
+                                    <div class="sub-title">1inch (ERC20)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
 
 
 

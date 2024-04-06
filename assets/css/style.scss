@@ -69,7 +69,7 @@ Typography
     --bg-color3: #ffffff;
     --bg-grad-color: #FFF;
     --bg-grad-color-trans: rgba(255, 255, 255, 0.00);
-    --body-color: #6B777F;
+    --body-color: #333333;
     --border-color1: #edf2f8;
     --border-color2: #e1e1e1;
     --border-color3: #000000;
@@ -335,6 +335,7 @@ textarea.form-control {
     color: var(--heading-color);
     text-transform: capitalize;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .form-select {
@@ -468,10 +469,9 @@ intlTelInput end
 Select2 section start
 ----------------------------------------------*/
 img.img-flag {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid var(--border-color2);
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
 }
 
 span.select2.select2-container.select2-container--default {
@@ -605,7 +605,7 @@ Breadcrumb end
 ----------------------------------------------*/
 
 p {
-    color: #6B777F;
+    color: #333333;
     margin-bottom: 10px;
     line-height: 1.4;
 }
@@ -791,6 +791,11 @@ body::-webkit-scrollbar-thumb {
 // Modal section start 
 .modal-header {
     border-bottom: 1px solid var(--border-color1);
+
+    .modal-title {
+        font-size: 20px;
+        font-family: var(--heading-font);
+    }
 }
 
 // Modal section end
@@ -963,7 +968,15 @@ Offcanvas section start
 /*----------------------------------------------
 Offcanvas end 
 ----------------------------------------------*/
+@keyframes input-amount-box-animation {
+    0% {
+        transform: scaleX(0)
+    }
 
+    to {
+        transform: scale(1)
+    }
+}
 
 .animation1 {
     position: relative;
@@ -1080,7 +1093,6 @@ Offcanvas end
     left: 20%;
     height: 300px;
     width: 300px;
-    backdrop-filter: blur(10px);
     filter: blur(250px);
     background-color: var(--primary-color);
     z-index: -1;
@@ -1095,6 +1107,7 @@ Offcanvas end
 }
 
 // Rtl bg shape1 end
+
 // Bg shape1 end
 
 // Bg gradient1 start
@@ -1346,10 +1359,6 @@ Offcanvas end
 }
 
 @media (max-width: 370px) {
-    .shape1 {
-        left: -7px;
-    }
-
     .shape2 {
         right: -7px;
     }
@@ -1532,6 +1541,25 @@ Offcanvas end
         background-color: var(--btn-hover-bg);
         color: var(--white);
         border: 1px solid var(--btn-hover-bg);
+    }
+}
+
+.cmn-btn-close {
+    font-size: 18px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--border-color1);
+    opacity: 1;
+    box-shadow: none;
+    border-radius: 6px;
+    transition: var(--transition);
+
+    &:hover {
+        background-color: var(--primary-color-opacity-low);
+        color: var(--primary-color);
     }
 }
 
@@ -2552,18 +2580,7 @@ Padding bottom
         box-shadow: none;
     }
 
-    .cmn-btn-close {
-        font-size: 18px;
-        background: var(--primary-color);
-        width: 40px;
-        height: 40px;
-        border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
-        color: var(--white);
-        padding: 0;
-        margin: 0;
-        opacity: 1;
-        box-shadow: none;
-    }
+
 
     .navbar-nav {
         text-align: center;
@@ -3107,15 +3124,152 @@ Hero end
 
 }
 
-// .select2-results__option {
-//     text-transform: uppercase;
-// }
+.input-amount-box {
+    border-radius: 8px;
+    font-size: 13px;
+    position: relative;
+
+    &.active {
+
+        .linear-gradient {
+            animation: input-amount-box-animation .3s ease-in-out forwards;
+        }
+    }
+
+    .input-amount-wrapper {
+        background-color: var(--input-color);
+        border-radius: 8px;
+        padding: 16px;
+        z-index: 1;
+        position: relative;
+        text-align: start;
+    }
+
+    .linear-gradient {
+        transition: var(--transition);
+
+        content: "";
+        position: absolute;
+        inset: -2px;
+        margin: auto;
+        // background: -webkit-gradient(linear, right top, left top, color-stop(.01%, #9fcf00), color-stop(49.48%, #00d44b), to(#009be3));
+        background: linear-gradient(270deg, #a5d409 .01%, #3bc56b 49.48%, var(--primary-color));
+        border-radius: 10px;
+        transform: translate(50%) scaleX(0);
+    }
+
+    .input-amount-box-inner {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        text-align: end;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--heading-color);
+        width: 100%;
+    }
+}
+
+.calculator-modal {
+    .modal-header {
+        align-items: initial;
+
+        .modal-title {
+            font-weight: 500;
+        }
+
+    }
+
+    .modal-body {
+        max-height: 400px;
+        overflow: auto;
+        min-height: 400px;
+        background-color: var(--white);
+        border-radius: 0 0 7px 7px;
+    }
+
+    .search-box .search-btn {
+        background-color: transparent;
+
+        i {
+            color: var(--heading-color);
+        }
+    }
+
+    img.img-flag {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+    }
+}
+
+.currency-list {
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--primary-color-opacity-low);
+        }
+    }
+
+    .item:not(:last-child) {
+        border-bottom: 1px solid var(--border-color1);
+    }
+
+    .left-side {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .text-area {
+            font-size: 13px;
+
+            .title {
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .sub-title {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .right-side {
+        i {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+    }
+}
+
+.fw-500 {
+    font-weight: 500;
+}
 
 .swap-area {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 20px 85px 20px 0;
+    justify-content: end;
+    margin: 10px 85px 10px 0;
 
     .form-label {
         margin-bottom: -40px;
@@ -3188,7 +3342,12 @@ Hero end
         padding: 15px;
     }
 
+}
 
+@media (max-width: 425px) {
+    .input-amount-box .input-amount-box-inner .icon-area {
+        display: none;
+    }
 }
 
 
@@ -3250,6 +3409,7 @@ Hero end
 }
 
 // Rtl calculator sectdion end
+
 /*----------------------------------------------
 Calculator end
 ----------------------------------------------*/
@@ -3369,6 +3529,12 @@ Feature end
     }
 }
 
+@media (max-width: 575px) {
+    .about-section {
+        overflow: hidden;
+    }
+}
+
 // About responsive end
 // Rtl about start
 .rtl {
@@ -3406,6 +3572,12 @@ About end
         .section-header {
             text-align: initial;
         }
+    }
+}
+
+@media (max-width: 575px) {
+    .how-it-work {
+        overflow: hidden;
     }
 }
 
@@ -3611,6 +3783,12 @@ Testimonial end
             background-position: center;
             border-radius: 4px;
         }
+    }
+}
+
+@media(max-width: 575px) {
+    .faq-section {
+        overflow: hidden;
     }
 }
 

@@ -63,7 +63,7 @@ Typography
   --bg-color3: #ffffff;
   --bg-grad-color: #FFF;
   --bg-grad-color-trans: rgba(255, 255, 255, 0.00);
-  --body-color: #6B777F;
+  --body-color: #333333;
   --border-color1: #edf2f8;
   --border-color2: #e1e1e1;
   --border-color3: #000000;
@@ -279,6 +279,7 @@ textarea.form-control {
   color: var(--heading-color);
   text-transform: capitalize;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .form-select {
@@ -398,10 +399,9 @@ intlTelInput end
 Select2 section start
 ----------------------------------------------*/
 img.img-flag {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid var(--border-color2);
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
 }
 
 span.select2.select2-container.select2-container--default {
@@ -516,7 +516,7 @@ Breadcrumb start
 Breadcrumb end
 ----------------------------------------------*/
 p {
-  color: #6B777F;
+  color: #333333;
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -692,6 +692,10 @@ body::-webkit-scrollbar-thumb:hover {
 .modal-header {
   border-bottom: 1px solid var(--border-color1);
 }
+.modal-header .modal-title {
+  font-size: 20px;
+  font-family: var(--heading-font);
+}
 
 /*----------------------------------------------
 Reset end
@@ -819,6 +823,14 @@ Offcanvas section start
 /*----------------------------------------------
 Offcanvas end 
 ----------------------------------------------*/
+@keyframes input-amount-box-animation {
+  0% {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .animation1 {
   position: relative;
   animation-name: animation1;
@@ -915,8 +927,6 @@ Offcanvas end
   left: 20%;
   height: 300px;
   width: 300px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   filter: blur(250px);
   background-color: var(--primary-color);
   z-index: -1;
@@ -1120,9 +1130,6 @@ Offcanvas end
   }
 }
 @media (max-width: 370px) {
-  .shape1 {
-    left: -7px;
-  }
   .shape2 {
     right: -7px;
   }
@@ -1273,6 +1280,24 @@ Offcanvas end
   background-color: var(--btn-hover-bg);
   color: var(--white);
   border: 1px solid var(--btn-hover-bg);
+}
+
+.cmn-btn-close {
+  font-size: 18px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border-color1);
+  opacity: 1;
+  box-shadow: none;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+.cmn-btn-close:hover {
+  background-color: var(--primary-color-opacity-low);
+  color: var(--primary-color);
 }
 
 /*----------------------------------------------
@@ -2164,18 +2189,6 @@ Padding bottom
   border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
   box-shadow: none;
 }
-.navbar .cmn-btn-close {
-  font-size: 18px;
-  background: var(--primary-color);
-  width: 40px;
-  height: 40px;
-  border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
-  color: var(--white);
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  box-shadow: none;
-}
 .navbar .navbar-nav {
   text-align: center;
 }
@@ -2579,11 +2592,122 @@ Hero end
   top: 10px;
 }
 
-.swap-area {
+.input-amount-box {
+  border-radius: 8px;
+  font-size: 13px;
+  position: relative;
+}
+.input-amount-box.active .linear-gradient {
+  animation: input-amount-box-animation 0.3s ease-in-out forwards;
+}
+.input-amount-box .input-amount-wrapper {
+  background-color: var(--input-color);
+  border-radius: 8px;
+  padding: 16px;
+  z-index: 1;
+  position: relative;
+  text-align: start;
+}
+.input-amount-box .linear-gradient {
+  transition: var(--transition);
+  content: "";
+  position: absolute;
+  inset: -2px;
+  margin: auto;
+  background: linear-gradient(270deg, #a5d409 0.01%, #3bc56b 49.48%, var(--primary-color));
+  border-radius: 10px;
+  transform: translate(50%) scaleX(0);
+}
+.input-amount-box .input-amount-box-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input-amount-box .title {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+.input-amount-box input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: end;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-color);
+  width: 100%;
+}
+
+.calculator-modal .modal-header {
+  align-items: initial;
+}
+.calculator-modal .modal-header .modal-title {
+  font-weight: 500;
+}
+.calculator-modal .modal-body {
+  max-height: 400px;
+  overflow: auto;
+  min-height: 400px;
+  background-color: var(--white);
+  border-radius: 0 0 7px 7px;
+}
+.calculator-modal .search-box .search-btn {
+  background-color: transparent;
+}
+.calculator-modal .search-box .search-btn i {
+  color: var(--heading-color);
+}
+.calculator-modal img.img-flag {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+}
+
+.currency-list .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 85px 20px 0;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.currency-list .item:hover {
+  background-color: var(--primary-color-opacity-low);
+}
+.currency-list .item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color1);
+}
+.currency-list .left-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.currency-list .left-side .text-area {
+  font-size: 13px;
+}
+.currency-list .left-side .text-area .title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.currency-list .left-side .text-area .sub-title {
+  text-transform: capitalize;
+}
+.currency-list .right-side i {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.swap-area {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 10px 85px 10px 0;
 }
 .swap-area .form-label {
   margin-bottom: -40px;
@@ -2636,6 +2760,11 @@ Hero end
 @media (max-width: 575px) {
   .calculator .calculator-body {
     padding: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .input-amount-box .input-amount-box-inner .icon-area {
+    display: none;
   }
 }
 .rtl .input-box .form-control {
@@ -2774,6 +2903,11 @@ Feature end
     text-align: center;
   }
 }
+@media (max-width: 575px) {
+  .about-section {
+    overflow: hidden;
+  }
+}
 .rtl .about-section .about-content .about-item {
   text-align: right;
 }
@@ -2798,6 +2932,11 @@ About end
   }
   .how-it-work .section-header {
     text-align: initial;
+  }
+}
+@media (max-width: 575px) {
+  .how-it-work {
+    overflow: hidden;
   }
 }
 .rtl .how-it-work .how-it-work-wrapper .how-it-work-item .section-header .number {
@@ -2957,6 +3096,11 @@ Testimonial end
   border-radius: 4px;
 }
 
+@media (max-width: 575px) {
+  .faq-section {
+    overflow: hidden;
+  }
+}
 .rtl .accordion-button {
   text-align: right;
   padding: 10px;

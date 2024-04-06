@@ -227,9 +227,76 @@ $(document).ready(function () {
     });
     // cmn select2 modal start
 
-
+    // International Telephone Input start
+    if ($('.login-signup-form').length) {
+        const input = document.querySelector("#telephone");
+        window.intlTelInput(input, {
+            initialCountry: "bd",
+            separateDialCode: true,
+        });
+    }
+    // International Telephone Input end
 
 });
+
+// Modal select to input focus start 
+document.addEventListener("DOMContentLoaded", function () {
+    function handleInput(inputAmountBox, inputAmountBoxInner) {
+        const inputField = inputAmountBoxInner.querySelector('input');
+
+        inputField.addEventListener("focus", function () {
+            inputAmountBox.classList.add("active");
+        });
+
+        inputField.addEventListener("blur", function () {
+            inputAmountBox.classList.remove("active");
+        });
+
+        inputField.addEventListener("click", function () {
+            inputField.setSelectionRange(inputField.value.length, inputField.value.length);
+        });
+
+        inputAmountBox.addEventListener("click", function (event) {
+            if (!event.target.closest('.icon-area') && !event.target.closest('.text-area')) {
+                inputField.focus();
+                inputField.setSelectionRange(inputField.value.length, inputField.value.length);
+            }
+        });
+    }
+
+    const inputAmountBox = document.getElementById("inputAmountBox");
+    const inputAmountBoxInner = document.getElementById("inputAmountBoxInner");
+    handleInput(inputAmountBox, inputAmountBoxInner);
+
+    const inputAmountBox2 = document.getElementById("inputAmountBox2");
+    const inputAmountBoxInner2 = document.getElementById("inputAmountBoxInner2");
+    handleInput(inputAmountBox2, inputAmountBoxInner2);
+});
+// Modal select to input focus end
+
+// Filter section start
+function filterItems(inputId) {
+    var input, filter, items, title, subtitle, i, txtValue;
+    input = document.getElementById(inputId);
+    filter = input.value.toUpperCase();
+    items = document.querySelectorAll("#currency-list .item");
+
+    items.forEach(function (item) {
+        title = item.querySelector(".title");
+        subtitle = item.querySelector(".sub-title");
+
+        txtValue = title.textContent || title.innerText;
+        txtValue += " " + (subtitle.textContent || subtitle.innerText);
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+// Filter section end
+
 // Dark theme start
 const toggleBtn = document.getElementById("toggle-btn");
 const body = document.querySelector("body");
@@ -312,13 +379,7 @@ swapBtn.addEventListener('click', () => {
 });
 // Calculator swap end
 
-// International Telephone Input start
-const input = document.querySelector("#telephone");
-window.intlTelInput(input, {
-    initialCountry: "bd",
-    separateDialCode: true,
-});
-// International Telephone Input end
+
 
 
 // input field show hide password start
