@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         inputAmountBox.addEventListener("click", function (event) {
-            if (!event.target.closest('.icon-area') && !event.target.closest('.text-area')) {
+            if (!event.target.closest('.icon-area') && !event.target.closest('.currency-name')) {
                 inputField.focus();
                 inputField.setSelectionRange(inputField.value.length, inputField.value.length);
             }
